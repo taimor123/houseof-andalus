@@ -1,6 +1,7 @@
+"use client";
 import React, { useState } from "react";
 import CountUp from "react-countup";
-"use client";
+
 import Link from 'next/link';
 
 function CounterThree() {

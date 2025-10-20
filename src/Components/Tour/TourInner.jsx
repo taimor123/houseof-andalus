@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
 "use client";
-import Link from 'next/link'
+import React, { useState } from 'react';
+import Link from 'next/link';
 import TourCard from './TourCard';
 import posts from '../data/data-tour.json';
 import TourCardTwo from './TourCardTwo';
@@ -37,7 +37,7 @@ function TourInner() {
                             <div className="sorting-filter-wrap">
                                 <div className="nav" role="tablist">
                                     <Link
-                                        to="#"
+                                        href="#"
                                         id="tab-destination-grid"
                                         data-bs-toggle="tab"
                                         data-bs-target="#tab-grid"
@@ -51,7 +51,7 @@ function TourInner() {
                                         <i className="fa-light fa-grid-2" />
                                     </Link>
                                     <Link
-                                        to="#"
+                                        href="#"
                                         id="tab-destination-list"
                                         data-bs-toggle="tab"
                                         data-bs-target="#tab-list"
@@ -125,7 +125,7 @@ function TourInner() {
                                         <li key={i}>
                                             <Link
                                                 className={currentPage === i + 1 ? 'active' : ''}
-                                                to="#"
+                                                href="#"
                                                 onClick={() => handlePageChange(i + 1)}
                                             >
                                                 {i + 1}
@@ -134,7 +134,7 @@ function TourInner() {
                                     ))}
                                     {currentPage < totalPages && (
                                         <li>
-                                            <Link className="next-page" to="#" onClick={() => handlePageChange(currentPage + 1)}>
+                                            <Link className="next-page" href="#" onClick={() => handlePageChange(currentPage + 1)}>
                                                 Next <img src="/assets/img/icon/arrow-right4.svg" alt="" />
                                             </Link>
                                         </li>
@@ -149,42 +149,42 @@ function TourInner() {
                                 <h3 className="widget_title">Categories</h3>
                                 <ul>
                                     <li>
-                                        <Link to="/blog">
+                                        <Link href="/blog">
                                             <img src="/assets/img/theme-img/map.svg" alt="" />
                                             City Tour
                                         </Link>
                                         <span>(8)</span>
                                     </li>
                                     <li>
-                                        <Link to="/blog">
+                                        <Link href="/blog">
                                             <img src="/assets/img/theme-img/map.svg" alt="" />
                                             Beach Tours
                                         </Link>
                                         <span>(6)</span>
                                     </li>
                                     <li>
-                                        <Link to="/blog">
+                                        <Link href="/blog">
                                             <img src="/assets/img/theme-img/map.svg" alt="" />
                                             Wildlife Tours
                                         </Link>
                                         <span>(2)</span>
                                     </li>
                                     <li>
-                                        <Link to="/blog">
+                                        <Link href="/blog">
                                             <img src="/assets/img/theme-img/map.svg" alt="" />
                                             News &amp; Tips
                                         </Link>
                                         <span>(7)</span>
                                     </li>
                                     <li>
-                                        <Link to="/blog">
+                                        <Link href="/blog">
                                             <img src="/assets/img/theme-img/map.svg" alt="" />
                                             Adventure Tours
                                         </Link>
                                         <span>(9)</span>
                                     </li>
                                     <li>
-                                        <Link to="/blog">
+                                        <Link href="/blog">
                                             <img src="/assets/img/theme-img/map.svg" alt="" />
                                             Mountain Tours
                                         </Link>
@@ -197,7 +197,7 @@ function TourInner() {
                                 <div className="recent-post-wrap">
                                     <div className="recent-post">
                                         <div className="media-img">
-                                            <Link to="/blog/1">
+                                            <Link href="/blog/1">
                                                 <img
                                                     src="/assets/img/blog/recent-post-1-1.jpg"
                                                     alt="Blog"
@@ -206,12 +206,12 @@ function TourInner() {
                                         </div>
                                         <div className="media-body">
                                             <h4 className="post-title">
-                                                <Link className="text-inherit" to="/blog/1">
+                                                <Link className="text-inherit" href="/blog/1">
                                                     Exploring The Green Spaces Of the island maldives
                                                 </Link>
                                             </h4>
                                             <div className="recent-post-meta">
-                                                <Link to="/blog">
+                                                <Link href="/blog">
                                                     <i className="fa-regular fa-calendar" />
                                                     22/6/ 2025
                                                 </Link>
@@ -220,7 +220,7 @@ function TourInner() {
                                     </div>
                                     <div className="recent-post">
                                         <div className="media-img">
-                                            <Link to="/blog/1">
+                                            <Link href="/blog/1">
                                                 <img
                                                     src="/assets/img/blog/recent-post-1-2.jpg"
                                                     alt="Blog"
@@ -229,12 +229,12 @@ function TourInner() {
                                         </div>
                                         <div className="media-body">
                                             <h4 className="post-title">
-                                                <Link className="text-inherit" to="/blog/1">
+                                                <Link className="text-inherit" href="/blog/1">
                                                     Harmony With Nature Of Belgium Tour and travle
                                                 </Link>
                                             </h4>
                                             <div className="recent-post-meta">
-                                                <Link to="/blog">
+                                                <Link href="/blog">
                                                     <i className="fa-regular fa-calendar" />
                                                     25/6/ 2025
                                                 </Link>
@@ -243,7 +243,7 @@ function TourInner() {
                                     </div>
                                     <div className="recent-post">
                                         <div className="media-img">
-                                            <Link to="/blog/1">
+                                            <Link href="/blog/1">
                                                 <img
                                                     src="/assets/img/blog/recent-post-1-3.jpg"
                                                     alt="Blog"
@@ -252,12 +252,12 @@ function TourInner() {
                                         </div>
                                         <div className="media-body">
                                             <h4 className="post-title">
-                                                <Link className="text-inherit" to="/blog/1">
+                                                <Link className="text-inherit" href="/blog/1">
                                                     Exploring The Green Spaces Of Realar Residence
                                                 </Link>
                                             </h4>
                                             <div className="recent-post-meta">
-                                                <Link to="/blog">
+                                                <Link href="/blog">
                                                     <i className="fa-regular fa-calendar" />
                                                     27/6/ 2025
                                                 </Link>
@@ -269,14 +269,14 @@ function TourInner() {
                             <div className="widget widget_tag_cloud  ">
                                 <h3 className="widget_title">Popular Tags</h3>
                                 <div className="tagcloud">
-                                    <Link to="/blog">Tour</Link>
-                                    <Link to="/blog">Adventure</Link>
-                                    <Link to="/blog">Rent</Link>
-                                    <Link to="/blog">Innovate</Link>
-                                    <Link to="/blog">Hotel</Link>
-                                    <Link to="/blog">Modern</Link>
-                                    <Link to="/blog">Luxury</Link>
-                                    <Link to="/blog">Travel</Link>
+                                    <Link href="/blog">Tour</Link>
+                                    <Link href="/blog">Adventure</Link>
+                                    <Link href="/blog">Rent</Link>
+                                    <Link href="/blog">Innovate</Link>
+                                    <Link href="/blog">Hotel</Link>
+                                    <Link href="/blog">Modern</Link>
+                                    <Link href="/blog">Luxury</Link>
+                                    <Link href="/blog">Travel</Link>
                                 </div>
                             </div>
                             <div
@@ -293,11 +293,11 @@ function TourInner() {
                                         </div>
                                         <div className="offer">
                                             <h6 className="offer-title">You Get Online support</h6>
-                                            <Link className="offter-num" to={+256214203215}>
+                                            <a className="offter-num" href="tel:+256214203215">
                                                 +256 214 203 215
-                                            </Link>
+                                            </a>
                                         </div>
-                                        <Link to="/contact" className="th-btn style2 th-icon">
+                                        <Link href="/contact" className="th-btn style2 th-icon">
                                             Read More
                                         </Link>
                                     </div>

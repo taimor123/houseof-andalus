@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
 "use client";
+import React, { useState } from 'react'
+
 import Link from 'next/link'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Thumbs, EffectFade } from "swiper/modules";
