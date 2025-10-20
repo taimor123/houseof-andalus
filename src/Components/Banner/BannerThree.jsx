@@ -8,7 +8,6 @@ import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 import "swiper/css/controller";
 import NiceSelect from "../Header/NiceSelect";
-"use client";
 import Link from 'next/link';
 
 function BannerThree() {

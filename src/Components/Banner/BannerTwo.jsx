@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect, useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css'; // Core Swiper styles
@@ -5,7 +6,6 @@ import { Pagination, A11y, EffectFade, Autoplay, Navigation, Thumbs } from 'swip
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/scrollbar';
-"use client";
 import Link from 'next/link';
 function BannerTwo() {
   const swiperRef = useRef(null);
