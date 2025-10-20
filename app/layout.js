@@ -2,10 +2,10 @@ import '../src/index.css';
 import '../src/App.css';
 
 export const metadata = {
-  title: 'Tourm - Travel & Tour Booking Agency ReactJS Template - Home Travel',
-  description: 'Tourm - Travel & Tour Booking Agency ReactJS Template',
+  title: 'House of Andalus',
+  description: 'House of Andalus - Travel & Tour Booking Agency',
   keywords: 'Tour, Travel, Booking, Agency',
-  authors: [{ name: 'Tourm' }],
+  authors: [{ name: 'House of Andalus' }],
 };
 // import css files served from /public/assets via <link> tags below
 
