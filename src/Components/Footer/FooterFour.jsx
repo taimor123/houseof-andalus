@@ -52,12 +52,11 @@ function FooterFour() {
                                 <div className="th-widget-about">
                                     <div className="about-logo">
                                         <Link href="/">
-                                            <img src="/assets/img/logo-white.svg" alt="Tourm" />
+                                            <img src="/assets/img/Andalus-logo-white.png" alt="house-of-andalus" />
                                         </Link>
                                     </div>
                                     <p className="about-text">
-                                        Rapidiously myocardinate cross-platform intellectual capital
-                                        model. Appropriately create interactive infrastructures
+                                        Beautifully weave Andalusian heritage with global vision. Purposefully create sanctuaries for reflection and growth.
                                     </p>
                                     <div className="th-social">
                                         <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
@@ -257,7 +256,7 @@ function FooterFour() {
                     <div className="row justify-content-between align-items-center">
                         <div className="col-md-6">
                             <p className="copyright-text">
-                                Copyright 2025 <Link href="/">Tourm</Link>. All Rights
+                                Copyright 2025 <Link href="/">House of Andalus</Link>. All Rights
                                 Reserved.
                             </p>
                         </div>

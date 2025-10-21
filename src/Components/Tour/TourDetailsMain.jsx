@@ -137,7 +137,7 @@ function TourDetailsMain() {
                             </div>
                             <div className="page-content">
                                 <div className="page-meta mb-45">
-                                    <Link className="page-tag mr-5" to="/tour">
+                                    <Link className="page-tag mr-5" href="/tour">
                                         Featured
                                     </Link>
                                     <span className="ratting">
@@ -308,42 +308,42 @@ function TourDetailsMain() {
                                 <h3 className="widget_title">Categories</h3>
                                 <ul>
                                     <li>
-                                        <Link to="/blog">
+                                        <Link href="/blog">
                                             <img src="/assets/img/theme-img/map.svg" alt="" />
                                             City Tour
                                         </Link>
                                         <span>(8)</span>
                                     </li>
                                     <li>
-                                        <Link to="/blog">
+                                        <Link href="/blog">
                                             <img src="/assets/img/theme-img/map.svg" alt="" />
                                             Beach Tours
                                         </Link>
                                         <span>(6)</span>
                                     </li>
                                     <li>
-                                        <Link to="/blog">
+                                        <Link href="/blog">
                                             <img src="/assets/img/theme-img/map.svg" alt="" />
                                             Wildlife Tours
                                         </Link>
                                         <span>(2)</span>
                                     </li>
                                     <li>
-                                        <Link to="/blog">
+                                        <Link href="/blog">
                                             <img src="/assets/img/theme-img/map.svg" alt="" />
                                             News &amp; Tips
                                         </Link>
                                         <span>(7)</span>
                                     </li>
                                     <li>
-                                        <Link to="/blog">
+                                        <Link href="/blog">
                                             <img src="/assets/img/theme-img/map.svg" alt="" />
                                             Adventure Tours
                                         </Link>
                                         <span>(9)</span>
                                     </li>
                                     <li>
-                                        <Link to="/blog">
+                                        <Link href="/blog">
                                             <img src="/assets/img/theme-img/map.svg" alt="" />
                                             Mountain Tours
                                         </Link>
@@ -356,7 +356,7 @@ function TourDetailsMain() {
                                 <div className="recent-post-wrap">
                                     <div className="recent-post">
                                         <div className="media-img">
-                                            <Link to="/blog/1">
+                                            <Link href="/blog/1">
                                                 <img
                                                     src="/assets/img/blog/recent-post-1-1.jpg"
                                                     alt="Blog"
@@ -370,7 +370,7 @@ function TourDetailsMain() {
                                                 </Link>
                                             </h4>
                                             <div className="recent-post-meta">
-                                                <Link to="/blog">
+                                                <Link href="/blog">
                                                     <i className="fa-regular fa-calendar" />
                                                     22/6/ 2025
                                                 </Link>
@@ -379,7 +379,7 @@ function TourDetailsMain() {
                                     </div>
                                     <div className="recent-post">
                                         <div className="media-img">
-                                            <Link to="/blog/1">
+                                            <Link href="/blog/1">
                                                 <img
                                                     src="/assets/img/blog/recent-post-1-2.jpg"
                                                     alt="Blog"
@@ -393,7 +393,7 @@ function TourDetailsMain() {
                                                 </Link>
                                             </h4>
                                             <div className="recent-post-meta">
-                                                <Link to="/blog">
+                                                <Link href="/blog">
                                                     <i className="fa-regular fa-calendar" />
                                                     25/6/ 2025
                                                 </Link>
@@ -402,7 +402,7 @@ function TourDetailsMain() {
                                     </div>
                                     <div className="recent-post">
                                         <div className="media-img">
-                                            <Link to="/blog/1">
+                                            <Link href="/blog/1">
                                                 <img
                                                     src="/assets/img/blog/recent-post-1-3.jpg"
                                                     alt="Blog"
@@ -416,7 +416,7 @@ function TourDetailsMain() {
                                                 </Link>
                                             </h4>
                                             <div className="recent-post-meta">
-                                                <Link to="/blog">
+                                                <Link href="/blog">
                                                     <i className="fa-regular fa-calendar" />
                                                     27/6/ 2025
                                                 </Link>
@@ -448,7 +448,7 @@ function TourDetailsMain() {
                                             Need Help? We Are Here To Help You
                                         </h6>
                                         <div className="banner-logo">
-                                            <img src="/assets/img/logo2.svg" alt="Tourm" />
+                                            <img src="/assets/img/logo2.svg" alt="andalus" />
                                         </div>
                                         <div className="offer">
                                             <h6 className="offer-title">You Get Online support</h6>

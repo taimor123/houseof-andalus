@@ -93,5 +93,5 @@ The original CRA scripts have been replaced with Next.js scripts:
 
 ## License
 
-All rights reserved © 2025 Tourm.
+All rights reserved © 2025 House of Andalus.
 

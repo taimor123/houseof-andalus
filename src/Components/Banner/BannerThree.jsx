@@ -101,7 +101,7 @@ function BannerThree() {
                                         Tourm is an international travel management company with 25 years of experience, specializing in business and maritime travel.
                                     </p>
                                     <div className="btn-group" data-ani="slideinup" data-ani-delay="0.6s">
-                                        <Link to="/tour" className="th-btn style2 th-icon">
+                                        <Link href="/tour" className="th-btn style2 th-icon">
                                             Explore Tours
                                         </Link>
                                     </div>
@@ -130,7 +130,7 @@ function BannerThree() {
                                     experience, specializing in business and maritime travel.
                                 </p>
                                 <div className="btn-group" data-ani="slideinup" data-ani-delay="0.6s">
-                                    <Link to="/tour" className="th-btn style2 th-icon">Explore Tours</Link>
+                                    <Link href="/tour" className="th-btn style2 th-icon">Explore Tours</Link>
                                 </div>
                             </div>
                         </div>
@@ -229,7 +229,7 @@ function BannerThree() {
                 </div>
             </div>
             <div className="scroll-down">
-                <Link to="/#destination-sec" onClick={handleScroll} className="scroll-wrap">
+                <Link href="/#destination-sec" onClick={handleScroll} className="scroll-wrap">
                     <span>
                         <img src="/assets/img/icon/down-arrow.svg" alt="" />
                     </span>

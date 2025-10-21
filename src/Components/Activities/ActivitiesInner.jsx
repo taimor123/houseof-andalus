@@ -188,21 +188,21 @@ function ActivitiesInner() {
                                 <h3 className="widget_title">Duration</h3>
                                 <ul>
                                     <li>
-                                        <Link to="/blog">
+                                        <Link href="/blog">
                                             <i className="fa-light fa-square-check" />
                                             Gozayan Tour, BD
                                         </Link>
                                         <span>(26)</span>
                                     </li>
                                     <li>
-                                        <Link to="/blog">
+                                        <Link href="/blog">
                                             <i className="fa-light fa-square-check" />
                                             Tourope UK
                                         </Link>
                                         <span>(27)</span>
                                     </li>
                                     <li>
-                                        <Link to="/blog">
+                                        <Link href="/blog">
                                             <i className="fa-light fa-square-check" />
                                             European Tours Limited
                                         </Link>

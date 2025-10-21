@@ -26,10 +26,10 @@ export default function HomePage() {
       <TourOne />
       <GalleryOne />
       <CounterOne />
-      <TourGuide />
-      <TestimonialOne />
-      <BrandOne className="space-bottom" />
-      <BlogOne />
+      {/* <TourGuide /> */}
+      {/* <TestimonialOne /> */}
+      {/* <BrandOne className="space-bottom" /> */}
+      {/* <BlogOne /> */}
       <FooterOne />
       <ScrollToTop />
     </div>

@@ -89,8 +89,16 @@ function HeaderOne() {
                             <div className="row align-items-center justify-content-between">
                                 <div className="col-auto">
                                     <div className="header-logo">
-                                        <Link href="/">
-                                            <img src="/assets/img/logo.svg" alt="Tourm" />
+                                        <Link href="/" aria-label="The House of Andalus Home">
+                                            <img 
+                                                src="/assets/img/Andalus-logo-white.png" 
+                                                alt="The House of Andalus" 
+                                                style={{
+                                                    height: '54px',
+                                                    width: 'auto',
+                                                    display: 'block'
+                                                }}
+                                            />
                                         </Link>
                                     </div>
                                 </div>

@@ -259,53 +259,53 @@ function HeaderTwo() {
                                                         </ul>
                                                     </li>
                                                     <li>
-                                                        <Link to="/gallery">Gallery</Link>
+                                                        <Link href="/gallery">Gallery</Link>
                                                     </li>
                                                     <li>
-                                                        <Link to="/tour">Our Tour</Link>
+                                                        <Link href="/tour">Our Tour</Link>
                                                     </li>
                                                     <li>
-                                                        <Link to="/tour-details">Tour Details</Link>
+                                                        <Link href="/tour-details">Tour Details</Link>
                                                     </li>
                                                     <li>
-                                                        <Link to="/resort">Resort page</Link>
+                                                        <Link href="/resort">Resort page</Link>
                                                     </li>
                                                     <li>
-                                                        <Link to="/resort/1">Resort Details</Link>
+                                                        <Link href="/resort/1">Resort Details</Link>
                                                     </li>
                                                     <li>
-                                                        <Link to="/tour-details">Tour Details</Link>
+                                                        <Link href="/tour-details">Tour Details</Link>
                                                     </li>
                                                     <li>
-                                                        <Link to="/tour-guide">Tour Guider</Link>
+                                                        <Link href="/tour-guide">Tour Guider</Link>
                                                     </li>
                                                     <li>
-                                                        <Link to="/tour-guide/1">Tour Guider Details</Link>
+                                                        <Link href="/tour-guide/1">Tour Guider Details</Link>
                                                     </li>
                                                     <li>
-                                                        <Link to="/faq">Faq Page</Link>
+                                                        <Link href="/faq">Faq Page</Link>
                                                     </li>
                                                     <li>
-                                                        <Link to="/price">Price Package</Link>
+                                                        <Link href="/price">Price Package</Link>
                                                     </li>
                                                     <li>
-                                                        <Link to="/error">Error Page</Link>
+                                                        <Link href="/error">Error Page</Link>
                                                     </li>
                                                 </ul>
                                             </li>
                                             <li className="menu-item-has-children">
-                                                <Link to="#">Blog</Link>
+                                                <Link href="#">Blog</Link>
                                                 <ul className="sub-menu">
                                                     <li>
-                                                        <Link to="/blog">Blog</Link>
+                                                        <Link href="/blog">Blog</Link>
                                                     </li>
                                                     <li>
-                                                        <Link to="/blog/1">Blog Details</Link>
+                                                        <Link href="/blog/1">Blog Details</Link>
                                                     </li>
                                                 </ul>
                                             </li>
                                             <li>
-                                                <Link to="/contact">Contact us</Link>
+                                                <Link href="/contact">Contact us</Link>
                                             </li>
                                         </ul>
                                     </nav>
@@ -319,7 +319,7 @@ function HeaderTwo() {
                                 </div>
                                 <div className="col-auto d-none d-xl-block">
                                     <div className="header-button">
-                                        <Link to="/contact" className="th-btn style3 th-icon">
+                                        <Link href="/contact" className="th-btn style3 th-icon">
                                             Book Now
                                         </Link>
                                     </div>

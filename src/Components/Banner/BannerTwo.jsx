@@ -80,7 +80,7 @@ function BannerTwo() {
                   Tourm an international travel management company with 25 years of experience, specializing in business and maritime travel.
                 </p>
                 <div className="btn-group" data-ani="slideinup" data-ani-delay="0.6s">
-                  <Link to="/destination" className="th-btn white-btn th-icon">Explore Tours</Link>
+                  <Link href="/destination" className="th-btn white-btn th-icon">Explore Tours</Link>
                 </div>
               </div>
             </div>
@@ -100,7 +100,7 @@ function BannerTwo() {
                   Provide a detailed itinerary of the tour, including the places you'll visit each day, any activities planned approximate times.
                 </p>
                 <div className="btn-group" data-ani="slideinup" data-ani-delay="0.6s">
-                  <Link to="/destination" className="th-btn white-btn th-icon">Explore Tours</Link>
+                  <Link href="/destination" className="th-btn white-btn th-icon">Explore Tours</Link>
                 </div>
               </div>
             </div>
@@ -118,7 +118,7 @@ function BannerTwo() {
                   Tourm an international travel management company with 25 years of experience, specializing in business and maritime travel.
                 </p>
                 <div className="btn-group" data-ani="slideinup" data-ani-delay="0.6s">
-                  <Link to="/tour" className="th-btn white-btn th-icon">Explore Tours</Link>
+                  <Link href="/tour" className="th-btn white-btn th-icon">Explore Tours</Link>
                 </div>
               </div>
             </div>
@@ -168,7 +168,7 @@ function BannerTwo() {
                 <h3 className="box-title">Mountain Tour</h3>
                 <h4 className="hero-card_price"><span className="currency">$850.00</span>/Person</h4>
                 <span className="d-block"><i className="fa-light fa-clock" />7 Days</span>
-                <Link to="/destination/1" className="th-btn style2">Book Now</Link>
+                <Link href="/destination/1" className="th-btn style2">Book Now</Link>
               </div>
             </div>
           </div>
@@ -183,7 +183,7 @@ function BannerTwo() {
                 <h3 className="box-title">Yachts Tour</h3>
                 <h4 className="hero-card_price"><span className="currency">$750.00</span>/Person</h4>
                 <span className="d-block"><i className="fa-light fa-clock" />6 Days</span>
-                <Link to="/destination/1" className="th-btn style2">Book Now</Link>
+                <Link href="/destination/1" className="th-btn style2">Book Now</Link>
               </div>
             </div>
           </div>
@@ -198,7 +198,7 @@ function BannerTwo() {
                 <h3 className="box-title">Mountain Tour</h3>
                 <h4 className="hero-card_price"><span className="currency">$850.00</span>/Person</h4>
                 <span className="d-block"><i className="fa-light fa-clock" />7 Days</span>
-                <Link to="/destination/1" className="th-btn style2">Book Now</Link>
+                <Link href="/destination/1" className="th-btn style2">Book Now</Link>
               </div>
             </div>
           </div>
@@ -206,7 +206,7 @@ function BannerTwo() {
         {/* Add more SwiperSlides here as needed */}
       </Swiper>
       <div className="scroll-down">
-        <Link to="/#destination-sec" onClick={handleScroll} className="scroll-wrap">
+  <Link href="/#destination-sec" onClick={handleScroll} className="scroll-wrap">
           <span>
             <img src="/assets/img/icon/down-arrow.svg" alt="" />
           </span>

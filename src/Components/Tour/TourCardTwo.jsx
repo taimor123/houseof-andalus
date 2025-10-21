@@ -11,7 +11,7 @@ function TourCardTwo(props) {
             </div>
             <div className="tour-content">
                 <h3 className="box-title">
-                   <Link to="/tour-details">{tourTitle ? tourTitle : 'Greece Tour Package'}</Link>
+                   <Link href="/tour-details">{tourTitle ? tourTitle : 'Greece Tour Package'}</Link>
                 </h3>
                 <div className="tour-rating">
                     <div
@@ -27,7 +27,7 @@ function TourCardTwo(props) {
                         </span>
                     </div>
                     <Link
-                        to="/tour-details"
+                        href="/tour-details"
                         className="woocommerce-review-link"
                     >
                         (<span className="count">4.8</span>
@@ -41,7 +41,7 @@ function TourCardTwo(props) {
                     <span>
                         <i className="fa-light fa-clock" />7 Days
                     </span>
-                    <Link to="/tour-details" className="th-btn style4">
+                    <Link href="/tour-details" className="th-btn style4">
                         Detail View
                     </Link>
                 </div>

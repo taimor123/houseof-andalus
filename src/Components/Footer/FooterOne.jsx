@@ -37,12 +37,11 @@ function FooterOne() {
                                 <div className="th-widget-about">
                                     <div className="about-logo">
                                         <Link href="/">
-                                            <img src="/assets/img/logo3.svg" alt="Tourm" />
+                                            <img src="/assets/img/Andalus-logo.png" alt="Tourm" />
                                         </Link>
                                     </div>
                                     <p className="about-text">
-                                        Rapidiously myocardinate cross-platform intellectual capital
-                                        model. Appropriately create interactive infrastructures
+                                        Beautifully weave Andalusian heritage with global vision. Purposefully create sanctuaries for reflection and growth.
                                     </p>
                                     <div className="th-social">
                                         <Link href="https://www.facebook.com/">
@@ -239,7 +238,7 @@ function FooterOne() {
                     <div className="row justify-content-between align-items-center">
                         <div className="col-md-6">
                             <p className="copyright-text">
-                                Copyright 2025 <Link href="/">Tourm</Link>. All Rights
+                                Copyright 2025 <Link href="/">House of Andalus</Link>. All Rights
                                 Reserved.
                             </p>
                         </div>

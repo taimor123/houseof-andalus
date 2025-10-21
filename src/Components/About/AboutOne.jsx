@@ -13,13 +13,13 @@ function AboutOne() {
                     <div className="col-xl-6">
                         <div className="img-box1">
                             <div className="img1">
-                                <img src="/assets/img/normal/about_1_1.jpg" alt="About" />
+                                <img src="/assets/img/imagi/312x630/1.jpg" alt="About" />
                             </div>
                             <div className="img2">
-                                <img src="/assets/img/normal/about_1_2.jpg" alt="About" />
+                                <img src="/assets/img/imagi/312x315/1.jpg" alt="About" />
                             </div>
                             <div className="img3">
-                                <img src="/assets/img/normal/about_1_3.jpg" alt="About" />
+                                <img src="/assets/img/imagi/312x315/2.jpg" alt="About" />
                             </div>
                         </div>
                     </div>
@@ -28,10 +28,11 @@ function AboutOne() {
                             <div className="title-area mb-20 pe-xl-5 me-xl-5">
                                 <span className="sub-title style1 ">Reawaken Together</span>
                                 <h2 className="sec-title mb-20 pe-xl-5 me-xl-5 heading">
-                                    Begin Your Stay With us
+                                    Welcome to the House of Andalus
                                 </h2>
                                 <p className="sec-text mb-30">
-                                    Rediscover stillness and soul at The House of Andalus, where wellness, faith, and nature merge to restore peace, balance, and belonging.
+                                    {/* Rediscover stillness and soul at The House of Andalus, where wellness, faith, and nature merge to restore peace, balance, and belonging. */}
+                                    Set within a century-old farmhouse, House of Andalus is a serene retreat for seekers and storytellers. Honouring the spirit of Al-Andalus, it offers space for rest, reflection, and renewal — nurturing both you and the ummah.
 
                                 </p>
                             </div>
@@ -101,7 +102,7 @@ function AboutOne() {
                         right: "-11%",
                     }}
                 >
-                    <img src="/assets/img/normal/about-slide-img.png" alt="shape" />
+                    <img src="/assets/img/imagi/217x546/1.jpg" alt="shape" />
                 </div>
                 <div
                     className="shape-mockup about-rating d-none d-xxl-block"

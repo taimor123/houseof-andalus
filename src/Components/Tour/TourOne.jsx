@@ -11,7 +11,7 @@ function TourOne() {
     <section
       className="tour-area position-relative bg-top-center overflow-hidden space bg-no-repeat"
       id="service-sec"
-      style={{ backgroundImage: 'url(/assets/img/bg/tour_bg_1.jpg)' }}
+      style={{ backgroundImage: 'url(/assets/img/imagi/1920x613/1.jpg)' }}
     >
       <div className="container">
         <div className="row">
@@ -42,7 +42,7 @@ function TourOne() {
             <SwiperSlide key="tour1">
               <div className="tour-box th-ani gsap-cursor">
                 <div className="tour-box_img global-img">
-                  <img src="/assets/img/tour/tour_box_1.jpg" alt="Greece Tour Package" />
+                  <img src="/assets/img/imagi/312x274/1.jpg" alt="Greece Tour Package" />
                 </div>
                 <div className="tour-content">
                   <h3 className="box-title">
@@ -76,7 +76,7 @@ function TourOne() {
             <SwiperSlide key="tour2">
               <div className="tour-box th-ani gsap-cursor">
                 <div className="tour-box_img global-img">
-                  <img src="/assets/img/tour/tour_box_2.jpg" alt="Italy Tour Package" />
+                  <img src="/assets/img/imagi/312x274/2.jpg" alt="Italy Tour Package" />
                 </div>
                 <div className="tour-content">
                   <h3 className="box-title">
@@ -110,7 +110,7 @@ function TourOne() {
             <SwiperSlide key="tour3">
               <div className="tour-box th-ani gsap-cursor">
                 <div className="tour-box_img global-img">
-                  <img src="/assets/img/tour/tour_box_3.jpg" alt="Dubai Tour Package" />
+                  <img src="/assets/img/imagi/312x274/3.jpg" alt="Dubai Tour Package" />
                 </div>
                 <div className="tour-content">
                   <h3 className="box-title">
@@ -144,7 +144,7 @@ function TourOne() {
             <SwiperSlide key="tour4">
               <div className="tour-box th-ani gsap-cursor">
                 <div className="tour-box_img global-img">
-                  <img src="/assets/img/tour/tour_box_4.jpg" alt="Switzerland Tour" />
+                  <img src="/assets/img/imagi/312x274/1.jpg" alt="Switzerland Tour" />
                 </div>
                 <div className="tour-content">
                   <h3 className="box-title">

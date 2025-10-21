@@ -62,15 +62,23 @@ function BannerOne() {
                 <div className="swiper-wrapper">
                     <SwiperSlide>
                         <div className="hero-inner">
-                            <div
-                                className="th-hero-bg"
-                                style={{
-                                    backgroundImage: "url(/assets/img/hero/hero_bg_1_1.jpg)",
-                                    backgroundRepeat: "no-repeat",
-                                    backgroundSize: "cover",
-                                }}
-                            >
-
+                            <div className="th-hero-bg" aria-label="House of Andalus introduction background">
+                                <video
+                                    className="hero-video"
+                                    src="/assets/img/homev.mp4"
+                                    autoPlay
+                                    muted
+                                    loop
+                                    playsInline
+                                    preload="auto"
+                                    style={{
+                                        width: '100%',
+                                        height: '100%',
+                                        objectFit: 'cover',
+                                        filter: 'brightness(55%) saturate(95%) contrast(105%)',
+                                        boxShadow: 'inset 0 0 200px rgba(0,0,0,0.6)'
+                                    }}
+                                />
                             </div>
                             <div className="container">
                                 <div className="hero-style1">
@@ -106,14 +114,24 @@ function BannerOne() {
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className="hero-inner">
-                            <div
-                                className="th-hero-bg"
-                                style={{
-                                    backgroundImage: "url(/assets/img/hero/hero_bg_1_2.jpg)", 
-                                    backgroundRepeat: "no-repeat",
-                                    backgroundSize: "cover",
-                                }}
-                            ></div>
+                            <div className="th-hero-bg" aria-label="House of Andalus introduction background">
+                                <video
+                                    className="hero-video"
+                                    src="/assets/img/homev.mp4"
+                                    autoPlay
+                                    muted
+                                    loop
+                                    playsInline
+                                    preload="auto"
+                                    style={{
+                                        width: '100%',
+                                        height: '100%',
+                                        objectFit: 'cover',
+                                        filter: 'brightness(55%) saturate(95%) contrast(105%)',
+                                        boxShadow: 'inset 0 0 200px rgba(0,0,0,0.6)'
+                                    }}
+                                />
+                            </div>
                             <div className="container">
                                 <div className="hero-style1">
                                     <span
@@ -148,14 +166,24 @@ function BannerOne() {
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className="hero-inner">
-                            <div
-                                className="th-hero-bg"
-                                style={{
-                                    backgroundImage: "url(/assets/img/hero/hero_bg_1_3.jpg)",
-                                    backgroundRepeat: "no-repeat",
-                                    backgroundSize: "cover",
-                                }}
-                            ></div>
+                            <div className="th-hero-bg" aria-label="House of Andalus introduction background">
+                                <video
+                                    className="hero-video"
+                                    src="/assets/img/homev.mp4"
+                                    autoPlay
+                                    muted
+                                    loop
+                                    playsInline
+                                    preload="auto"
+                                    style={{
+                                        width: '100%',
+                                        height: '100%',
+                                        objectFit: 'cover',
+                                        filter: 'brightness(55%) saturate(95%) contrast(105%)',
+                                        boxShadow: 'inset 0 0 200px rgba(0,0,0,0.6)'
+                                    }}
+                                />
+                            </div>
                             <div className="container">
                                 <div className="hero-style1">
                                     <span

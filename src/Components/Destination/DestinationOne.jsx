@@ -7,16 +7,16 @@ import "swiper/css/effect-coverflow";
 import Link from 'next/link';
 
 const destinations = [
-  { id: 1, name: "Retreats", listings: 15, image: "/assets/img/destination/destination_1_1.jpg" },
-  { id: 2, name: "Holiday Home", listings: 22, image: "/assets/img/destination/destination_1_2.jpg" },
-  { id: 3, name: "Special Events", listings: 25, image: "/assets/img/destination/destination_1_3.jpg" },
-  { id: 4, name: "Join the Harvest", listings: 28, image: "/assets/img/destination/destination_1_4.jpg" },
-  { id: 5, name: "Wellness Experience", listings: 30, image: "/assets/img/destination/destination_1_5.jpg" },
-  { id: 6, name: "Heritage", listings: 15, image: "/assets/img/destination/destination_1_1.jpg" },
-  { id: 7, name: "Faith", listings: 22, image: "/assets/img/destination/destination_1_2.jpg" },
-  { id: 8, name: "Retreats", listings: 25, image: "/assets/img/destination/destination_1_3.jpg" },
-  { id: 9, name: "Olive Evenings", listings: 28, image: "/assets/img/destination/destination_1_4.jpg" },
-  { id: 10, name: "Community Circles", listings: 30, image: "/assets/img/destination/destination_1_5.jpg" },
+  { id: 1, name: "Retreats", listings: 15, image: "/assets/img/imagi/247x372/destination_1_1_2.jpg" },
+  { id: 2, name: "Holiday Home", listings: 22, image: "/assets/img/imagi/337x506/destination_1_2.jpg" },
+  { id: 3, name: "Special Events", listings: 25, image: "/assets/img/imagi/423x636/destination_1_3.jpg" },
+  { id: 4, name: "Join the Harvest", listings: 28, image: "/assets/img/imagi/337x506/destination_1_2_3.jpg" },
+  { id: 5, name: "Wellness Experience", listings: 30, image: "/assets/img/imagi/247x372/destination_1_1_3.jpg" },
+  { id: 6, name: "Heritage", listings: 15, image: "/assets/img/imagi/247x372/destination_1_1.jpg" },
+  { id: 7, name: "Faith", listings: 22, image: "/assets/img/imagi/337x506/destination_1_2_2.jpg" },
+  { id: 8, name: "Retreats", listings: 25, image: "/assets/img/imagi/423x636/destination_1_3.jpg" },
+  { id: 9, name: "Olive Evenings", listings: 28, image: "/assets/img/imagi/337x506/destination_1_2.jpg" },
+  { id: 10, name: "Community Circles", listings: 30, image: "/assets/img/imagi/337x506/destination_1_2_4.jpg" },
 ];
 
 const sliderOptions = {

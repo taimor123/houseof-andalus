@@ -10,16 +10,16 @@ const CategoryOne = () => {
   const swiperRef = useRef(null);
 
   const categories = [
-    { id: 1, title: "Couples Retreat", imgSrc: "/assets/img/category/category_1_1.jpg" },
-    { id: 2, title: "Writers Retreat", imgSrc: "/assets/img/category/category_1_2.jpg" },
-    { id: 3, title: "Leadership Retreat", imgSrc: "/assets/img/category/category_1_3.jpg" },
-    { id: 4, title: "Men Retreat", imgSrc: "/assets/img/category/category_1_4.jpg" },
-    { id: 5, title: "Women Retreat", imgSrc: "/assets/img/category/category_1_5.jpg" },
-    { id: 6, title: "Custom Retreats", imgSrc: "/assets/img/category/category_1_1.jpg" },
-    { id: 7, title: "Dhikr Walks", imgSrc: "/assets/img/category/category_1_2.jpg" },
-    { id: 8, title: "Cooking Class", imgSrc: "/assets/img/category/category_1_3.jpg" },
-    { id: 9, title: "Wellness", imgSrc: "/assets/img/category/category_1_4.jpg" },
-    { id: 10, title: "Harvest", imgSrc: "/assets/img/category/category_1_5.jpg" },
+    { id: 1, title: "Couples Retreat", imgSrc: "/assets/img/imagi/312x311/category_1_1.jpg" }, 
+    { id: 2, title: "Writers Retreat", imgSrc: "/assets/img/imagi/312x310/category_1_2.jpg" },
+    { id: 3, title: "Leadership Retreat", imgSrc: "/assets/img/imagi/313x313/category_1_3.jpg" },
+    { id: 4, title: "Men Retreat", imgSrc: "/assets/img/imagi/312x309/category_1_4.jpg" },
+    { id: 5, title: "Women Retreat", imgSrc: "/assets/img/imagi/312x311/category_1_1_3.jpg" },
+    { id: 6, title: "Custom Retreats", imgSrc: "/assets/img/imagi/312x311/category_1_1_2.jpg" },
+    { id: 7, title: "Dhikr Walks", imgSrc: "/assets/img/imagi/312x310/category_1_2_2.jpg" },
+    { id: 8, title: "Cooking Class", imgSrc: "/assets/img/imagi/313x313/category_1_3_2.jpg" },
+    { id: 9, title: "Harvest", imgSrc: "/assets/img/imagi/312x309/category_1_4_2.jpg" },
+    // { id: 10, title: "Harvest", imgSrc: "/assets/img/category/category_1_5.jpg" },
   ];
 
   useEffect(() => {
@@ -75,7 +75,7 @@ const CategoryOne = () => {
   return (
     <section
       className="category-area bg-top-center"
-      style={{ backgroundImage: "url(/assets/img/bg/category_bg_1.png)", backgroundRepeat: "no-repeat" }}
+      // style={{ backgroundImage: "url(/assets/img/imagi/1920x632/1.jpg)", backgroundRepeat: "no-repeat" }}
     >
       <div className="container th-container">
         <div className="title-area text-center">

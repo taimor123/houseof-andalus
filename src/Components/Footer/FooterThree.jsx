@@ -256,7 +256,7 @@ function FooterThree() {
                     <div className="row justify-content-between align-items-center">
                         <div className="col-md-6">
                             <p className="copyright-text">
-                                Copyright 2025 <Link href="/">Tourm</Link>. All Rights
+                                Copyright 2025 <Link href="/">House of Andalus</Link>. All Rights
                                 Reserved.
                             </p>
                         </div>
