@@ -22,24 +22,17 @@ function AboutFour() {
                <div className="col-xl-5">
                   <div className="ps-xl-4">
                      <div className="title-area mb-20">
-                        <span className="sub-title style1 ">Welcome To Tourm</span>
+                        <span className="sub-title style1 ">Welcome To House of Andalus</span>
                         <h2 className="sec-title mb-20 pe-xl-5 me-xl-5 heading">
-                           We are world reputeted travel agency
+                           We are a heritage-inspired retreat home
                         </h2>
                      </div>
                      <p className="pe-xl-5">
-                        There are many variations of passages of available but the majority
-                        have suffered alteration in some form, by injected hum randomised
-                        words.
+                        There are many reflections of journeys here, but each finds peace in remembrance, reflection, and rootedness.
                      </p>
                      <p className="mb-30 pe-xl-5">
                         {" "}
-                        Leiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                        ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                        aliquip ex ea commodo consequat. Duis aute irure dolor in
-                        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                        culpa qui officia deserunt.
+                        Life at The House of Andalus invites stillness, reflection, and renewal. Every experience is designed to nurture the body, calm the mind, and awaken the heart to remembrance. Here, peace is not distant — it lives in every detail, every gathering, and every shared moment. Each stay becomes a gentle return to what truly matters.
                      </p>
                      <div className="about-item-wrap">
                         <div className="about-item style2">
