@@ -8,8 +8,8 @@ import Link from 'next/link';
 
 // Placeholder retreats list (replace with dynamic data later)
 const upcomingRetreats = [
-  { id: 1, title: 'Couples&rsquo; Retreat: A Fine Romance', date: 'Mar 14-18, 2026', fee: 'From €1,250', summary: 'Reconnect hearts through guided practices, wellness, and nature.' },
-  { id: 2, title: 'Writers&rsquo; Retreat: Return To Voice', date: 'Apr 09-14, 2026', fee: 'From €980', summary: 'Ignite creativity with mentorship, silent hours, and Andalusian trails.' },
+  { id: 1, title: 'Couples Retreat: A Fine Romance', date: 'Mar 14-18, 2026', fee: 'From €1,250', summary: 'Reconnect hearts through guided practices, wellness, and nature.' },
+  { id: 2, title: 'Writers Retreat: Return To Voice', date: 'Apr 09-14, 2026', fee: 'From €980', summary: 'Ignite creativity with mentorship, silent hours, and Andalusian trails.' },
   { id: 3, title: 'Leadership Retreat: Conscious Authority', date: 'May 20-24, 2026', fee: 'From €1,450', summary: 'Lead with taqwa and clarity in reflective circles and guided workshops.' },
 ];
 

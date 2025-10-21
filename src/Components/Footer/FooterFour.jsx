@@ -112,15 +112,15 @@ function FooterFour() {
                                         </div>
                                         <div className="details">
                                             <p>
-                                                <a href="tel:+01234567890" className="info-box_link">
-                                                    +01 234 567 890
+                                                <a href="tel:+34 000 000 000" className="info-box_link">
+                                                    +34 000 000 000
                                                 </a>
                                             </p>
-                                            <p>
+                                            {/* <p>
                                                 <a href="tel:+09876543210" className="info-box_link">
                                                     +09 876 543 210
                                                 </a>
-                                            </p>
+                                            </p> */}
                                         </div>
                                     </div>
                                     <div className="info-box_text">
@@ -130,20 +130,20 @@ function FooterFour() {
                                         <div className="details">
                                             <p>
                                                 <a
-                                                    href="mailto:mailinfo00@tourm.com"
+                                                    href="mailto:hello@houseofandalus.com"
                                                     className="info-box_link"
                                                 >
-                                                    mailinfo00@tourm.com
+                                                    hello@houseofandalus.com
                                                 </a>
                                             </p>
-                                            <p>
+                                            {/* <p>
                                                 <a
                                                     href="mailto:support24@tourm.com"
                                                     className="info-box_link"
                                                 >
                                                     support24@tourm.com
                                                 </a>
-                                            </p>
+                                            </p> */}
                                         </div>
                                     </div>
                                     <div className="info-box_text">
@@ -151,7 +151,7 @@ function FooterFour() {
                                             <img src="/assets/img/icon/location-dot.svg" alt="img" />
                                         </div>
                                         <div className="details">
-                                            <p>789 Inner Lane, Holy park, California, USA</p>
+                                            <p>Andalucia, Spain x7792 street</p>
                                         </div>
                                     </div>
                                 </div>

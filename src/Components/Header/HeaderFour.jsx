@@ -41,7 +41,7 @@ function HeaderFour() {
                            <ul>
                               <li className="d-none d-xl-inline-block">
                                  <i className="fa-sharp fa-regular  fa-location-dot" />
-                                 <span>45 New Eskaton Road, Austria</span>
+                                 <span>Andalucia, Spain x7792 street</span>
                               </li>
                               <li className="d-none d-xl-inline-block">
                                  <i className="fa-regular fa-clock" />
