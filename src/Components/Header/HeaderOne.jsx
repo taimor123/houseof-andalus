@@ -105,11 +105,11 @@ function HeaderOne() {
                                 <div className="col-auto me-xl-auto">
                                     <nav className="main-menu d-none d-xl-inline-block">
                                         <ul>
-                                            <li className="menu-item-has-children mega-menu-wrap">
-                                                <Link className="active" href="/">
+                                            <li className="">
+                                                <Link className="" href="/">
                                                     Home
                                                 </Link>
-                                                <ul className="mega-menu mega-menu-content">
+                                                {/* <ul className="mega-menu mega-menu-content">
                                                     <li>
                                                         <div className="container">
                                                             <div className="row gy-4">
@@ -208,12 +208,18 @@ function HeaderOne() {
                                                             </div>
                                                         </div>
                                                     </li>
-                                                </ul>
+                                                </ul> */}
                                             </li>
-                                            <li>
+                                            {/* <li>
                                                 <Link href="/about">About Us</Link>
-                                            </li>
-                                            <li className="menu-item-has-children">
+                                            </li> */}
+                                             <li>
+                                                <Link href="/the-house">The House</Link>
+                                            </li> 
+                                            <li>
+                                                <Link href="/book-your-stay">Book Your Stay</Link>
+                                            </li> 
+                                            {/* <li className="menu-item-has-children">
                                                 <Link href="#">Destination</Link>
                                                 <ul className="sub-menu">
                                                     <li>
@@ -225,7 +231,7 @@ function HeaderOne() {
                                                         </Link>
                                                     </li>
                                                 </ul>
-                                            </li>
+                                            </li> */}
                                             <li className="menu-item-has-children">
                                                 <Link href="#">Service</Link>
                                                 <ul className="sub-menu">
