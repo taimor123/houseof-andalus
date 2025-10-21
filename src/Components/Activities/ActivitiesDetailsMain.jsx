@@ -72,7 +72,7 @@ function ActivitiesDetailsMain() {
                             </div>
                             <div className="page-content">
                                 <div className="page-meta mb-45">
-                                    <Link className="page-tag mr-5" to="/tour">
+                                    <Link className="page-tag mr-5" href="/tour">
                                         Featured
                                     </Link>
                                     <span className="ratting">
@@ -135,7 +135,7 @@ function ActivitiesDetailsMain() {
                                             </div>
                                             <div className="content">
                                                 <span className="title">Free Cancellation</span>
-                                                <Link to="/#" className="line-btn">
+                                                <Link href="/#" className="line-btn">
                                                     Learn more
                                                 </Link>
                                             </div>
@@ -424,42 +424,42 @@ function ActivitiesDetailsMain() {
                                 <h3 className="widget_title">Categories</h3>
                                 <ul>
                                     <li>
-                                        <Link to="/blog">
+                                        <Link href="/blog">
                                             <img src="/assets/img/theme-img/map.svg" alt="" />
                                             City Tour
                                         </Link>
                                         <span>(8)</span>
                                     </li>
                                     <li>
-                                        <Link to="/blog">
+                                        <Link href="/blog">
                                             <img src="/assets/img/theme-img/map.svg" alt="" />
                                             Beach Tours
                                         </Link>
                                         <span>(6)</span>
                                     </li>
                                     <li>
-                                        <Link to="/blog">
+                                        <Link href="/blog">
                                             <img src="/assets/img/theme-img/map.svg" alt="" />
                                             Wildlife Tours
                                         </Link>
                                         <span>(2)</span>
                                     </li>
                                     <li>
-                                        <Link to="/blog">
+                                        <Link href="/blog">
                                             <img src="/assets/img/theme-img/map.svg" alt="" />
                                             News &amp; Tips
                                         </Link>
                                         <span>(7)</span>
                                     </li>
                                     <li>
-                                        <Link to="/blog">
+                                        <Link href="/blog">
                                             <img src="/assets/img/theme-img/map.svg" alt="" />
                                             Adventure Tours
                                         </Link>
                                         <span>(9)</span>
                                     </li>
                                     <li>
-                                        <Link to="/blog">
+                                        <Link href="/blog">
                                             <img src="/assets/img/theme-img/map.svg" alt="" />
                                             Mountain Tours
                                         </Link>
@@ -483,7 +483,7 @@ function ActivitiesDetailsMain() {
                                         </li>
                                     </ul>
                                 </div>
-                                <Link to="/contact" className="th-btn th-icon">
+                                <Link href="/contact" className="th-btn th-icon">
                                     Book Now
                                 </Link>
                                 <span className="review">
@@ -494,14 +494,14 @@ function ActivitiesDetailsMain() {
                             <div className="widget widget_tag_cloud  ">
                                 <h3 className="widget_title">Popular Tags</h3>
                                 <div className="tagcloud">
-                                    <Link to="/blog">Tour</Link>
-                                    <Link to="/blog">Adventure</Link>
-                                    <Link to="/blog">Rent</Link>
-                                    <Link to="/blog">Innovate</Link>
-                                    <Link to="/blog">Hotel</Link>
-                                    <Link to="/blog">Modern</Link>
-                                    <Link to="/blog">Luxury</Link>
-                                    <Link to="/blog">Travel</Link>
+                                    <Link href="/blog">Tour</Link>
+                                    <Link href="/blog">Adventure</Link>
+                                    <Link href="/blog">Rent</Link>
+                                    <Link href="/blog">Innovate</Link>
+                                    <Link href="/blog">Hotel</Link>
+                                    <Link href="/blog">Modern</Link>
+                                    <Link href="/blog">Luxury</Link>
+                                    <Link href="/blog">Travel</Link>
                                 </div>
                             </div>
                             <div
@@ -517,11 +517,11 @@ function ActivitiesDetailsMain() {
                                         </div>
                                         <div className="offer">
                                             <h6 className="offer-title">You Get Online support</h6>
-                                            <Link className="offter-num" to={+256214203215}>
+                                            <Link className="offter-num" href="tel:+256214203215">
                                                 +256 214 203 215
                                             </Link>
                                         </div>
-                                        <Link to="/contact" className="th-btn style2 th-icon">
+                                        <Link href="/contact" className="th-btn style2 th-icon">
                                             Read More
                                         </Link>
                                     </div>
