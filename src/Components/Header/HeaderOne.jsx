@@ -234,7 +234,10 @@ function HeaderOne() {
                                              <li>
                                                 <Link href="/about">About Us</Link>
                                             </li>
-                                            <li className="menu-item-has-children">
+                                            <li>
+                                                <Link href="/gallery">Gallery</Link>
+                                            </li>
+                                            {/* <li className="menu-item-has-children">
                                                 <Link href="#">Service</Link>
                                                 <ul className="sub-menu">
                                                     <li>
@@ -315,7 +318,7 @@ function HeaderOne() {
                                                         <Link href="/error">Error Page</Link>
                                                     </li>
                                                 </ul>
-                                            </li>
+                                            </li> */}
                                             <li className="menu-item-has-children">
                                                 <Link href="#">Blog</Link>
                                                 <ul className="sub-menu">
