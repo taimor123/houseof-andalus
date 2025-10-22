@@ -148,7 +148,7 @@ function FooterOne() {
                                 <div className="sidebar-gallery">
                                     <div className="gallery-thumb">
                                         <img
-                                            src="/assets/img/widget/gallery_1_1.jpg"
+                                            src="/assets/img/Gallery2/Home 1.png"
                                             alt="Gallery"
                                         />
                                         <Link
@@ -161,7 +161,7 @@ function FooterOne() {
                                     </div>
                                     <div className="gallery-thumb">
                                         <img
-                                            src="/assets/img/widget/gallery_1_2.jpg"
+                                            src="/assets/img/Gallery2/Home 2.png"
                                             alt="Gallery"
                                         />
                                         <Link
@@ -174,7 +174,7 @@ function FooterOne() {
                                     </div>
                                     <div className="gallery-thumb">
                                         <img
-                                            src="/assets/img/widget/gallery_1_3.jpg"
+                                            src="/assets/img/Gallery2/Home 3.png"
                                             alt="Gallery"
                                         />
                                         <Link
@@ -187,7 +187,7 @@ function FooterOne() {
                                     </div>
                                     <div className="gallery-thumb">
                                         <img
-                                            src="/assets/img/widget/gallery_1_4.jpg"
+                                            src="/assets/img/Gallery2/Home 4.png"
                                             alt="Gallery"
                                         />
                                         <Link
@@ -200,7 +200,7 @@ function FooterOne() {
                                     </div>
                                     <div className="gallery-thumb">
                                         <img
-                                            src="/assets/img/widget/gallery_1_5.jpg"
+                                            src="/assets/img/Gallery2/Home 5.png"
                                             alt="Gallery"
                                         />
                                         <Link
@@ -213,7 +213,7 @@ function FooterOne() {
                                     </div>
                                     <div className="gallery-thumb">
                                         <img
-                                            src="/assets/img/widget/gallery_1_6.jpg"
+                                            src="/assets/img/Gallery2/Home 6.png"
                                             alt="Gallery"
                                         />
                                         <Link

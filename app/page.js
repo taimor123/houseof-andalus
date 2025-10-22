@@ -4,7 +4,7 @@ import Booking from '../src/Components/Booking/Booking';
 import CategoryOne from '../src/Components/Category/CategoryOne';
 import DestinationOne from '../src/Components/Destination/DestinationOne';
 import AboutOne from '../src/Components/About/AboutOne';
-import TourOne from '../src/Components/Tour/TourOne';
+import TourTwo from '../src/Components/Tour/TourTwo';
 import GalleryOne from '../src/Components/Gallery/GalleryOne';
 import CounterOne from '../src/Components/Counter/CounterOne';
 import TourGuide from '../src/Components/Guide/TourGuide';
@@ -23,7 +23,7 @@ export default function HomePage() {
       <CategoryOne />
       <DestinationOne />
       <AboutOne />
-      <TourOne />
+      <TourTwo />
       <GalleryOne />
       <CounterOne />
       {/* <TourGuide /> */}

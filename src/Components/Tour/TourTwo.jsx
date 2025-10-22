@@ -5,6 +5,7 @@ import { Pagination } from "swiper/modules";
 import 'swiper/css';
 import Link from 'next/link';
 
+// Retains TourItem for other tabs (Hotel, Transport) if needed; first tab now uses retreat cards from TourOne.
 const TourItem = ({ image, title, link, rating, price, duration, bookLink }) => (
     <div className="tour-box th-ani gsap-cursor">
         <div className="tour-box_img global-img">
@@ -42,11 +43,63 @@ const TourItem = ({ image, title, link, rating, price, duration, bookLink }) => 
 function TourTwo() {
     const [activeTab, setActiveTab] = useState('nav-step1');
 
+    // Retreat content adapted from TourOne component
+    const retreats = [
+        {
+            key: 'couple',
+            title: 'Couple Retreat',
+            image: '/assets/img/Home/Most Popular Tour/1 Most Popular Tour Couple Retreat.png',
+            description: 'Find balance and connection in Andalusia’s serene embrace.',
+            icon: 'fa-heart',
+            label: 'Together'
+        },
+        {
+            key: 'writer',
+            title: 'Writer Retreat',
+            image: '/assets/img/Home/Most Popular Tour/2 Most Popular Tour Writer Retreat.png',
+            description: 'Let inspiration awaken where silence meets the soul.',
+            icon: 'fa-feather',
+            label: 'Inspire'
+        },
+        {
+            key: 'leadership',
+            title: 'Leadership Retreat',
+            image: '/assets/img/Home/Most Popular Tour/3 Most Popular Tour Leadership Retreat.png',
+            description: 'Lead with clarity born from stillness and reflection.',
+            icon: 'fa-chess-king',
+            label: 'Empower'
+        },
+        {
+            key: 'men',
+            title: 'Men Retreat',
+            image: '/assets/img/Home/Most Popular Tour/4 Most Popular Tour Men Retreat.png',
+            description: 'Renew strength and spirit through brotherhood and faith.',
+            icon: 'fa-people-arrows',
+            label: 'Strength'
+        },
+        {
+            key: 'women',
+            title: 'Women Retreat',
+            image: '/assets/img/Home/Most Popular Tour/5 Most Popular Tour Women Retreat.png',
+            description: 'Awaken inner grace through calm, care, and reflection.',
+            icon: 'fa-dove',
+            label: 'Grace'
+        },
+        {
+            key: 'custom',
+            title: 'Custom Retreat',
+            image: '/assets/img/Home/Most Popular Tour/6 Most Popular Tour Customer Retreat.png',
+            description: 'Shape your own path to peace, purpose, and renewal.',
+            icon: 'fa-pen-nib',
+            label: 'Create'
+        }
+    ];
+
     return (
         <section
             className="tour-area3 position-relative bg-top-center overflow-hidden space"
             id="service-sec"
-            style={{ backgroundImage: "url('/assets/img/bg/tour_bg_1.jpg", backgroundRepeat:"no-repeat" }}
+            // style={{ backgroundImage: "url('/assets/img/bg/tour_bg_1.jpg", backgroundRepeat:"no-repeat" }}
         >
             <div className="container">
                 <div className="row justify-content-center">
@@ -57,7 +110,7 @@ function TourTwo() {
                         </div>
                     </div>
                 </div>
-                <div className="nav nav-tabs tour-tabs" id="nav-tab" role="tablist">
+                {/* <div className="nav nav-tabs tour-tabs" id="nav-tab" role="tablist">
                     <button
                         className={`nav-link th-btn ${activeTab === 'nav-step1' ? 'active' : ''}`}
                         id="nav-step1-tab"
@@ -91,7 +144,7 @@ function TourTwo() {
                         <img src="/assets/img/icon/tour_icon_3.svg" alt="" />
                         Transport
                     </button>
-                </div>
+                </div> */}
                 <div className="tab-content" id="nav-tabContent">
                     <div className={`tab-pane fade ${activeTab === 'nav-step1' ? 'show active' : ''}`} id="nav-step1" role="tabpanel">
                         <div className="slider-area tour-slider slider-drag-wrap">
@@ -112,95 +165,29 @@ function TourTwo() {
                                 }}
                                 className="swiper th-slider has-shadow"
                             >
-                                <SwiperSlide>
-                                    <TourItem
-                                        image="/assets/img/tour/tour_box_1.jpg"
-                                        title="Greece Tour Package"
-                                        link="/tour-details"
-                                        rating={5.0}
-                                        price={980}
-                                        duration={7}
-                                        bookLink="/contact"
-                                    />
-                                </SwiperSlide>
-                                <SwiperSlide>
-                                    <TourItem
-                                        image="/assets/img/tour/tour_box_2.jpg"
-                                        title="Italy Tour Package"
-                                        link="/tour-details"
-                                        rating={5.0}
-                                        price={980}
-                                        duration={7}
-                                        bookLink="/contact"
-                                    />
-                                </SwiperSlide>
-                                <SwiperSlide>
-                                    <TourItem
-                                        image="/assets/img/tour/tour_box_3.jpg"
-                                        title="Dubai Tour Package"
-                                        link="/tour-details"
-                                        rating={5.0}
-                                        price={980}
-                                        duration={7}
-                                        bookLink="/contact"
-                                    />
-                                </SwiperSlide>
-                                <SwiperSlide>
-                                    <TourItem
-                                        image="/assets/img/tour/tour_box_4.jpg"
-                                        title="Paris Tour Package"
-                                        link="/tour-details"
-                                        rating={5.0}
-                                        price={980}
-                                        duration={7}
-                                        bookLink="/contact"
-                                    />
-                                </SwiperSlide>
-                                <SwiperSlide>
-                                    <TourItem
-                                        image="/assets/img/tour/tour_box_1.jpg"
-                                        title="Greece Tour Package"
-                                        link="/tour-details"
-                                        rating={5.0}
-                                        price={980}
-                                        duration={7}
-                                        bookLink="/contact"
-                                    />
-                                </SwiperSlide>
-                                <SwiperSlide>
-                                    <TourItem
-                                        image="/assets/img/tour/tour_box_2.jpg"
-                                        title="Italy Tour Package"
-                                        link="/tour-details"
-                                        rating={5.0}
-                                        price={980}
-                                        duration={7}
-                                        bookLink="/contact"
-                                    />
-                                </SwiperSlide>
-                                <SwiperSlide>
-                                    <TourItem
-                                        image="/assets/img/tour/tour_box_3.jpg"
-                                        title="Dubai Tour Package"
-                                        link="/tour-details"
-                                        rating={5.0}
-                                        price={980}
-                                        duration={7}
-                                        bookLink="/contact"
-                                    />
-                                </SwiperSlide>
-                                <SwiperSlide>
-                                    <TourItem
-                                        image="/assets/img/tour/tour_box_4.jpg"
-                                        title="Paris Tour Package"
-                                        link="/tour-details"
-                                        rating={5.0}
-                                        price={980}
-                                        duration={7}
-                                        bookLink="/contact"
-                                    />
-                                </SwiperSlide>
-                                {/* Add more SwiperSlide items here */}
+                                {retreats.map((r) => (
+                                    <SwiperSlide key={r.key}>
+                                        <div className="tour-box th-ani gsap-cursor">
+                                            <div className="tour-box_img global-img">
+                                                <img src={r.image} alt={r.title} />
+                                            </div>
+                                            <div className="tour-content">
+                                                <h3 className="box-title">
+                                                    <Link href="/tour-details">{r.title}</Link>
+                                                </h3>
+                                                <p className="tour-description">{r.description}</p>
+                                                <div className="tour-action">
+                                                    <span>
+                                                        <i className={`fa-solid ${r.icon}`} aria-hidden="true" /> {r.label}
+                                                    </span>
+                                                    <Link href="/contact" className="th-btn style4 th-icon">
+                                                        Book Now
+                                                    </Link>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </SwiperSlide>
+                                ))}
                             </Swiper>
                         </div>
                     </div>

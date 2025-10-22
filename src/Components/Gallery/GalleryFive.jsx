@@ -42,13 +42,13 @@ function GalleryFive() {
                         <SwiperSlide>
                             <div className="gallery-thumb style2 global-img">
                                 <img
-                                    src="/assets/img/gallery/gallery_4_1.jpg"
+                                    src="/assets/img/About us/About 4.png"
                                     alt="Gallery"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_4_1.jpg', e)}
+                                    onClick={(e) => openModal('/assets/img/About us/About 4.png', e)}
                                 />
-                                <a href="/assets/img/gallery/gallery_4_1.jpg"
+                                <a href="/assets/img/About us/About 4.png"
                                     className="gallery-btn popup-image"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_4_1.jpg', e)}
+                                    onClick={(e) => openModal('/assets/img/About us/About 4.png', e)}
                                 >
                                     <i className="fab fa-instagram" />
                                 </a>
@@ -57,13 +57,13 @@ function GalleryFive() {
                         <SwiperSlide>
                             <div className="gallery-thumb style2 global-img">
                                 <img
-                                    src="/assets/img/gallery/gallery_4_2.jpg"
+                                    src="/assets/img/About us/About 5.png"
                                     alt="Gallery"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_4_2.jpg', e)}
+                                    onClick={(e) => openModal('/assets/img/About us/About 5.png', e)}
                                 />
-                                <a href="/assets/img/gallery/gallery_4_2.jpg"
+                                <a href="/assets/img/About us/About 5.png"
                                     className="gallery-btn popup-image"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_4_2.jpg', e)}
+                                    onClick={(e) => openModal('/assets/img/About us/About 5.png', e)}
                                 >
                                     <i className="fab fa-instagram" />
                                 </a>
@@ -72,13 +72,13 @@ function GalleryFive() {
                         <SwiperSlide>
                             <div className="gallery-thumb style2 global-img">
                                 <img
-                                    src="/assets/img/gallery/gallery_4_3.jpg"
+                                    src="/assets/img/About us/About 6.png"
                                     alt="Gallery"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_4_3.jpg', e)}
+                                    onClick={(e) => openModal('/assets/img/About us/About 6.png', e)}
                                 />
-                                <a href="/assets/img/gallery/gallery_4_3.jpg"
+                                <a href="/assets/img/About us/About 6.png"
                                     className="gallery-btn popup-image"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_4_3.jpg', e)}
+                                    onClick={(e) => openModal('/assets/img/About us/About 6.png', e)}
                                 >
                                     <i className="fab fa-instagram" />
                                 </a>
@@ -87,13 +87,13 @@ function GalleryFive() {
                         <SwiperSlide>
                             <div className="gallery-thumb style2 global-img">
                                 <img
-                                    src="/assets/img/gallery/gallery_4_4.jpg"
+                                    src="/assets/img/About us/About 7.png"
                                     alt="Gallery"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_4_4.jpg', e)}
+                                    onClick={(e) => openModal('/assets/img/About us/About 7.png', e)}
                                 />
-                                <a href="/assets/img/gallery/gallery_4_4.jpg"
+                                <a href="/assets/img/About us/About 7.png"
                                     className="gallery-btn popup-image"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_4_4.jpg', e)}
+                                    onClick={(e) => openModal('/assets/img/About us/About 7.png', e)}
                                 >
                                     <i className="fab fa-instagram" />
                                 </a>
@@ -102,13 +102,13 @@ function GalleryFive() {
                         <SwiperSlide>
                             <div className="gallery-thumb style2 global-img">
                                 <img
-                                    src="/assets/img/gallery/gallery_4_5.jpg"
+                                    src="/assets/img/About us/About 8.png"
                                     alt="Gallery"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_4_5.jpg', e)}
+                                    onClick={(e) => openModal('/assets/img/About us/About 8.png', e)}
                                 />
-                                <a href="/assets/img/gallery/gallery_4_5.jpg"
+                                <a href="/assets/img/About us/About 8.png"
                                     className="gallery-btn popup-image"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_4_5.jpg', e)}
+                                    onClick={(e) => openModal('/assets/img/About us/About 8.png', e)}
                                 >
                                     <i className="fab fa-instagram" />
                                 </a>
@@ -117,13 +117,13 @@ function GalleryFive() {
                         <SwiperSlide>
                             <div className="gallery-thumb style2 global-img">
                                 <img
-                                    src="/assets/img/gallery/gallery_4_1.jpg"
+                                    src="/assets/img/About us/About 9.png"
                                     alt="Gallery"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_4_1.jpg', e)}
+                                    onClick={(e) => openModal('/assets/img/About us/About 9.png', e)}
                                 />
-                                <a href="/assets/img/gallery/gallery_4_1.jpg"
+                                <a href="/assets/img/About us/About 9.png"
                                     className="gallery-btn popup-image"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_4_1.jpg', e)}
+                                    onClick={(e) => openModal('/assets/img/About us/About 9.png', e)}
                                 >
                                     <i className="fab fa-instagram" />
                                 </a>
@@ -132,13 +132,13 @@ function GalleryFive() {
                         <SwiperSlide>
                             <div className="gallery-thumb style2 global-img">
                                 <img
-                                    src="/assets/img/gallery/gallery_4_2.jpg"
+                                    src="/assets/img/About us/About 10.png"
                                     alt="Gallery"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_4_2.jpg', e)}
+                                    onClick={(e) => openModal('/assets/img/About us/About 10.png', e)}
                                 />
-                                <a href="/assets/img/gallery/gallery_4_2.jpg"
+                                <a href="/assets/img/About us/About 10.png"
                                     className="gallery-btn popup-image"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_4_2.jpg', e)}
+                                    onClick={(e) => openModal('/assets/img/About us/About 10.png', e)}
                                 >
                                     <i className="fab fa-instagram" />
                                 </a>
@@ -147,13 +147,13 @@ function GalleryFive() {
                         <SwiperSlide>
                             <div className="gallery-thumb style2 global-img">
                                 <img
-                                    src="/assets/img/gallery/gallery_4_3.jpg"
+                                    src="/assets/img/About us/About 11.png"
                                     alt="Gallery"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_4_3.jpg', e)}
+                                    onClick={(e) => openModal('/assets/img/About us/About 11.png', e)}
                                 />
-                                <a href="/assets/img/gallery/gallery_4_3.jpg"
+                                <a href="/assets/img/About us/About 11.png"
                                     className="gallery-btn popup-image"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_4_3.jpg', e)}
+                                    onClick={(e) => openModal('/assets/img/About us/About 11.png', e)}
                                 >
                                     <i className="fab fa-instagram" />
                                 </a>
@@ -162,13 +162,13 @@ function GalleryFive() {
                         <SwiperSlide>
                             <div className="gallery-thumb style2 global-img">
                                 <img
-                                    src="/assets/img/gallery/gallery_4_4.jpg"
+                                    src="/assets/img/About us/About 12.png"
                                     alt="Gallery"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_4_4.jpg', e)}
+                                    onClick={(e) => openModal('/assets/img/About us/About 12.png', e)}
                                 />
-                                <a href="/assets/img/gallery/gallery_4_4.jpg"
+                                <a href="/assets/img/About us/About 12.png"
                                     className="gallery-btn popup-image"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_4_4.jpg', e)}
+                                    onClick={(e) => openModal('/assets/img/About us/About 12.png', e)}
                                 >
                                     <i className="fab fa-instagram" />
                                 </a>
@@ -177,33 +177,33 @@ function GalleryFive() {
                         <SwiperSlide>
                             <div className="gallery-thumb style2 global-img">
                                 <img
-                                    src="/assets/img/gallery/gallery_4_5.jpg"
+                                    src="/assets/img/About us/About 13.png"
                                     alt="Gallery"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_4_5.jpg', e)}
+                                    onClick={(e) => openModal('/assets/img/About us/About 13.png', e)}
                                 />
-                                <a href="/assets/img/gallery/gallery_4_5.jpg"
+                                <a href="/assets/img/About us/About 13.png"
                                     className="gallery-btn popup-image"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_4_5.jpg', e)}
+                                    onClick={(e) => openModal('/assets/img/About us/About 13.png', e)}
                                 >
                                     <i className="fab fa-instagram" />
                                 </a>
                             </div>
                         </SwiperSlide>
-                        <SwiperSlide>
+                        {/* <SwiperSlide>
                             <div className="gallery-thumb style2 global-img">
                                 <img
-                                    src="/assets/img/gallery/gallery_4_2.jpg"
+                                    src="/assets/img/About us/About 14.png"
                                     alt="Gallery"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_4_2.jpg', e)}
+                                    onClick={(e) => openModal('/assets/img/About us/About 14.png', e)}
                                 />
-                                <a href="/assets/img/gallery/gallery_4_2.jpg"
+                                <a href="/assets/img/About us/About 14.png"
                                     className="gallery-btn popup-image"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_4_2.jpg', e)}
+                                    onClick={(e) => openModal('/assets/img/About us/About 14.png', e)}
                                 >
                                     <i className="fab fa-instagram" />
                                 </a>
                             </div>
-                        </SwiperSlide>
+                        </SwiperSlide> */}
                     </Swiper>
                 </div>
             </div>

@@ -1,5 +1,5 @@
 "use client";
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import HeaderOne from '../../src/Components/Header/HeaderOne';
 import FooterFour from '../../src/Components/Footer/FooterFour';
 import ScrollToTop from '../../src/Components/ScrollToTop';
@@ -8,15 +8,47 @@ import Link from 'next/link';
 
 // Simple room data placeholder; replace with real data source later
 const rooms = [
-  { id: 1, name: 'Ibn Rushd', image: '/assets/img/normal/about_1_1.jpg' },
-  { id: 2, name: 'Ibn Arabi', image: '/assets/img/normal/about_1_2.jpg' },
-  { id: 3, name: 'Ibn Hazm', image: '/assets/img/normal/about_1_3.jpg' },
-  { id: 4, name: 'Ziryab', image: '/assets/img/normal/about_1_2.jpg' },
-  { id: 5, name: 'Wallada', image: '/assets/img/normal/about_1_1.jpg' },
-  { id: 6, name: 'Ibn Tufayl', image: '/assets/img/normal/about_1_3.jpg' },
+  { id: 1, name: 'Ibn Rushd', image: '/assets/img/the-house/Room 1.png' },
+  { id: 2, name: 'Ibn Arabi', image: '/assets/img/the-house/Room 2.png' },
+  { id: 3, name: 'Ibn Hazm', image: '/assets/img/the-house/Room 3.png' },
+  { id: 4, name: 'Ziryab', image: '/assets/img/the-house/Room 4.png' },
+  { id: 5, name: 'Wallada', image: '/assets/img/the-house/Room 5.png' },
+  { id: 6, name: 'Ibn Tufayl', image: '/assets/img/the-house/Room 6.png' },
 ];
 
 export default function TheHousePage() {
+  const introVideoRef = useRef(null);
+
+  // Auto-play video when it scrolls into view (with user gesture fallback for sound policies)
+  useEffect(() => {
+    const videoEl = introVideoRef.current;
+    if (!videoEl) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Attempt play; browsers may block if not muted until user interacts
+            const playPromise = videoEl.play();
+            if (playPromise && typeof playPromise.then === 'function') {
+              playPromise.catch(() => {
+                // If playback is blocked (likely due to sound), you could optionally mute then play
+                // videoEl.muted = true; videoEl.play(); // Uncomment if you prefer silent autoplay fallback
+              });
+            }
+          } else {
+            // Pause when out of view to save resources
+            if (!videoEl.paused) {
+              videoEl.pause();
+            }
+          }
+        });
+      },
+      { threshold: 0.4 }
+    );
+    observer.observe(videoEl);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <>
       <HeaderOne />
@@ -29,25 +61,36 @@ export default function TheHousePage() {
               <div className="col-xl-6 mb-40 mb-xl-0">
                 <div className="img-box1">
                   <div className="img1">
-                    <img src="/assets/img/normal/about_1_1.jpg" alt="The House" />
+                    <img src="/assets/img/the-house/Olive 1.png" alt="The House" />
                   </div>
                   <div className="img2">
-                    <img src="/assets/img/normal/about_1_2.jpg" alt="The House" />
+                    <img src="/assets/img/the-house/Olive 2.png" alt="The House" />
                   </div>
                   <div className="img3">
-                    <img src="/assets/img/normal/about_1_3.jpg" alt="The House" />
+                    <img src="/assets/img/the-house/Olive 3.png" alt="The House" />
                   </div>
                 </div>
               </div>
               <div className="col-xl-6">
                 <div className="ps-xl-4 ms-xl-2">
                   <div className="title-area mb-20 pe-xl-5 me-xl-5">
-                    <span className="sub-title style1">The House</span>
-                    <h1 className="sec-title mb-2 pe-xl-5 me-xl-5 heading">Why We Do What We Do</h1>
+                    <span className="sub-title style1">The Olive Garden of Andalus</span>
+                    <h1 className="sec-title mb-2 pe-xl-5 me-xl-5 heading">Why the Olive Tree</h1>
                   </div>
-                  <p className="sec-text mb-2">
-                  Why do we do what we do? The House of Andalus was born from a longing to live beautifully and meaningfully, to restore what modern life has stripped away: stillness, sincerity, and sacred connection. We respect that you, like us, believe that travel can serve a purpose: nourishing the soul as well as the earth beneath our feet. We merge the two platforms of wellness and legacy to promote personal health and the welfare of the ummah. Experience something out of the ordinary. Feel more alive. Be part of a community. Play. Ultimately reconnect with yourself, others and the world around you.
-                  </p>
+                <p className="sec-text mb-2">
+                  In the timeless valleys of Andalusia—where endless olive trees reach toward heaven—the spirit of legacy whispers through every grove. Here, The House of Andalus stands as a living monument to serenity, sincerity, and sacred connection, born from a longing to restore what modern life has taken away. It envisions an Olive Garden of Renewal—a sanctuary of learning and giving that revives the art and spirituality of olive cultivation, the ancient symbol of peace, faith, and sustenance.
+                </p>
+                <p className="sec-text mb-2">
+                  Each tree planted nourishes both land and soul, carrying forward the mission of wellness, knowledge, and community—the same values upon which Andalusia was built. Experience the extraordinary, restore the balance, and let your roots grow here in the Garden of Andalus—where faith meets earth, and giving becomes eternal.
+                </p>
+                <div className="mt-30 d-flex flex-wrap align-items-center" style={{ gap: '16px' }}>
+                  <Link href="/donate-tree" className="th-btn style3 th-icon" aria-label="Donate for a tree">
+                    Donate For A Tree
+                  </Link>
+                  <Link href="/plant-tree" className="th-btn style1 th-icon" aria-label="Plant a tree">
+                    Plant A Tree
+                  </Link>
+                </div>
                 </div>
               </div>
             </div>
@@ -89,11 +132,18 @@ export default function TheHousePage() {
                    <div className="row gy-4">
                                     <div className="col-12">
                                         <div className="blog-img">
-                                            <img
-                                                className="w-100"
-                                                src="/assets/img/blog/blog_inner_1.jpg"
-                                                alt="Blog Image"
-                                            />
+                      <video
+                        ref={introVideoRef}
+                        className="w-100"
+                        controls
+                        loop
+                        playsInline
+                        poster="/assets/img/blog/blog_inner_1.jpg"
+                        aria-label="House of Andalus Intro Video"
+                      >
+                        <source src="/assets/img/House%20of%20Andalus%20video%203.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                      </video>
                                         </div>
                                     </div>
                                 </div>
@@ -114,14 +164,16 @@ export default function TheHousePage() {
                     <h2 className="box-title mb-20">Rooted In Reverence</h2>
                     <p className="blog-text mb-40">This is our how: the way we live our name and reawaken your senses with offerings and experiences that are quietly transformative, gently restorative, and intentionally out of the ordinary.</p>
                     <div className="row gy-4 gx-4 mb-10">
-                      {[{title:'Ihsan with Heart',desc:'Intention guides design & stillness.'},
-                        {title:'Local Integrity, Global Vision',desc:'Roots Andalusian, reach the world.'},
-                        {title:'Sustainability as Spirituality',desc:'Land care as gratitude to the Maker.'},
-                        {title:'Emotional Hospitality',desc:'Adab in service: humility, grace, love.'}].map((v,i)=>(
-                        <div key={i} className="col-md-6 col-lg-3">
+                      {[
+                        {title:'Ihsan with Heart',desc:'Intention guides design & stillness.',image:'/assets/img/the-house/Ihsan with Heart.png'},
+                        {title:'Local Integrity, Global Vision',desc:'Roots Andalusian, reach the world.',image:'/assets/img/the-house/Local Integrity.png'},
+                        {title:'Sustainability as Spirituality',desc:'Land care as gratitude to the Maker.',image:'/assets/img/the-house/Sustainability.png'},
+                        {title:'Emotional Hospitality',desc:'Adab in service: humility, grace, love.',image:'/assets/img/the-house/Emotional.png'}
+                      ].map((v,i)=>(
+                        <div key={v.title} className="col-md-6 col-lg-3">
                           <div className="destination-item th-ani" aria-label={v.title}>
                             <div className="destination-item_img global-img">
-                              <img src="/assets/img/destination/destination_1_1.jpg" alt={v.title} />
+                              <img src={v.image} alt={v.title} />
                             </div>
                             <div className="destination-content">
                               <h6 className="destination-subtitle mb-10"><span>{v.title}</span></h6>
@@ -132,14 +184,16 @@ export default function TheHousePage() {
                       ))}
                     </div>
                     <div className="row gy-4 gx-4 mb-40">
-                      {[{title:'Legacy of Light',desc:'Guided by light, grounded in faith.'},
-                        {title:'Andalusian Roots',desc:'Heritage kept, resonance extended.'},
-                        {title:'Gratitude in Care',desc:'Olive trees tended with reverence.'},
-                        {title:'Adab in Every Act',desc:'Manners visible in every moment.'}].map((v,i)=>(
-                        <div key={i} className="col-md-6 col-lg-3">
+                      {[
+                        {title:'Legacy of Light',desc:'Guided by light, grounded in faith.',image:'/assets/img/the-house/Legacy.png'},
+                        {title:'Andalusian Roots',desc:'Heritage kept, resonance extended.',image:'/assets/img/the-house/Andalusian.png'},
+                        {title:'Gratitude in Care',desc:'Olive trees tended with reverence.',image:'/assets/img/the-house/Gratitude.png'},
+                        {title:'A History Archive',desc:'Manners visible in every moment.',image:'/assets/img/the-house/Adab.png'}
+                      ].map((v,i)=>(
+                        <div key={v.title} className="col-md-6 col-lg-3">
                           <div className="destination-item th-ani" aria-label={v.title}>
                             <div className="destination-item_img global-img">
-                              <img src="/assets/img/destination/destination_1_2.jpg" alt={v.title} />
+                              <img src={v.image} alt={v.title} />
                             </div>
                             <div className="destination-content">
                               <h6 className="destination-subtitle mb-10"><span>{v.title}</span></h6>

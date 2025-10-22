@@ -51,9 +51,9 @@ function GalleryOne() {
                         <div className="gallery-card">
                             <div className="box-img global-img">
                                 <Link
-                                    href="/assets/img/home/gallery/743x575.png"
+                                    href="/assets/img/Gallery2/Home 1.png"
                                     className="popup-image"
-                                    onClick={(e) => openModal('/assets/img/home/gallery/743x575.png', e)}
+                                    onClick={(e) => openModal('/assets/img/Gallery2/Home 1.png', e)}
                                 >
                                     <div className="icon-btn">
                                         <i className="fal fa-magnifying-glass-plus" />

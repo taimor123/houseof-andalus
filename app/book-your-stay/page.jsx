@@ -27,13 +27,13 @@ export default function BookYourStayPage() {
                 {/* Adopt AboutFour image composition */}
                 <div className="img-box3" aria-label="Retreat Atmosphere Images">
                   <div className="img1">
-                    <img src="/assets/img/normal/about_3_1.jpg" alt="Olive Grove Morning" />
+                    <img src="/assets/img/Book your stay/Retreat 1.png" alt="Olive Grove Morning" />
                   </div>
                   <div className="img2">
-                    <img src="/assets/img/normal/about_3_2.jpg" alt="Courtyard Reflection" />
+                    <img src="/assets/img/Book your stay/Retreat 2.png" alt="Courtyard Reflection" />
                   </div>
                   <div className="img3 movingX">
-                    <img src="/assets/img/normal/about_3_3.jpg" alt="Stillness & Light" />
+                    <img src="/assets/img/Book your stay/Retreat 3.png" alt="Stillness & Light" />
                   </div>
                 </div>
               </div>
@@ -288,13 +288,13 @@ export default function BookYourStayPage() {
               <div className="col-xl-7 mb-40 mb-xl-0">
                 <div className="img-box3" aria-label="Craft Your Own Retreat Imagery">
                   <div className="img1">
-                    <img src="/assets/img/normal/about_3_1.jpg" alt="Custom Planning" />
+                    <img src="/assets/img/Book your stay/Custom Retreat 1.png" alt="Custom Planning" />
                   </div>
                   <div className="img2">
-                    <img src="/assets/img/normal/about_3_2.jpg" alt="Group Gathering" />
+                    <img src="/assets/img/Book your stay/Custom Retreat 2.png" alt="Group Gathering" />
                   </div>
                   <div className="img3 movingX">
-                    <img src="/assets/img/normal/about_3_3.jpg" alt="Quiet Preparation" />
+                    <img src="/assets/img/Book your stay/Custom Retreat 3.png" alt="Quiet Preparation" />
                   </div>
                 </div>
               </div>

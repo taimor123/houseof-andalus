@@ -29,11 +29,11 @@ function GalleryInner() {
                     <div className="col-auto">
                         <div className="gallery-box style5">
                             <div className="gallery-img global-img">
-                                <img src="/assets/img/gallery/gallery_8_1.jpg" alt="gallery" />
+                                <img src="/assets/img/Gallery2/Gallery 1.png" alt="gallery" />
                                 <a
-                                    href="/assets/img/gallery/gallery_8_1.jpg"
+                                    href="/assets/img/Gallery2/Gallery 1.png"
                                     className="icon-btn popup-image"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_8_1.jpg', e)}
+                                    onClick={(e) => openModal('/assets/img/Gallery2/Gallery 1.png', e)}
                                 >
                                     <i className="fal fa-magnifying-glass-plus" />
                                 </a>
@@ -43,11 +43,11 @@ function GalleryInner() {
                     <div className="col-auto">
                         <div className="gallery-box style5">
                             <div className="gallery-img global-img">
-                                <img src="/assets/img/gallery/gallery_8_2.jpg" alt="gallery" />
+                                <img src="/assets/img/Gallery2/Gallery 2.png" alt="gallery" />
                                 <a
-                                    href="/assets/img/gallery/gallery_8_2.jpg"
+                                    href="/assets/img/Gallery2/Gallery 2.png"
                                     className="icon-btn popup-image"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_8_2.jpg', e)}
+                                    onClick={(e) => openModal('/assets/img/Gallery2/Gallery 2.png', e)}
                                 >
                                     <i className="fal fa-magnifying-glass-plus" />
                                 </a>
@@ -57,11 +57,11 @@ function GalleryInner() {
                     <div className="col-auto">
                         <div className="gallery-box style5">
                             <div className="gallery-img global-img">
-                                <img src="/assets/img/gallery/gallery_8_3.jpg" alt="gallery" />
+                                <img src="/assets/img/Gallery2/Gallery 3.png" alt="gallery" />
                                 <a
-                                    href="/assets/img/gallery/gallery_8_3.jpg"
+                                    href="/assets/img/Gallery2/Gallery 3.png"
                                     className="icon-btn popup-image"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_8_3.jpg', e)}
+                                    onClick={(e) => openModal('/assets/img/Gallery2/Gallery 3.png', e)}
                                 >
                                     <i className="fal fa-magnifying-glass-plus" />
                                 </a>
@@ -71,11 +71,11 @@ function GalleryInner() {
                     <div className="col-auto">
                         <div className="gallery-box style5">
                             <div className="gallery-img global-img">
-                                <img src="/assets/img/gallery/gallery_8_4.jpg" alt="gallery" />
+                                <img src="/assets/img/Gallery2/Gallery 4.png" alt="gallery" />
                                 <a
-                                    href="/assets/img/gallery/gallery_8_4.jpg"
+                                    href="/assets/img/Gallery2/Gallery 4.png"
                                     className="icon-btn popup-image"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_8_4.jpg', e)}
+                                    onClick={(e) => openModal('/assets/img/Gallery2/Gallery 4.png', e)}
                                 >
                                     <i className="fal fa-magnifying-glass-plus" />
                                 </a>
@@ -85,11 +85,11 @@ function GalleryInner() {
                     <div className="col-auto">
                         <div className="gallery-box style5">
                             <div className="gallery-img global-img">
-                                <img src="/assets/img/gallery/gallery_8_5.jpg" alt="gallery" />
+                                <img src="/assets/img/Gallery2/Gallery 5.png" alt="gallery" />
                                 <a
-                                    href="/assets/img/gallery/gallery_8_5.jpg"
+                                    href="/assets/img/Gallery2/Gallery 5.png"
                                     className="icon-btn popup-image"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_8_5.jpg', e)}
+                                    onClick={(e) => openModal('/assets/img/Gallery2/Gallery 5.png', e)}
                                 >
                                     <i className="fal fa-magnifying-glass-plus" />
                                 </a>
@@ -99,11 +99,11 @@ function GalleryInner() {
                     <div className="col-auto">
                         <div className="gallery-box style5">
                             <div className="gallery-img global-img">
-                                <img src="/assets/img/gallery/gallery_8_6.jpg" alt="gallery" />
+                                <img src="/assets/img/Gallery2/Gallery 6.png" alt="gallery" />
                                 <a
-                                    href="/assets/img/gallery/gallery_8_6.jpg"
+                                    href="/assets/img/Gallery2/Gallery 6.png"
                                     className="icon-btn popup-image"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_8_6.jpg', e)}
+                                    onClick={(e) => openModal('/assets/img/Gallery2/Gallery 6.png', e)}
                                 >
                                     <i className="fal fa-magnifying-glass-plus" />
                                 </a>
@@ -113,11 +113,11 @@ function GalleryInner() {
                     <div className="col-auto">
                         <div className="gallery-box style5">
                             <div className="gallery-img global-img">
-                                <img src="/assets/img/gallery/gallery_8_7.jpg" alt="gallery" />
+                                <img src="/assets/img/Gallery2/Gallery 7.png" alt="gallery" />
                                 <a
-                                    href="/assets/img/gallery/gallery_8_7.jpg"
+                                    href="/assets/img/Gallery2/Gallery 7.png"
                                     className="icon-btn popup-image"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_8_7.jpg', e)}
+                                    onClick={(e) => openModal('/assets/img/Gallery2/Gallery 7.png', e)}
                                 >
                                     <i className="fal fa-magnifying-glass-plus" />
                                 </a>
@@ -127,11 +127,11 @@ function GalleryInner() {
                     <div className="col-auto">
                         <div className="gallery-box style5">
                             <div className="gallery-img global-img">
-                                <img src="/assets/img/gallery/gallery_8_8.jpg" alt="gallery" />
+                                <img src="/assets/img/Gallery2/Gallery 8.png" alt="gallery" />
                                 <a
-                                    href="/assets/img/gallery/gallery_8_8.jpg"
+                                    href="/assets/img/Gallery2/Gallery 8.png"
                                     className="icon-btn popup-image"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_8_8.jpg', e)}
+                                    onClick={(e) => openModal('/assets/img/Gallery2/Gallery 8.png', e)}
                                 >
                                     <i className="fal fa-magnifying-glass-plus" />
                                 </a>

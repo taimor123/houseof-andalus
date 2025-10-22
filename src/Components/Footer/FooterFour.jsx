@@ -163,84 +163,84 @@ function FooterFour() {
                                 <div className="sidebar-gallery">
                                     <div className="gallery-thumb">
                                         <img
-                                            src="/assets/img/widget/gallery_1_1.jpg"
+                                            src="/assets/img/Gallery2/Home 1.png"
                                             alt="Gallery"
-                                            onClick={(e) => openModal('/assets/img/widget/gallery_1_1.jpg', e)}
+                                            onClick={(e) => openModal('/assets/img/Gallery2/Home 1.png', e)}
                                         />
                                         <a
-                                            href="/assets/img/widget/gallery_1_1.jpg"
+                                            href="/assets/img/Gallery2/Home 1.png"
                                             className="gallery-btn popup-image"
-                                            onClick={(e) => openModal('/assets/img/widget/gallery_1_1.jpg', e)}
+                                            onClick={(e) => openModal('/assets/img/Gallery2/Home 1.png', e)}
                                         >
                                             <i className="fab fa-instagram" />
                                         </a>
                                     </div>
                                     <div className="gallery-thumb">
                                         <img
-                                            src="/assets/img/widget/gallery_1_2.jpg"
+                                            src="/assets/img/Gallery2/Home 2.png"
                                             alt="Gallery"
-                                            onClick={(e) => openModal('/assets/img/widget/gallery_1_2.jpg', e)}
+                                            onClick={(e) => openModal('/assets/img/Gallery2/Home 2.png', e)}
                                         />
                                         <a
-                                            href="/assets/img/widget/gallery_1_2.jpg"
+                                            href="/assets/img/Gallery2/Home 2.png"
                                             className="gallery-btn popup-image"
-                                            onClick={(e) => openModal('/assets/img/widget/gallery_1_2.jpg', e)}
+                                            onClick={(e) => openModal('/assets/img/Gallery2/Home 2.png', e)}
                                         >
                                             <i className="fab fa-instagram" />
                                         </a>
                                     </div>
                                     <div className="gallery-thumb">
                                         <img
-                                            src="/assets/img/widget/gallery_1_3.jpg"
+                                            src="/assets/img/Gallery2/Home 3.png"
                                             alt="Gallery"
-                                            onClick={(e) => openModal('/assets/img/widget/gallery_1_3.jpg', e)}
+                                            onClick={(e) => openModal('/assets/img/Gallery2/Home 3.png', e)}
                                         />
                                         <a
-                                            href="/assets/img/widget/gallery_1_3.jpg"
+                                            href="/assets/img/Gallery2/Home 3.png"
                                             className="gallery-btn popup-image"
-                                            onClick={(e) => openModal('/assets/img/widget/gallery_1_3.jpg', e)}
+                                            onClick={(e) => openModal('/assets/img/Gallery2/Home 3.png', e)}
                                         >
                                             <i className="fab fa-instagram" />
                                         </a>
                                     </div>
                                     <div className="gallery-thumb">
                                         <img
-                                            src="/assets/img/widget/gallery_1_4.jpg"
+                                            src="/assets/img/Gallery2/Home 4.png"
                                             alt="Gallery"
-                                            onClick={(e) => openModal('/assets/img/widget/gallery_1_4.jpg', e)}
+                                            onClick={(e) => openModal('/assets/img/Gallery2/Home 4.png', e)}
                                         />
                                         <a
-                                            href="/assets/img/widget/gallery_1_4.jpg"
+                                            href="/assets/img/Gallery2/Home 4.png"
                                             className="gallery-btn popup-image"
-                                            onClick={(e) => openModal('/assets/img/widget/gallery_1_4.jpg', e)}
+                                            onClick={(e) => openModal('/assets/img/Gallery2/Home 4.png', e)}
                                         >
                                             <i className="fab fa-instagram" />
                                         </a>
                                     </div>
                                     <div className="gallery-thumb">
                                         <img
-                                            src="/assets/img/widget/gallery_1_5.jpg"
+                                            src="/assets/img/Gallery2/Home 5.png"
                                             alt="Gallery"
-                                            onClick={(e) => openModal('/assets/img/widget/gallery_1_5.jpg', e)}
+                                            onClick={(e) => openModal('/assets/img/Gallery2/Home 5.png', e)}
                                         />
                                         <a
-                                            href="/assets/img/widget/gallery_1_5.jpg"
+                                            href="/assets/img/Gallery2/Home 5.png"
                                             className="gallery-btn popup-image"
-                                            onClick={(e) => openModal('/assets/img/widget/gallery_1_5.jpg', e)}
+                                            onClick={(e) => openModal('/assets/img/Gallery2/Home 5.png', e)}
                                         >
                                             <i className="fab fa-instagram" />
                                         </a>
                                     </div>
                                     <div className="gallery-thumb">
                                         <img
-                                            src="/assets/img/widget/gallery_1_6.jpg"
+                                            src="/assets/img/Gallery2/Home 6.png"
                                             alt="Gallery"
-                                            onClick={(e) => openModal('/assets/img/widget/gallery_1_6.jpg', e)}
+                                            onClick={(e) => openModal('/assets/img/Gallery2/Home 6.png', e)}
                                         />
                                         <a
-                                            href="/assets/img/widget/gallery_1_6.jpg"
+                                            href="/assets/img/Gallery2/Home 6.png"
                                             className="gallery-btn popup-image"
-                                            onClick={(e) => openModal('/assets/img/widget/gallery_1_6.jpg', e)}
+                                            onClick={(e) => openModal('/assets/img/Gallery2/Home 6.png', e)}
                                         >
                                             <i className="fab fa-instagram" />
                                         </a>
