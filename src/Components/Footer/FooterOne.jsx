@@ -232,7 +232,7 @@ function FooterOne() {
             </div>
             <div
                 className="copyright-wrap background-image"
-                style={{ backgroundImage: "url('/assets/img/bg/copyright_bg_1.jpg')" }}
+                style={{ backgroundImage: "url('/assets/img/home/copyright_bg_1.jpg')" }}
             >
                 <div className="container">
                     <div className="row justify-content-between align-items-center">
