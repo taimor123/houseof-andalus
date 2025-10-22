@@ -5,6 +5,7 @@ import Breadcrumb from '../Components/BreadCrumb/Breadcrumb'
 import AboutFour from '../Components/About/AboutFour'
 import OfferTwo from '../Components/Offer/OfferTwo'
 import ElementSection from '../Components/Elements/ElementSection'
+import TourOne from '../Components/Tour/TourOne';
 import TourGuideTwo from '../Components/Guide/TourGuideTwo'
 import TestimonialOne from '../Components/Testimonials/TestimonialOne'
 import BrandOne from '../Components/Brand/BrandOne'
@@ -20,11 +21,13 @@ function About() {
                 title="About Andalus"
             />
             <AboutFour />
-            <OfferTwo />
+            {/* <OfferTwo /> */}
+            <TourOne/>
             <ElementSection />
-            <TourGuideTwo />
-            <TestimonialOne />
-            <BrandOne/>
+            
+            {/* <TourGuideTwo />
+            <TestimonialOne /> */}
+            {/* <BrandOne/> */}
             <GalleryFive />
             <FooterFour />
             <ScrollToTop />
