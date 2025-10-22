@@ -13,13 +13,13 @@ function AboutOne() {
                     <div className="col-xl-6">
                         <div className="img-box1">
                             <div className="img1">
-                                <img src="/assets/img/imagi/312x630/1.jpg" alt="About" />
+                                <img src="/assets/img/Home/House of Andalus/1 Begin Your Stay 312x630.png" alt="About" />
                             </div>
                             <div className="img2">
-                                <img src="/assets/img/imagi/312x315/1.jpg" alt="About" />
+                                <img src="/assets/img/Home/House of Andalus/2 Begin Your Stay 312x315.png" alt="About" />
                             </div>
                             <div className="img3">
-                                <img src="/assets/img/imagi/312x315/2.jpg" alt="About" />
+                                <img src="/assets/img/Home/House of Andalus/3 Begin Your Stay 312x315.png" alt="About" />
                             </div>
                         </div>
                     </div>
@@ -102,26 +102,29 @@ function AboutOne() {
                         right: "-11%",
                     }}
                 >
-                    <img src="/assets/img/imagi/217x546/1.jpg" alt="shape" />
+                    <img src="/assets/img/Home/House of Andalus/4 Begin Your Stay 217x546.png" alt="shape" />
                 </div>
                 <div
-                    className="shape-mockup about-rating d-none d-xxl-block"
+                    className="shape-mockup about-accent d-none d-xxl-block"
                     style={{
-                        bottom: "50%",
-                        right: "-20%",
+                        bottom: "48%",
+                        right: "-16%",
+                        color: "#8A7B5C",
+                        fontSize: "26px",
                     }}
                 >
-                    <i className="fa-sharp fa-solid fa-star" />
-                    <span>4.9k</span>
+                    <i className="fa-solid fa-leaf" aria-hidden="true" />
                 </div>
                 <div
-                    className="shape-mockup about-emoji d-none d-xxl-block"
+                    className="shape-mockup about-crescent d-none d-xxl-block"
                     style={{
-                        bottom: "25%",
-                        right: "5%",
+                        bottom: "22%",
+                        right: "2%",
+                        color: "#8A7B5C",
+                        fontSize: "22px",
                     }}
                 >
-                    <img src="/assets/img/icon/emoji.png" alt="" />
+                    <i className="fa-solid fa-moon" aria-hidden="true" />
                 </div>
             </div>
         </div>

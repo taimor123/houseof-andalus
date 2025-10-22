@@ -7,16 +7,16 @@ import "swiper/css/effect-coverflow";
 import Link from 'next/link';
 
 const destinations = [
-  { id: 1, name: "Retreats", listings: 15, image: "/assets/img/imagi/247x372/destination_1_1_2.jpg" },
-  { id: 2, name: "Holiday Home", listings: 22, image: "/assets/img/imagi/337x506/destination_1_2.jpg" },
-  { id: 3, name: "Special Events", listings: 25, image: "/assets/img/imagi/423x636/destination_1_3.jpg" },
-  { id: 4, name: "Join the Harvest", listings: 28, image: "/assets/img/imagi/337x506/destination_1_2_3.jpg" },
-  { id: 5, name: "Wellness Experience", listings: 30, image: "/assets/img/imagi/247x372/destination_1_1_3.jpg" },
-  { id: 6, name: "Heritage", listings: 15, image: "/assets/img/imagi/247x372/destination_1_1.jpg" },
-  { id: 7, name: "Faith", listings: 22, image: "/assets/img/imagi/337x506/destination_1_2_2.jpg" },
-  { id: 8, name: "Retreats", listings: 25, image: "/assets/img/imagi/423x636/destination_1_3.jpg" },
-  { id: 9, name: "Olive Evenings", listings: 28, image: "/assets/img/imagi/337x506/destination_1_2.jpg" },
-  { id: 10, name: "Community Circles", listings: 30, image: "/assets/img/imagi/337x506/destination_1_2_4.jpg" },
+  { id: 1, name: "Retreats", listings: 15, image: "/assets/img/Home/Reserve Your Retreat/1 Reserve Your Retreat 423x636.png" },
+  { id: 2, name: "Architecture", listings: 22, image: "/assets/img/Home/Reserve Your Retreat/2 Reserve Your Retreat Architecture.png" },
+  { id: 3, name: "History", listings: 25, image: "/assets/img/Home/Reserve Your Retreat/3 Reserve Your Retreat 247x372 History.png" },
+  { id: 4, name: "Culture", listings: 28, image: "/assets/img/Home/Reserve Your Retreat/4 Reserve Your Retreat 337x506 Culture.png" },
+  { id: 5, name: "Artifacts", listings: 30, image: "/assets/img/Home/Reserve Your Retreat/5 Reserve Your Retreat 337x506 Artifacts.png" },
+  { id: 6, name: "Preservation", listings: 15, image: "/assets/img/Home/Reserve Your Retreat/6 Reserve Your Retreat 423x636 Preservation.png" },
+  { id: 7, name: "Monastery", listings: 22, image: "/assets/img/Home/Reserve Your Retreat/7 Reserve Your Retreat 337x506 Monastery.png" },
+  { id: 8, name: "Symbolism", listings: 25, image: "/assets/img/Home/Reserve Your Retreat/8 Reserve Your Retreat 247x372 Symbolism.png" },
+  { id: 9, name: "Antiquity", listings: 28, image: "/assets/img/Home/Reserve Your Retreat/9 Reserve Your Retreat 247x372 Antiquity.png" },
+  { id: 10, name: "Landmark", listings: 30, image: "/assets/img/Home/Reserve Your Retreat/10 Reserve Your Retreat 337x506 Landmark.png" },
 ];
 
 const sliderOptions = {

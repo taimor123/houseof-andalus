@@ -10,16 +10,16 @@ const CategoryOne = () => {
   const swiperRef = useRef(null);
 
   const categories = [
-    { id: 1, title: "Couples Retreat", imgSrc: "/assets/img/imagi/312x311/category_1_1.jpg" }, 
-    { id: 2, title: "Writers Retreat", imgSrc: "/assets/img/imagi/312x310/category_1_2.jpg" },
-    { id: 3, title: "Leadership Retreat", imgSrc: "/assets/img/imagi/313x313/category_1_3.jpg" },
-    { id: 4, title: "Men Retreat", imgSrc: "/assets/img/imagi/312x309/category_1_4.jpg" },
-    { id: 5, title: "Women Retreat", imgSrc: "/assets/img/imagi/312x311/category_1_1_3.jpg" },
-    { id: 6, title: "Custom Retreats", imgSrc: "/assets/img/imagi/312x311/category_1_1_2.jpg" },
-    { id: 7, title: "Dhikr Walks", imgSrc: "/assets/img/imagi/312x310/category_1_2_2.jpg" },
-    { id: 8, title: "Cooking Class", imgSrc: "/assets/img/imagi/313x313/category_1_3_2.jpg" },
-    { id: 9, title: "Harvest", imgSrc: "/assets/img/imagi/312x309/category_1_4_2.jpg" },
-    // { id: 10, title: "Harvest", imgSrc: "/assets/img/category/category_1_5.jpg" },
+    { id: 1, title: "Current farmhouse", imgSrc: "/assets/img/Home/Book your stay/1 Book Your Stay 312x311 (1) Current farmhouse.png" }, 
+    { id: 2, title: "Envisaged Retreat", imgSrc: "/assets/img/Home/Book your stay/2 Book Your Stay 313x313 (2) Envisaged Retreat centre.png" },
+    { id: 3, title: "Andalucian tours", imgSrc: "/assets/img/Home/Book your stay/3 Book Your Stay 312x310 (1) Andalucian tours.png" },
+    { id: 4, title: "Andalucian tours", imgSrc: "/assets/img/Home/Book your stay/4 Book Your Stay 312x310 (2) Retreat Inside.png" },
+    { id: 5, title: "Heritage Pathways", imgSrc: "/assets/img/Home/Book your stay/5 Book Your Stay 312x311 (2) Andalucian tours.png" }, 
+    { id: 6, title: "Andalus Legacy", imgSrc: "/assets/img/Home/Book your stay/6 Book Your Stay 312x311 (3) Andalucian tours.png" }, 
+    { id: 7, title: "Olive Trails", imgSrc: "/assets/img/Home/Book your stay/7 Book Your Stay 312x309 (1) Andalucian farm.png" },
+    { id: 8, title: "Andalus Echoes", imgSrc: "/assets/img/Home/Book your stay/8 Book Your Stay 312x309 (2) Hill side.png" },
+    { id: 9, title: "Harvest", imgSrc: "/assets/img/Home/Book your stay/9 Book Your Stay 312x311 (4) Hill side.png" },
+    { id: 10, title: "Holiday Home", imgSrc: "/assets/img/Home/Book your stay/10 Book Your Stay 313x313 (1) Andalucian tours.png" },
   ];
 
   useEffect(() => {
@@ -75,7 +75,7 @@ const CategoryOne = () => {
   return (
     <section
       className="category-area bg-top-center"
-      // style={{ backgroundImage: "url(/assets/img/imagi/1920x632/1.jpg)", backgroundRepeat: "no-repeat" }}
+      style={{ backgroundImage: "url(/assets/img/Home/Book your stay/Book Your Stay Background Pic.png)", backgroundRepeat: "no-repeat" }}
     >
       <div className="container th-container">
         <div className="title-area text-center">

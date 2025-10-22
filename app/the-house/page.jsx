@@ -132,7 +132,7 @@ export default function TheHousePage() {
                       ))}
                     </div>
                     <div className="row gy-4 gx-4 mb-40">
-                      {[{title:'Ihsan with Heart',desc:'Gestures elevated by sincere intent.'},
+                      {[{title:'Legacy of Light',desc:'Guided by light, grounded in faith.'},
                         {title:'Andalusian Roots',desc:'Heritage kept, resonance extended.'},
                         {title:'Gratitude in Care',desc:'Olive trees tended with reverence.'},
                         {title:'Adab in Every Act',desc:'Manners visible in every moment.'}].map((v,i)=>(
