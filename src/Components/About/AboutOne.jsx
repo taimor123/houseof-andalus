@@ -102,7 +102,7 @@ function AboutOne() {
                         right: "-11%",
                     }}
                 >
-                    <img src="/assets/img/olivehome.png" alt="shape" />
+                    <img src="/Flowers-Purple-Curve-Transparent-Background.png" alt="shape" />
                 </div>
                 <div
                     className="shape-mockup about-accent d-none d-xxl-block"
