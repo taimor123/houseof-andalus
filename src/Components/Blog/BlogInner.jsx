@@ -23,7 +23,7 @@ function BlogInner() {
         <section className="th-blog-wrapper space-top space-extra-bottom">
             <div className="container">
                 <div className="row">
-                    <div className="col-xxl-8 col-lg-7">
+                    <div className="col-xxl-12 col-lg-12">
                         {currentPosts.map((data) => (
                             <BlogPost
                                 key={data.id}
@@ -32,7 +32,7 @@ function BlogInner() {
                                 blogTitle={data.title}
                             />
                         ))}
-                        <div className="th-pagination">
+                        {/* <div className="th-pagination">
                             <ul>
                                 {Array.from({ length: totalPages }, (_, i) => (
                                     <li key={i}>
@@ -53,9 +53,9 @@ function BlogInner() {
                                     </li>
                                 )}
                             </ul>
-                        </div>
+                        </div> */}
                     </div>
-                    <div className="col-xxl-4 col-lg-5">
+                    {/* <div className="col-xxl-4 col-lg-5">
                         <aside className="sidebar-area">
                             <div className="widget widget_search  ">
                                 <form className="search-form">
@@ -200,7 +200,7 @@ function BlogInner() {
                                 </div>
                             </div>
                         </aside>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </section>

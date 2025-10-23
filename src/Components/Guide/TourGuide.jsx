@@ -11,10 +11,10 @@ const guides = [
   { id: 2, name: "Jane Cooper", image: "team_1_2.jpg" },
   { id: 3, name: "Guy Hawkins", image: "team_1_3.jpg" },
   { id: 4, name: "Jenny Wilson", image: "team_1_4.jpg" },
-  { id: 5, name: "Jacob Jones", image: "team_1_1.jpg" },
-  { id: 6, name: "Jane Cooper", image: "team_1_2.jpg" },
-  { id: 7, name: "Guy Hawkins", image: "team_1_3.jpg" },
-  { id: 8, name: "Jenny Wilson", image: "team_1_4.jpg" },
+  // { id: 5, name: "Jacob Jones", image: "team_1_1.jpg" },
+  // { id: 6, name: "Jane Cooper", image: "team_1_2.jpg" },
+  // { id: 7, name: "Guy Hawkins", image: "team_1_3.jpg" },
+  // { id: 8, name: "Jenny Wilson", image: "team_1_4.jpg" },
 ];
 
 function TourGuide() {

@@ -102,7 +102,7 @@ function AboutOne() {
                         right: "-11%",
                     }}
                 >
-                    <img src="/assets/img/Home/House of Andalus/4 Begin Your Stay 217x546.png" alt="shape" />
+                    <img src="/assets/img/olivehome.png" alt="shape" />
                 </div>
                 <div
                     className="shape-mockup about-accent d-none d-xxl-block"
