@@ -18,7 +18,7 @@ function About() {
         <>
             <HeaderOne />
             <Breadcrumb
-                title="About Andalus"
+                title="About Us"
             />
             <AboutFour />
             {/* <OfferTwo /> */}

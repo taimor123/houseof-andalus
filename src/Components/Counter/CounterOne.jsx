@@ -5,10 +5,10 @@ import { useInView } from "react-intersection-observer";
 
 const CounterOne = () => {
     const counters = [
-        { value: 12, suffix: "", title: "Years Experience" },
-        { value: 97, suffix: "%", title: "Retention Rate" },
-        { value: 8, suffix: "k", title: "Tour Completed" },
-        { value: 19, suffix: "k", title: "Happy Travellers" }
+        { value: "Next", suffix: "", title: "Years Experience" },
+        { value: "Next", suffix: "", title: "Retention Rate" },
+        { value: "Next", suffix: "", title: "Tour Completed" },
+        { value: "Next", suffix: "", title: "Happy Travellers" }
     ];
 
     // Use intersection observer to detect when component is in view
@@ -24,15 +24,17 @@ const CounterOne = () => {
                                 <div className="counter-shape"><span></span></div>
                                 <div className="media-body">
                                     <h3 className="box-number">
-                                        {inView && (
+                                        {typeof counter.value === 'number' && inView ? (
                                             <CountUp
                                                 start={0}
                                                 end={counter.value}
-                                                duration={2} // Matches your jQuery settings
+                                                duration={2}
                                                 delay={0}
                                             />
+                                        ) : (
+                                            <span>{counter.value}</span>
                                         )}
-                                        {counter.suffix}
+                                        <span>{counter.suffix}</span>
                                     </h3>
                                     <h6 className="counter-title">{counter.title}</h6>
                                 </div>

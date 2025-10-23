@@ -114,7 +114,7 @@ const CategoryOne = () => {
                 <h3 className="box-title">
                   <Link href="/destination">{category.title}</Link>
                 </h3>
-                <Link className="line-btn" href="/destination">
+                <Link className="line-btn" href="/the-house">
                   See more
                 </Link>
               </div>

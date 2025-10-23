@@ -3102,6 +3102,19 @@ input[type=time]::-webkit-calendar-picker-indicator {
   margin-bottom: calc(var(--section-title-space) - 11px);
 }
 
+.subr-title {
+  display: block;
+  color: var(--title-color);
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 400;
+  font-family: var(--style-font);
+  position: relative;
+  color: var(--white-color);
+  margin-bottom: -4px;
+  /* Extra small devices */
+}
+
 .sub-title {
   display: block;
   color: var(--title-color);

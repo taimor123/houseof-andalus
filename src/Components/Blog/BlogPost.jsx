@@ -143,9 +143,20 @@ function BlogPost(props) {
                     <Link href={`/blog/${blogID}`}>
                         <img src="/assets/img/blog/blog-s-1-2.jpg" alt="Blog" />
                     </Link>
-                    <a href="https://www.youtube.com/watch?v=cQfIUPw72Dk" className="play-btn popup-video" target="_blank" rel="noopener noreferrer">
-                        <i className="fas fa-play" />
-                    </a>
+                    {/* Local video replaces external YouTube link */}
+                    <div className="blog-inline-video">
+                        <video
+                            className="w-100"
+                            controls
+                            playsInline
+                            poster="/assets/img/blog/blog-s-1-2.jpg"
+                            aria-label="House of Andalus Video"
+                            style={{ borderRadius: '8px', boxShadow: '0 4px 18px rgba(0,0,0,0.15)' }}
+                        >
+                            <source src="/assets/img/House%20of%20Andalus%20video%202.mp4" type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
                 </div>
                 <div className="blog-content">
                     <div className="blog-meta">

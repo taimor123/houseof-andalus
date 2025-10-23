@@ -150,7 +150,7 @@ export default function BookYourStayPage() {
                       <cite>Facilitator Team</cite>
                     </blockquote>
                     <div className="mt-25">
-                      <Link href="#contact" className="th-btn style3 th-icon">Join the Couples&rsquo; Retreat</Link>
+                      <Link href="/contact" className="th-btn style3 th-icon">Join the Couples&rsquo; Retreat</Link>
                     </div>
                   </div>
                 </div>
@@ -174,7 +174,7 @@ export default function BookYourStayPage() {
                     <p className="blog-text mb-30">Life won&rsquo;t look the same after time at the House of Andalus. Writing here becomes a journey of rediscovery—words shaped in stillness, guided by intention. The valley offers a quiet companionship that lets language breathe again.</p>
                     <p className="blog-text mb-30">Somewhere between the call to prayer, a turning page, and a pause in your pen, you realise this isn&rsquo;t escape. It&rsquo;s a return—to clarity, to courage, to the inner voice that faith protects. Hours of silence, mentored sessions, and reflective walks help pages emerge that change not only what you write, but how you live.</p>
                     <div className="mt-10">
-                      <Link href="#contact" className="th-btn style1">Join the Writers&rsquo; Retreat</Link>
+                      <Link href="/contact" className="th-btn style1">Join the Writers&rsquo; Retreat</Link>
                     </div>
                   </div>
                 </div>
@@ -198,7 +198,7 @@ export default function BookYourStayPage() {
                     <p className="blog-text mb-30">Arrive in grace to our Leadership Retreats, descending into a valley where every sunrise spills light across centuries-old olive groves and every night hums with inherited wisdom. This is a setting for inward leadership: clarity before action, sincerity before influence.</p>
                     <p className="blog-text mb-30">Here, leadership isn&rsquo;t conquest but consciousness. Rediscover what it means to steward with inner alignment, emotional maturity, and spiritual depth through reflective circles, guided workshops, and stillness that restores intention.</p>
                     <div className="mt-10">
-                      <Link href="#contact" className="th-btn style3 th-icon">Apply for the Leadership Retreat</Link>
+                      <Link href="/contact" className="th-btn style3 th-icon">Apply for the Leadership Retreat</Link>
                     </div>
                   </div>
                 </div>
@@ -237,7 +237,7 @@ export default function BookYourStayPage() {
                       </ul>
                     </div>
                     <div className="mt-5">
-                      <Link href="#contact" className="th-btn style1" style={{padding:'6px 22px'}}>Join the Men&rsquo;s Retreat</Link>
+                      <Link href="/contact" className="th-btn style1" style={{padding:'6px 22px'}}>Join the Men&rsquo;s Retreat</Link>
                     </div>
                   </div>
                 </div>
@@ -272,7 +272,7 @@ export default function BookYourStayPage() {
                       </ul>
                     </div>
                     <div className="mt-10">
-                      <Link href="#contact" className="th-btn style3 th-icon">View Upcoming Women&rsquo;s Retreats</Link>
+                      <Link href="/contact" className="th-btn style3 th-icon">View Upcoming Women&rsquo;s Retreats</Link>
                     </div>
                   </div>
                 </div>
@@ -302,18 +302,19 @@ export default function BookYourStayPage() {
                 <div className="page-single">
                   <div className="page-content d-block">
                     <div className="page-meta mt-10 mb-30">
-                      <span className="page-tag mr-5 text-white">Craft Your Own</span>
-                      <span className="destination-subtitle text-white" style={{display:'inline-block',padding:'4px 12px',border:'1px solid #ffffff33',borderRadius:'30px',fontSize:'12px',letterSpacing:'.05em',textTransform:'uppercase',background:'rgba(255,255,255,0.08)'}}>Your Vision. Our Space.</span>
+                      <span className="subr-title text-white ">Custom Retreat</span>
+                      {/* <span className="page-tag mr-5 text-white">Craft Your Own</span>
+                      <span className="destination-subtitle text-white" style={{display:'inline-block',padding:'4px 12px',border:'1px solid #ffffff33',borderRadius:'30px',fontSize:'12px',letterSpacing:'.05em',textTransform:'uppercase',background:'rgba(255,255,255,0.08)'}}>Your Vision. Our Space.</span> */}
                     </div>
                     <h2 className="box-title text-white">Design A Bespoke Retreat</h2>
-                    <p className="blog-text mb-30">You can design your own journey, from a simple weekend of quiet companionship to a full multi-day renewal retreat. Every detail, from room selection to reflection themes, is crafted around your story.</p>
-                    <p className="blog-text mb-30">Host your own gathering in the serene embrace of the Andalusian mountains. Whether for wellness, learning, or spiritual reflection, we&rsquo;ll help you create a bespoke experience.</p>
+                    <p className="blog-text mb-30 text-white">You can design your own journey, from a simple weekend of quiet companionship to a full multi-day renewal retreat. Every detail, from room selection to reflection themes, is crafted around your story.</p>
+                    <p className="blog-text mb-30 text-white">Host your own gathering in the serene embrace of the Andalusian mountains. Whether for wellness, learning, or spiritual reflection, we&rsquo;ll help you create a bespoke experience.</p>
                     <blockquote>
                       <p>Purpose is not found in extravagance, but in remembrance. And here, remembrance is where life begins.</p>
                       <cite>House of Andalus Team</cite>
                     </blockquote>
                     <div className="mt-25">
-                      <Link href="#contact" className="th-btn style4 th-icon">Enquire About Hosting</Link>
+                      <Link href="/contact" className="th-btn style1 th-icon hosting-btn">Enquire About Hosting</Link>
                     </div>
                   </div>
                 </div>
@@ -322,6 +323,20 @@ export default function BookYourStayPage() {
           </div>
         </section>
       </main>
+      <style jsx>{`
+        /* Improve contrast of hosting enquiry button on dark bg */
+        .hosting-btn {
+          background: #fff !important;
+          color: #1a2a21 !important;
+          border: 1px solid #ffffff !important;
+          box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+        }
+        .hosting-btn:hover {
+          background: #e9f4ef !important;
+          color: #0f221b !important;
+          box-shadow: 0 6px 20px rgba(0,0,0,0.28);
+        }
+      `}</style>
       <FooterFour />
       <ScrollToTop />
     </>

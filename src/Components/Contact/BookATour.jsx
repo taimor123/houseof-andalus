@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link'
 import NiceSelect from '../Header/NiceSelect';
 import Modal from 'react-modal';
@@ -15,16 +15,41 @@ function useModalAccessibility() {
 function BookATour() {
     useModalAccessibility();
     const [modalIsOpen, setModalIsOpen] = useState(false);
+    const videoRef = useRef(null);
     const countryOptions = [
-        { value: "country", label: "Select Tour Type" },
-        { value: "Africa Adventure", label: "Africa Adventure" },
-        { value: "Africa Wild", label: "Africa Wild" },
-        { value: "Asia", label: "Asia" },
+        { value: "country", label: "Select Retreat Type" },
+        { value: "Couple Retreat", label: "Couple Retreat" },
+        { value: "Writers Retreat", label: "Writers Retreat" },
+        { value: "Leaders Retreat", label: "Leaders Retreat" },
+        { value: "Men Retreat", label: "Men Retreat" },
+        { value: "Women Retreat", label: "Women Retreat" },
+        { value: "Custom Retreat", label: "Custom Retreat" },
     ];
+    // Auto-play video when modal opens (muted first to satisfy browser policies)
+    useEffect(() => {
+        if (modalIsOpen && videoRef.current) {
+            const v = videoRef.current;
+            // Attempt play; if rejected due to audio policy, mute then retry
+            const tryPlay = () => {
+                const p = v.play();
+                if (p && typeof p.then === 'function') {
+                    p.catch(() => {
+                        v.muted = true;
+                        v.play().catch(() => {/* give up silently */});
+                    });
+                }
+            };
+            tryPlay();
+        } else if (!modalIsOpen && videoRef.current) {
+            // Pause when modal closes
+            videoRef.current.pause();
+        }
+    }, [modalIsOpen]);
+
     return (
         <div
             className="space-extra2-top space-extra2-bottom"
-            style={{ background: "url(/assets/img/bg/video_bg_1.jpg)", backgroundRepeat: "no-repeat", backgroundSize: "cover" }}
+            style={{ background: "url(/assets/img/bg/!.jpg)", backgroundRepeat: "no-repeat", backgroundSize: "cover" }}
         >
             <div className="container">
                 <div className="row flex-row-reverse justify-content-center align-items-center">
@@ -41,7 +66,7 @@ function BookATour() {
                                 
                                 className="contact-form style2 ajax-contact"
                             >
-                                <h3 className="sec-title mb-30 text-capitalize">Book a tour</h3>
+                                <h3 className="sec-title mb-30 text-capitalize">Book your retreat</h3>
 
                                 <div className="row">
                                     <div className="col-12 form-group">
@@ -67,7 +92,7 @@ function BookATour() {
                                         <img src="assets/img/icon/mail.svg" alt="" />
                                     </div>
                                     <div className="form-group col-12">
-                                        <NiceSelect options={countryOptions} defaultValue="Select Tour Type" />
+                                        <NiceSelect options={countryOptions} defaultValue="Select Retreat Type" />
 
                                     </div>
                                     <div className="form-group col-12">
@@ -100,19 +125,36 @@ function BookATour() {
                 isOpen={modalIsOpen}
                 onRequestClose={() => setModalIsOpen(false)}
                 contentLabel="Video Popup"
-                className="video-modal"
+                className="video-modal large"
                 overlayClassName="video-modal-overlay"
+                style={{
+                    content: {
+                        maxWidth: '1100px',
+                        width: '100%',
+                        inset: '50% auto auto 50%',
+                        transform: 'translate(-50%, -50%)',
+                        background: '#000',
+                        // padding: '28px 32px',
+                        borderRadius: '14px',
+                        // border: '1px solid #1a1a1a'
+                    }
+                }}
             >
                 <button className="close-btn" onClick={() => setModalIsOpen(false)}>&times;</button>
-                <iframe
+                <video
+                    ref={videoRef}
                     width="100%"
-                    height="400px"
-                    src="https://www.youtube.com/embed/cQfIUPw72Dk"
-                    title="YouTube video player"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                ></iframe>
+                    height="700"
+                    autoPlay
+                    controls
+                    playsInline
+                    poster=""
+                    aria-label="Retreat Introduction Video"
+                    style={{ borderRadius: '10px', boxShadow: '0 6px 30px rgba(106, 104, 104, 0.4)' }}
+                >
+                    <source src="/assets/img/House%20of%20Andalus%20video%202.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
             </Modal>
         </div>
     )

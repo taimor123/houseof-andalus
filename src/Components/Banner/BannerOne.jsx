@@ -101,10 +101,10 @@ function BannerOne() {
                                         data-ani="slideinup"
                                         data-ani-delay="0.6s"
                                     >
-                                        <Link href="/tour" className="th-btn th-icon">
+                                        <Link href="/contact" className="th-btn th-icon">
                                             Book Retreats
                                         </Link>
-                                        <Link href="/service" className="th-btn style2 th-icon">
+                                        <Link href="/book-your-stay" className="th-btn style2 th-icon">
                                             Our Services
                                         </Link>
                                     </div>
@@ -153,10 +153,10 @@ function BannerOne() {
                                         data-ani="slideinup"
                                         data-ani-delay="0.6s"
                                     >
-                                        <Link href="/tour" className="th-btn th-icon">
+                                        <Link href="/contact" className="th-btn th-icon">
                                             Join Retreats
                                         </Link>
-                                        <Link href="/service" className="th-btn style2 th-icon">
+                                        <Link href="/book-your-stay" className="th-btn style2 th-icon">
                                             Our Services
                                         </Link>
                                     </div>
@@ -205,10 +205,10 @@ function BannerOne() {
                                         data-ani="slideinup"
                                         data-ani-delay="0.6s"
                                     >
-                                        <Link href="/tour" className="th-btn th-icon">
+                                        <Link href="/contact" className="th-btn th-icon">
                                             Book Retreats
                                         </Link>
-                                        <Link href="/service" className="th-btn style2 th-icon">
+                                        <Link href="/book-your-stay" className="th-btn style2 th-icon">
                                             Our Services
                                         </Link>
                                     </div>

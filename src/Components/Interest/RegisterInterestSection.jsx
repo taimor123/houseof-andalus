@@ -150,16 +150,17 @@ function RegisterInterestSection() {
         overlayClassName="video-modal-overlay"
       >
         <button className="close-btn" onClick={() => setModalIsOpen(false)} aria-label="Close Video">&times;</button>
-        {/* Provided video embed */}
-        <iframe
-          width="100%"
-          height="400px"
-          src="https://www.youtube.com/embed/6FQkIa-bBL0?rel=0&list=RD6FQkIa-bBL0&start_radio=1"
-          title="Register Interest Intro"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        ></iframe>
+        {/* Local MP4 video instead of YouTube iframe */}
+        <video
+          className="w-100"
+          controls
+          playsInline
+          poster="/assets/img/blog/blog_inner_1.jpg"
+          aria-label="Register Interest Intro Video"
+        >
+          <source src="/assets/img/House%20of%20Andalus%20video%202.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </Modal>
     </div>
   );

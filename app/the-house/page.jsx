@@ -84,10 +84,10 @@ export default function TheHousePage() {
                   Each tree planted nourishes both land and soul, carrying forward the mission of wellness, knowledge, and community—the same values upon which Andalusia was built. Experience the extraordinary, restore the balance, and let your roots grow here in the Garden of Andalus—where faith meets earth, and giving becomes eternal.
                 </p>
                 <div className="mt-30 d-flex flex-wrap align-items-center" style={{ gap: '16px' }}>
-                  <Link href="/donate-tree" className="th-btn style3 th-icon" aria-label="Donate for a tree">
+                  <Link href="/contact" className="th-btn style3 th-icon" aria-label="Donate for a tree">
                     Donate For A Tree
                   </Link>
-                  <Link href="/plant-tree" className="th-btn style1 th-icon" aria-label="Plant a tree">
+                  <Link href="/contact" className="th-btn style1 th-icon" aria-label="Plant a tree">
                     Plant A Tree
                   </Link>
                 </div>
@@ -138,7 +138,7 @@ export default function TheHousePage() {
                         controls
                         loop
                         playsInline
-                        poster="/assets/img/blog/blog_inner_1.jpg"
+                        // poster="/assets/img/blog/blog_inner_1.jpg"
                         aria-label="House of Andalus Intro Video"
                       >
                         <source src="/assets/img/House%20of%20Andalus%20video%203.mp4" type="video/mp4" />

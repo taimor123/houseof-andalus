@@ -101,7 +101,7 @@ function DestinationOne() {
                         <span className="destination-subtitle">{dest.listings} Listing</span>
                       </div>
                       <div>
-                        <Link href="/destination" className="th-btn style2 th-icon">
+                        <Link href="/book-your-stay" className="th-btn style2 th-icon">
                           View All
                         </Link>
                       </div>
