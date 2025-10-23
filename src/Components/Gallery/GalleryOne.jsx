@@ -31,18 +31,18 @@ function GalleryOne() {
                         <div className="gallery-card">
                             <div className="box-img global-img">
                                 <Link
-                                    href="/assets/img/home/gallery/742x696.png"
+                                    href="/assets/img/imagi/Gallery/1 Recent Gallery.png"
                                     className="popup-image"
-                                    onClick={(e) => openModal('/assets/img/home/gallery/742x696.png', e)}
+                                    onClick={(e) => openModal('/assets/img/imagi/Gallery/1 Recent Gallery.png', e)}
                                 >
                                     <div className="icon-btn">
                                         <i className="fal fa-magnifying-glass-plus" />
                                     </div>
                                 </Link>
                                 <img
-                                    src="/assets/img/home/gallery/742x696.png"
+                                    src="/assets/img/imagi/Gallery/1 Recent Gallery.png"
                                     alt="gallery"
-                                    onClick={(e) => openModal('/assets/img/home/gallery/742x696.png', e)}
+                                    onClick={(e) => openModal('/assets/img/imagi/Gallery/1 Recent Gallery.png', e)}
                                 />
                             </div>
                         </div>
@@ -51,56 +51,36 @@ function GalleryOne() {
                         <div className="gallery-card">
                             <div className="box-img global-img">
                                 <Link
-                                    href="/assets/img/Gallery2/Home 1.png"
+                                    href="/assets/img/imagi/Gallery/2 Recent Gallery.png"
                                     className="popup-image"
-                                    onClick={(e) => openModal('/assets/img/Gallery2/Home 1.png', e)}
+                                    onClick={(e) => openModal('/assets/img/imagi/Gallery/2 Recent Gallery.png', e)}
                                 >
                                     <div className="icon-btn">
                                         <i className="fal fa-magnifying-glass-plus" />
                                     </div>
                                 </Link>
                                 <img
-                                    src="/assets/img/home/gallery/743x575.png"
+                                    src="/assets/img/imagi/Gallery/2 Recent Gallery.png"
                                     alt="gallery"
-                                    onClick={(e) => openModal('/assets/img/home/gallery/743x575.png', e)}
+                                    onClick={(e) => openModal('/assets/img/imagi/Gallery/2 Recent Gallery.png', e)}
                                 />
                             </div>
                         </div>
                         <div className="gallery-card">
                             <div className="box-img global-img">
                                 <Link
-                                    href="/assets/img/home/gallery/743x575a.png"
+                                    href="/assets/img/imagi/Gallery/3 Recent Gallery.png"
                                     className="popup-image"
-                                    onClick={(e) => openModal('/assets/img/home/gallery/743x575a.png', e)}
+                                    onClick={(e) => openModal('/assets/img/imagi/Gallery/3 Recent Gallery.png', e)}
                                 >
                                     <div className="icon-btn">
                                         <i className="fal fa-magnifying-glass-plus" />
                                     </div>
                                 </Link>
                                 <img
-                                    src="/assets/img/home/gallery/743x575a.png"
+                                    src="/assets/img/imagi/Gallery/3 Recent Gallery.png"
                                     alt="gallery"
-                                    onClick={(e) => openModal('/assets/img/home/gallery/743x575a.png', e)}
-                                />
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-6 col-lg-2">
-                        <div className="gallery-card">
-                            <div className="box-img global-img">
-                                <Link
-                                    href="/assets/img/home/gallery/743x1200.png"
-                                    className="popup-image"
-                                    onClick={(e) => openModal('/assets/img/home/gallery/743x1200.png', e)}
-                                >
-                                    <div className="icon-btn">
-                                        <i className="fal fa-magnifying-glass-plus" />
-                                    </div>
-                                </Link>
-                                <img
-                                    src="/assets/img/home/gallery/743x1200.png"
-                                    alt="gallery"
-                                    onClick={(e) => openModal('/assets/img/home/gallery/743x1200.png', e)}
+                                    onClick={(e) => openModal('/assets/img/imagi/Gallery/3 Recent Gallery.png', e)}
                                 />
                             </div>
                         </div>
@@ -109,36 +89,18 @@ function GalleryOne() {
                         <div className="gallery-card">
                             <div className="box-img global-img">
                                 <Link
-                                    href="/assets/img/home/gallery/742x575.png"
+                                    href="/assets/img/imagi/Gallery/4 Recent Gallery.png"
                                     className="popup-image"
-                                    onClick={(e) => openModal('/assets/img/home/gallery/742x575.png', e)}
+                                    onClick={(e) => openModal('/assets/img/imagi/Gallery/4 Recent Gallery.png', e)}
                                 >
                                     <div className="icon-btn">
                                         <i className="fal fa-magnifying-glass-plus" />
                                     </div>
                                 </Link>
                                 <img
-                                    src="/assets/img/home/gallery/742x575.png"
+                                    src="/assets/img/imagi/Gallery/4 Recent Gallery.png"
                                     alt="gallery"
-                                    onClick={(e) => openModal('/assets/img/home/gallery/742x575.png', e)}
-                                />
-                            </div>
-                        </div>
-                        <div className="gallery-card">
-                            <div className="box-img global-img">
-                                <Link
-                                    href="/assets/img/home/gallery/742x575a.png"
-                                    className="popup-image"
-                                    onClick={(e) => openModal('/assets/img/home/gallery/742x575a.png', e)}
-                                >
-                                    <div className="icon-btn">
-                                        <i className="fal fa-magnifying-glass-plus" />
-                                    </div>
-                                </Link>
-                                <img
-                                    src="/assets/img/home/gallery/742x575a.png"
-                                    alt="gallery"
-                                    onClick={(e) => openModal('/assets/img/home/gallery/742x575a.png', e)}
+                                    onClick={(e) => openModal('/assets/img/imagi/Gallery/4 Recent Gallery.png', e)}
                                 />
                             </div>
                         </div>
@@ -147,18 +109,56 @@ function GalleryOne() {
                         <div className="gallery-card">
                             <div className="box-img global-img">
                                 <Link
-                                    href="/assets/img/home/gallery/742x696a.png"
+                                    href="/assets/img/imagi/Gallery/5 Recent Gallery.png"
                                     className="popup-image"
-                                    onClick={(e) => openModal('/assets/img/home/gallery/742x696a.png', e)}
+                                    onClick={(e) => openModal('/assets/img/imagi/Gallery/5 Recent Gallery.png', e)}
                                 >
                                     <div className="icon-btn">
                                         <i className="fal fa-magnifying-glass-plus" />
                                     </div>
                                 </Link>
                                 <img
-                                    src="/assets/img/home/gallery/742x696a.png"
+                                    src="/assets/img/imagi/Gallery/5 Recent Gallery.png"
                                     alt="gallery"
-                                    onClick={(e) => openModal('/assets/img/home/gallery/742x696a.png', e)}
+                                    onClick={(e) => openModal('/assets/img/imagi/Gallery/5 Recent Gallery.png', e)}
+                                />
+                            </div>
+                        </div>
+                        <div className="gallery-card">
+                            <div className="box-img global-img">
+                                <Link
+                                    href="/assets/img/imagi/Gallery/6 Recent Gallery.png"
+                                    className="popup-image"
+                                    onClick={(e) => openModal('/assets/img/imagi/Gallery/6 Recent Gallery.png', e)}
+                                >
+                                    <div className="icon-btn">
+                                        <i className="fal fa-magnifying-glass-plus" />
+                                    </div>
+                                </Link>
+                                <img
+                                    src="/assets/img/imagi/Gallery/6 Recent Gallery.png"
+                                    alt="gallery"
+                                    onClick={(e) => openModal('/assets/img/imagi/Gallery/6 Recent Gallery.png', e)}
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-md-6 col-lg-2">
+                        <div className="gallery-card">
+                            <div className="box-img global-img">
+                                <Link
+                                    href="/assets/img/imagi/Gallery/7 Recent Gallery.png"
+                                    className="popup-image"
+                                    onClick={(e) => openModal('/assets/img/imagi/Gallery/7 Recent Gallery.png', e)}
+                                >
+                                    <div className="icon-btn">
+                                        <i className="fal fa-magnifying-glass-plus" />
+                                    </div>
+                                </Link>
+                                <img
+                                    src="/assets/img/imagi/Gallery/7 Recent Gallery.png"
+                                    alt="gallery"
+                                    onClick={(e) => openModal('/assets/img/imagi/Gallery/7 Recent Gallery.png', e)}
                                 />
                             </div>
                         </div>
