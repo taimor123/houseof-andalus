@@ -15,6 +15,7 @@ function AboutFour() {
                         <img src="/assets/img/About us/About 2.png" alt="About" />
                      </div>
                      <div className="img3 movingX">
+                        {/* <img src="/assets/img/About us/About 3.png" alt="About" /> */}
                         <img src="/assets/img/About us/About 3.png" alt="About" />
                      </div>
                   </div>
@@ -27,6 +28,7 @@ function AboutFour() {
                            We are a heritage-inspired retreat home
                         </h2>
                      </div>
+                     
                      <p className="pe-xl-5">
                         There are many reflections of journeys here, but each finds peace in remembrance, reflection, and rootedness.
                      </p>

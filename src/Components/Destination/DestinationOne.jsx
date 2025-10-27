@@ -7,18 +7,18 @@ import "swiper/css/effect-coverflow";
 import Link from 'next/link';
 
 const destinations = [
-  { id: 1, name: "Retreats", listings: 15, image: "/assets/img/Home/Reserve Your Retreat/1 Reserve Your Retreat 423x636.png" },
-  { id: 2, name: "Architecture", listings: 22, image: "/assets/img/Home/Reserve Your Retreat/2 Reserve Your Retreat Architecture.png" },
-  { id: 3, name: "History", listings: 25, image: "/assets/img/Home/Reserve Your Retreat/3 Reserve Your Retreat 247x372 History.png" },
-  { id: 4, name: "Culture", listings: 28, image: "/assets/img/Home/Reserve Your Retreat/4 Reserve Your Retreat 337x506 Culture.png" },
-  { id: 5, name: "Artifacts", listings: 30, image: "/assets/img/Home/Reserve Your Retreat/5 Reserve Your Retreat 337x506 Artifacts.png" },
-  { id: 6, name: "Preservation", listings: 15, image: "/assets/img/Home/Reserve Your Retreat/6 Reserve Your Retreat 423x636 Preservation.png" },
-  { id: 7, name: "Monastery", listings: 22, image: "/assets/img/Home/Reserve Your Retreat/7 Reserve Your Retreat 337x506 Monastery.png" },
-  { id: 8, name: "Symbolism", listings: 25, image: "/assets/img/Home/Reserve Your Retreat/8 Reserve Your Retreat 247x372 Symbolism.png" },
-  { id: 9, name: "Antiquity", listings: 28, image: "/assets/img/Home/Reserve Your Retreat/9 Reserve Your Retreat 247x372 Antiquity.png" },
-  { id: 10, name: "Landmark", listings: 30, image: "/assets/img/Home/Reserve Your Retreat/10 Reserve Your Retreat 337x506 Landmark.png" },
+  { id: 1, name: "Couples Retreat", subtitle: "June, September 2026", image: "/assets/img/Home/Reserve Your Retreat/1 Reserve Your Retreat 423x636.png", link: "/book-your-stay/couple-retreat-form" },
+  { id: 2, name: "Writers Retreat", subtitle: "March, October 2026", image: "/assets/img/Home/Reserve Your Retreat/2 Reserve Your Retreat Architecture.png", link: "/book-your-stay/booking-form" },
+  { id: 3, name: "Leadership Retreat", subtitle: "23-27 April 2026", image: "/assets/img/Home/Reserve Your Retreat/3 Reserve Your Retreat 247x372 History.png", link: "/book-your-stay/booking-form" },
+  { id: 4, name: "Men Retreat", subtitle: "June 2026", image: "/assets/img/Home/Reserve Your Retreat/4 Reserve Your Retreat 337x506 Culture.png", link: "/book-your-stay/booking-form" },
+  { id: 5, name: "Women Retreat", subtitle: "14-17 May, 24-28 Sept 2026", image: "/assets/img/Home/Reserve Your Retreat/5 Reserve Your Retreat 337x506 Artifacts.png", link: "/book-your-stay/booking-form" },
+  { id: 6, name: "Custom Retreat", subtitle: "July and August 2026", image: "/assets/img/Home/Reserve Your Retreat/6 Reserve Your Retreat 423x636 Preservation.png", link: "/book-your-stay/organize-your-own-retreat" },
+  { id: 7, name: "Olive Harvest Retreat", subtitle: "October 2026", image: "/assets/img/Home/Reserve Your Retreat/7 Reserve Your Retreat 337x506 Monastery.png", link: "/book-your-stay/booking-form" },
+  // { id: 8, name: "Symbolism", subtitle: "October 2026", image: "/assets/img/Home/Reserve Your Retreat/8 Reserve Your Retreat 247x372 Symbolism.png", link: "/book-your-stay/booking-form" },
+  // { id: 9, name: "Antiquity", subtitle: "October 2026", image: "/assets/img/Home/Reserve Your Retreat/9 Reserve Your Retreat 247x372 Antiquity.png", link: "/book-your-stay/booking-form" },
+  // { id: 10, name: "Landmark", subtitle: "October 2026", image: "/assets/img/Home/Reserve Your Retreat/10 Reserve Your Retreat 337x506 Landmark.png", link: "/book-your-stay/booking-form" },
 ];
-
+ 
 const sliderOptions = {
     modules: [EffectCoverflow],
     effect: "coverflow",
@@ -98,10 +98,10 @@ function DestinationOne() {
                         <h4 className="box-title">
                           <Link href="/destination/1">{dest.name}</Link>
                         </h4>
-                        <span className="destination-subtitle">{dest.listings} Listing</span>
+                        <span className="destination-subtitle">{dest.subtitle}</span>
                       </div>
                       <div>
-                        <Link href="/book-your-stay" className="th-btn style2 th-icon">
+                        <Link href={dest.link || "/book-your-stay"} className="th-btn style2 th-icon" aria-label={`View all for ${dest.name}`}>
                           View All
                         </Link>
                       </div>

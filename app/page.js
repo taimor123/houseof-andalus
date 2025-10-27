@@ -20,14 +20,16 @@ export default function HomePage() {
       <HeaderOne />
       <BannerOne />
       <Booking />
-      <CategoryOne />
-      <DestinationOne />
       <AboutOne />
+      <DestinationOne />
+      <CategoryOne />
+     
+    
       <TourTwo />
       <GalleryOne />
       <CounterOne />
       {/* <TourGuide /> */}
-      {/* <TestimonialOne /> */}
+      <TestimonialOne />
       {/* <BrandOne className="space-bottom" /> */}
       {/* <BlogOne /> */}
       <FooterOne />

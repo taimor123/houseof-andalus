@@ -1,8 +1,10 @@
 "use client";
 import React, { useState } from "react";
+import { useRouter } from 'next/navigation';
 import NiceSelect from "../Header/NiceSelect";
-
+import Link from "next/link";
 function Booking() {
+    const router = useRouter();
     const [formData, setFormData] = useState({
         destination: "",
         adventureType: "",
@@ -12,19 +14,14 @@ function Booking() {
 
     const [formMessage, setFormMessage] = useState({ text: "", type: "" });
 
-    const destinationOptions = [
-        { value: "Australia", label: "Australia" },
-        { value: "Dubai", label: "Dubai" },
-        { value: "England", label: "England" },
-        { value: "Sweden", label: "Sweden" },
-        { value: "Thailand", label: "Thailand" },
-        { value: "Switzerland", label: "Switzerland" },
-    ];
     const adventureOptions = [
-        { value: "Beach", label: "Beach" },
-        { value: "Group Tour", label: "Group Tour" },
-        { value: "Couple Tour", label: "Couple Tour" },
-        { value: "Family Tour", label: "Family Tour" },
+        { value: "Heritage Harvest", label: "Heritage Harvest" },
+        { value: "Al Andalus Pathways", label: "Al Andalus Pathways" },
+        { value: "Leadership Journeys", label: "Leadership Journeys" },
+        { value: "Sacred Land", label: "Sacred Land" },
+        { value: "The House and Its History", label: "The House and Its History" },
+        { value: "Culture and Society", label: "Culture and Society" },
+        { value: "Art and Architecture", label: "Art and Architecture" },
     ];
     const durationOptions = [
         { value: "1 days", label: "1 days" },
@@ -35,9 +32,12 @@ function Booking() {
         { value: "6 days", label: "6 days" },
     ];
     const categoryOptions = [
-        { value: "Luxury", label: "Luxury" },
-        { value: "Deluxe", label: "Deluxe" },
-        { value: "Economy", label: "Economy" },
+        { value: "Couples Retreat", label: "Couples Retreat" },
+        { value: "Writers Retreat", label: "Writers Retreat" },
+        { value: "Leadership Retreat", label: "Leadership Retreat" },
+        { value: "Men Retreat", label: "Men Retreat" },
+        { value: "Women Retreat", label: "Women Retreat" },
+        { value: "Custom Retreat", label: "Custom Retreat" },
     ];
 
     const handleChange = (name, value) => {
@@ -48,14 +48,24 @@ function Booking() {
         e.preventDefault();
 
 
-        if (!formData.destination || !formData.adventureType || !formData.duration || !formData.category) {
+        if ( !formData.adventureType || !formData.duration || !formData.category) {
             setFormMessage({ text: "Please fill in all fields before searching.", type: "error" });
            
             return;
         }
 
-        setFormMessage({ text: "Search submitted successfully!", type: "success" });
+        // Redirect logic based on selected category
+        const cat = formData.category;
+        if (cat === 'Couples Retreat') {
+            router.push('/book-your-stay/couple-retreat-form');
+        } else if (cat === 'Custom Retreat') {
+            router.push('/book-your-stay/organize-your-own-retreat');
+        } else {
+            router.push('/book-your-stay/booking-form');
+        }
 
+        // Optionally reset & message (can be removed since redirect happens)
+        setFormMessage({ text: "Redirecting...", type: "success" });
         setFormData({ destination: "", adventureType: "", duration: "", category: "" });
     };
 
@@ -65,7 +75,7 @@ function Booking() {
                 <form onSubmit={handleSubmit} className="booking-form">
                     <div className="input-wrap">
                         <div className="row align-items-center justify-content-between">
-                            <div className="form-group col-md-6 col-lg-auto">
+                            {/* <div className="form-group col-md-6 col-lg-auto">
                                 <div className="icon">
                                     <i className="fa-light fa-route" />
                                 </div>
@@ -77,7 +87,7 @@ function Booking() {
                                         onChange={(value) => handleChange("destination", value)}
                                     />
                                 </div>
-                            </div>
+                            </div> */}
                             <div className="form-group col-md-6 col-lg-auto">
                                 <div className="icon">
                                     <i className="fa-regular fa-person-hiking" />
@@ -118,10 +128,14 @@ function Booking() {
                                 </div>
                             </div>
                             <div className="form-btn col-md-12 col-lg-auto">
-                                <button className="th-btn" type="submit">
+                                {/* <button className="th-btn" type="submit">
                                     <img src="/assets/img/icon/search.svg" alt="" />
-                                    Find Stay
-                                </button>
+                                    Book Retreat
+                                </button> */}
+                                    <Link  href="/book-your-stay/booking-form" className="th-btn" type="submit">
+                                    <img src="/assets/img/icon/search.svg" alt="" />
+                                    Book Retreat
+                                </Link>
                             </div>
                         </div>
 

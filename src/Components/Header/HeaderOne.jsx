@@ -214,9 +214,23 @@ function HeaderOne() {
                                              <li>
                                                 <Link href="/the-house">The House</Link>
                                             </li> 
-                                            <li>
+                                            {/* <li>
                                                 <Link href="/book-your-stay">Book Your Stay</Link>
-                                            </li> 
+                                            </li>  */}
+                                            <li className="menu-item-has-children">
+                                                <Link href="/book-your-stay">Book Your Stay</Link>
+                                                <ul className="sub-menu">
+                                                    {/* <li>
+                                                        <Link href="/book-your-independence-day">Book your Independence Day</Link>
+                                                    </li> */}
+                                                    <li>
+                                                        <Link href="/book-your-stay/booking-form">Book your Retreat</Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link href="/book-your-stay/organize-your-own-retreat">Organize your own Retreat</Link>
+                                                    </li>
+                                                </ul>
+                                            </li>
                                             {/* <li className="menu-item-has-children">
                                                 <Link href="#">Destination</Link>
                                                 <ul className="sub-menu">

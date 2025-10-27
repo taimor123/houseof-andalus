@@ -75,13 +75,13 @@ function FooterOne() {
                                             <Link href="/about">About us</Link>
                                         </li>
                                         <li>
-                                            <Link href="/service">Our Service</Link>
+                                            <Link href="/the-house">The House</Link>
                                         </li>
                                         <li>
-                                            <Link href="/contact">Terms of Service</Link>
+                                            <Link href="/book-your-stay">Book your Stay</Link>
                                         </li>
                                         <li>
-                                            <Link href="/contact">Tour Booking Now</Link>
+                                            <Link href="/contact">Contact Us</Link>
                                         </li>
                                     </ul>
                                 </div>

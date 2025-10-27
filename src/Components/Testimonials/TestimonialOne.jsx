@@ -7,40 +7,40 @@ import "swiper/css/pagination";
 
 const testimonials = [
   {
-    name: "Maria Doe",
-    designation: "Traveller",
+    name: "Amina Rahman",
+    designation: "Retreat Guest",
     image: "/assets/img/testimonial/testi_1_1.jpg",
-    text: "A home that perfectly blends sustainability with luxury until I discovered Ecoland Residence. From the moment I stepped into this community, I knew it was where I wanted to live. The commitment to eco-friendly living.",
+    text: "A place that beautifully unites spirituality with comfort — until I arrived at House of Andalus. From the first moment, I felt peace in every corner. The devotion to mindful, soulful living is truly inspiring.",
   },
   {
-    name: "Andrew Simon",
+    name: "Omar Khalid",
     designation: "Traveller",
     image: "/assets/img/testimonial/testi_1_2.jpg",
-    text: "The home boasts sleek, contemporary architecture with clean lines and expansive windows, allowing natural light to flood the interiors. It incorporates passive design principles.",
+    text: "The house features warm, Andalusian architecture with natural light flowing through calm spaces. Every detail, from the olive wood to the quiet courtyards, reflects harmony and thoughtful design.",
   },
   {
-    name: "Alex Jordan",
-    designation: "Traveller",
+    name: "Layla Hassan",
+    designation: "Retreat Participant",
     image: "/assets/img/testimonial/testi_1_1.jpg",
-    text: "Solar panels adorn the roof, harnessing renewable energy to power the home and even feed excess electricity back into the grid. High-performance insulation and triple-glazed windows enhance energy efficiency.",
+    text: "Olive groves surround the estate, nurturing both heart and mind. The stillness of this place restores the spirit while reminding you of the sacred bond between land, faith, and human connection.",
   },
   {
-    name: "Maria Doe",
-    designation: "Traveller",
+    name: "Yusuf Ali",
+    designation: "Guest",
     image: "/assets/img/testimonial/testi_1_1.jpg",
-    text: "A home that perfectly blends sustainability with luxury until I discovered Ecoland Residence. From the moment I stepped into this community, I knew it was where I wanted to live. The commitment to eco-friendly living.",
+    text: "A place that beautifully unites spirituality with comfort — until I arrived at House of Andalus. From the first moment, I felt peace in every corner. The devotion to mindful, soulful living is truly inspiring.",
   },
   {
-    name: "Andrew Simon",
-    designation: "Traveller",
+    name: "Fatima Noor",
+    designation: "Retreat Guest",
     image: "/assets/img/testimonial/testi_1_2.jpg",
-    text: "The home boasts sleek, contemporary architecture with clean lines and expansive windows, allowing natural light to flood the interiors. It incorporates passive design principles.",
+    text: "The house features warm, Andalusian architecture with natural light flowing through calm spaces. Every detail, from the olive wood to the quiet courtyards, reflects harmony and thoughtful design.",
   },
   {
-    name: "Alex Jordan",
-    designation: "Traveller",
+    name: "Ibrahim Khan",
+    designation: "Retreat Participant",
     image: "/assets/img/testimonial/testi_1_1.jpg",
-    text: "Solar panels adorn the roof, harnessing renewable energy to power the home and even feed excess electricity back into the grid. High-performance insulation and triple-glazed windows enhance energy efficiency.",
+    text: "Olive groves surround the estate, nurturing both heart and mind. The stillness of this place restores the spirit while reminding you of the sacred bond between land, faith, and human connection.",
   },
 ];
 

@@ -222,7 +222,7 @@ export default function TheHousePage() {
                       <span className="page-tag mr-5">The Rooms</span>
                       <span className="destination-subtitle" style={{display:'inline-block',padding:'4px 10px',border:'1px solid #e1ece8',borderRadius:'30px',fontSize:'12px',letterSpacing:'.05em',textTransform:'uppercase'}}>Heritage Alive</span>
                     </div>
-                    <h2 className="box-title">Rooms That Remember</h2>
+                    <h2 className="box-title">House of Andalus by different Season</h2>
                     <p className="blog-text mb-35">Each room is named after a historic Andalusi figure, chosen for their unique character, achievements, leadership styles, and the legacy they left behind. Every fabric, tile, and scent was chosen to honour heritage and harmony. The interiors blend local Andalusian craft with modern restraint, resulting in a space that feels both timeless and intimate.</p>
                     <p className="blog-text mb-35">Each olive tree, each archway carries the memory of Al-Andalus, where scholars once wrote, artists once painted, and hearts once worshipped in beauty. This is a house that holds stories. And now, it holds yours too.</p>
                     {/* <h3 className="page-title mt-10 mb-25">Room Showcase</h3> */}

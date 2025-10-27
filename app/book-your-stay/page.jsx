@@ -65,68 +65,7 @@ export default function BookYourStayPage() {
           </div>
         </section>
 
-        {/* Section: Overview / What's Included */}
-  <section className="space bg-smoke" id="retreats">
-          <div className="container shape-mockup-wrap">
-            <div className="row">
-              <div className="col-xl-12">
-                <div className="page-single">
-                  <div className="page-content d-block">
-                    <div className="page-meta mt-10 mb-30">
-                      <span className="page-tag mr-5">Retreats</span>
-                      <span className="destination-subtitle" style={{display:'inline-block',padding:'4px 10px',border:'1px solid #e1ece8',borderRadius:'30px',fontSize:'12px',letterSpacing:'.05em',textTransform:'uppercase'}}>Included</span>
-                    </div>
-                    <h2 className="box-title">House of Andalus Retreats</h2>
-                    <p className="blog-text mb-30">At the House of Andalus, we design retreats that the world makes us forget: intimacy, creativity, clarity, and connection. Each experience flows with reflection, community, and nature&rsquo;s rhythm.</p>
-                    <h3 className="box-title">What&rsquo;s Included</h3>
-                    <div className="destination-checklist mb-35">
-                      <div className="checklist style2">
-                        <ul>
-                          <li>All workshops & materials</li>
-                          <li>Premium accommodation</li>
-                          <li>All meals & refreshments</li>
-                          <li>Guided adventures & excursions</li>
-                        </ul>
-                      </div>
-                      <div className="checklist style2">
-                        <ul>
-                          <li>Pre-retreat consultation</li>
-                          <li>Wellness & reflection spaces</li>
-                          <li>Community circles & dhikr</li>
-                          <li>Dedicated retreat facilitators</li>
-                        </ul>
-                      </div>
-                    </div>
-                    <p className="blog-text mb-40">Join us in the mountains of Andalucia for our next retreat here: <Link href="#upcoming" className="th-btn style4 th-icon" style={{padding:'4px 14px'}}>View Upcoming</Link></p>
-
-                    {/* Upcoming Retreats List */}
-                    <h3 className="page-title mt-10 mb-25" id="upcoming">Upcoming Retreats</h3>
-                    <div className="row gy-4 gx-4 mb-10">
-                      {upcomingRetreats.map(r => (
-                        <div key={r.id} className="col-md-6 col-lg-4">
-                          <div className="destination-item th-ani" aria-label={r.title}>
-                            <div className="destination-item_img global-img">
-                              <img src="/assets/img/destination/destination_1_1.jpg" alt={r.title} />
-                            </div>
-                            <div className="destination-content">
-                              <h3 className="box-title" style={{fontSize:'19px'}}>
-                                <Link href="#contact">{r.title}</Link>
-                              </h3>
-                              <p className="destination-text mb-10" style={{minHeight:'60px'}}>{r.summary}</p>
-                              <p className="destination-text mb-5" style={{fontSize:'12px',letterSpacing:'.05em',textTransform:'uppercase'}}>{r.date}</p>
-                              <p className="destination-text mb-15" style={{fontWeight:600}}>{r.fee} <span style={{fontWeight:400,fontSize:'11px'}}>• 5 Days • Andalusia</span></p>
-                              <Link href="#contact" className="th-btn style4 th-icon" style={{padding:'6px 18px',fontSize:'13px'}}>Book Now</Link>
-                            </div>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+   
 
   {/* Couples’ Retreat (Text Focus) */}
         <section className="space" id="couples-retreat">
@@ -150,7 +89,7 @@ export default function BookYourStayPage() {
                       <cite>Facilitator Team</cite>
                     </blockquote>
                     <div className="mt-25">
-                      <Link href="/contact" className="th-btn style3 th-icon">Join the Couples&rsquo; Retreat</Link>
+                      <Link href="/book-your-stay/couple-retreat-form" className="th-btn style3 th-icon">Join the Couples&rsquo; Retreat</Link>
                     </div>
                   </div>
                 </div>
@@ -315,6 +254,69 @@ export default function BookYourStayPage() {
                     </blockquote>
                     <div className="mt-25">
                       <Link href="/contact" className="th-btn style1 th-icon hosting-btn">Enquire About Hosting</Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+             {/* Section: Overview / What's Included */}
+  <section className="space bg-smoke" id="retreats">
+          <div className="container shape-mockup-wrap">
+            <div className="row">
+              <div className="col-xl-12">
+                <div className="page-single">
+                  <div className="page-content d-block">
+                    <div className="page-meta mt-10 mb-30">
+                      <span className="page-tag mr-5">Retreats</span>
+                      <span className="destination-subtitle" style={{display:'inline-block',padding:'4px 10px',border:'1px solid #e1ece8',borderRadius:'30px',fontSize:'12px',letterSpacing:'.05em',textTransform:'uppercase'}}>Included</span>
+                    </div>
+                    <h2 className="box-title">House of Andalus Retreats</h2>
+                    <p className="blog-text mb-30">At the House of Andalus, we design retreats that the world makes us forget: intimacy, creativity, clarity, and connection. Each experience flows with reflection, community, and nature&rsquo;s rhythm.</p>
+                    <h3 className="box-title">What&rsquo;s Included</h3>
+                    <div className="destination-checklist mb-35">
+                      <div className="checklist style2">
+                        <ul>
+                          <li>All workshops & materials</li>
+                          <li>Premium accommodation</li>
+                          <li>All meals & refreshments</li>
+                          <li>Guided adventures & excursions</li>
+                        </ul>
+                      </div>
+                      <div className="checklist style2">
+                        <ul>
+                          <li>Pre-retreat consultation</li>
+                          <li>Wellness & reflection spaces</li>
+                          <li>Community circles & dhikr</li>
+                          <li>Dedicated retreat facilitators</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <p className="blog-text mb-40">Join us in the mountains of Andalucia for our next retreat here: <Link href="#upcoming" className="th-btn style4 th-icon" style={{padding:'4px 14px'}}>View Upcoming</Link></p>
+
+                    {/* Upcoming Retreats List */}
+                    <h3 className="page-title mt-10 mb-25" id="upcoming">Upcoming Retreats</h3>
+                    <div className="row gy-4 gx-4 mb-10">
+                      {upcomingRetreats.map(r => (
+                        <div key={r.id} className="col-md-6 col-lg-4">
+                          <div className="destination-item th-ani" aria-label={r.title}>
+                            <div className="destination-item_img global-img">
+                              <img src="/assets/img/destination/destination_1_1.jpg" alt={r.title} />
+                            </div>
+                            <div className="destination-content">
+                              <h3 className="box-title" style={{fontSize:'19px'}}>
+                                <Link href="#contact">{r.title}</Link>
+                              </h3>
+                              <p className="destination-text mb-10" style={{minHeight:'60px'}}>{r.summary}</p>
+                              <p className="destination-text mb-5" style={{fontSize:'12px',letterSpacing:'.05em',textTransform:'uppercase'}}>{r.date}</p>
+                              <p className="destination-text mb-15" style={{fontWeight:600}}>{r.fee} <span style={{fontWeight:400,fontSize:'11px'}}>• 5 Days • Andalusia</span></p>
+                              <Link href="#contact" className="th-btn style4 th-icon" style={{padding:'6px 18px',fontSize:'13px'}}>Book Now</Link>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
                     </div>
                   </div>
                 </div>
