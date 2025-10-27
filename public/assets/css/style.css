@@ -3121,7 +3121,7 @@ input[type=time]::-webkit-calendar-picker-indicator {
   font-size: 40px;
   line-height: 40px;
   font-weight: 400;
-  font-family: var(--style-font);
+  /* font-family: var(--style-font); */
   position: relative;
   margin-bottom: -4px;
   /* Extra small devices */
