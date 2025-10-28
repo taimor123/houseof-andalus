@@ -1,19 +1,143 @@
 "use client";
-import React from 'react';
+import React, { useEffect } from 'react';
 import HeaderOne from '../../src/Components/Header/HeaderOne';
 import FooterFour from '../../src/Components/Footer/FooterFour';
 import ScrollToTop from '../../src/Components/ScrollToTop';
 import Breadcrumb from '../../src/Components/BreadCrumb/Breadcrumb';
 import Link from 'next/link';
 
-// Placeholder retreats list (replace with dynamic data later)
-const upcomingRetreats = [
-  { id: 1, title: 'Couples Retreat: A Fine Romance', date: 'Mar 14-18, 2026', fee: 'From €1,250', summary: 'Reconnect hearts through guided practices, wellness, and nature.' },
-  { id: 2, title: 'Writers Retreat: Return To Voice', date: 'Apr 09-14, 2026', fee: 'From €980', summary: 'Ignite creativity with mentorship, silent hours, and Andalusian trails.' },
-  { id: 3, title: 'Leadership Retreat: Conscious Authority', date: 'May 20-24, 2026', fee: 'From €1,450', summary: 'Lead with taqwa and clarity in reflective circles and guided workshops.' },
+// REPLACED placeholder upcomingRetreats with structured 2026 data
+const events2026 = [
+  {
+    month: 'March',
+    icon: '🌸',
+    items: [
+      {
+        title: 'New Blossom – Spring Writer’s Retreat',
+        description: 'Nurture creativity and peace among the olive groves. Write, reflect, and rediscover inspiration.',
+        dates: 'March (exact dates to be announced)',
+        register: true
+      }
+    ]
+  },
+  {
+    month: 'April',
+    icon: '🌿',
+    items: [
+      {
+        title: 'Alchemy of Leadership Programme',
+        description: 'Transform your understanding of leadership with a soulful, purpose-driven framework.',
+        dates: '23–27 April',
+        viewDetails: true,
+        register: true
+      }
+    ]
+  },
+  {
+    month: 'May',
+    icon: '❀',
+    items: [
+      {
+        title: 'Muslim Women Leadership Retreat',
+        description: 'A sacred space for women to grow, connect, and empower each other through spiritual and personal development.',
+        dates: '14–17 May',
+        register: true
+      }
+    ]
+  },
+  {
+    month: 'June',
+    icon: '♥︎',
+    items: [
+      {
+        title: 'Connecting Couples Retreat',
+        description: 'Reignite love, improve communication, and renew your relationship in a serene Andalusian setting.',
+        dates: 'June (exact dates to be announced)',
+        register: true
+      }
+    ]
+  },
+  {
+    month: 'July & August',
+    icon: '☀️',
+    items: [
+      {
+        title: 'Family & Friends Open Retreats',
+        description: 'Spend precious days with loved ones. Reconnect through laughter, food, and shared memories.',
+        dates: 'July–August (flexible bookings)',
+        register: true
+      }
+    ]
+  },
+  {
+    month: 'September',
+    icon: '🍁',
+    items: [
+      {
+        title: 'Women’s Retreat with Asma Ahmad',
+        description: 'A rejuvenating retreat to restore balance, strength, and inner peace.',
+        dates: '24–28 September',
+        register: true
+      },
+      {
+        title: 'Couples Retreat',
+        description: 'A nurturing space to reconnect hearts and heal together through guided reflection.',
+        dates: 'September (exact dates to be announced)',
+        register: true
+      },
+      {
+        title: 'Alchemy of Leadership (Encore)',
+        description: 'An extended opportunity for those who missed the April programme.',
+        dates: 'September (TBC)',
+        viewDetails: true,
+        register: true
+      }
+    ]
+  },
+  {
+    month: 'October',
+    icon: '🫒',
+    items: [
+      {
+        title: 'Writer’s Retreat',
+        description: 'Find your muse in the Andalusian calm. A peaceful space to write, think, and grow.',
+        dates: 'October (exact dates to be announced)',
+        register: true
+      },
+      {
+        title: 'Olive Harvest Retreat',
+        description: 'Experience the sacred tradition of olive harvesting — reconnecting body, earth, and spirit.',
+        dates: 'October (exact dates to be announced)',
+        register: true
+      }
+    ]
+  }
 ];
+// ADD: helper for Register Interest button destination
+const getInterestHref = (title = '') => {
+  const lower = title.toLowerCase();
+  if (lower.includes('couples')) return '/book-your-stay/couple-retreat-form';
+  if (lower.includes('custom')) return '/book-your-stay/organize-your-own-retreat';
+  return '/book-your-stay/booking-form';
+};
 
 export default function BookYourStayPage() {
+  useEffect(() => {
+    const cards = document.querySelectorAll('.hoa-event-card');
+    const obs = new IntersectionObserver(
+      entries => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.classList.add('in-view');
+            obs.unobserve(e.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+    cards.forEach(c => obs.observe(c));
+    return () => obs.disconnect();
+  }, []);
   return (
     <>
       <HeaderOne />
@@ -253,7 +377,7 @@ export default function BookYourStayPage() {
                       <cite>House of Andalus Team</cite>
                     </blockquote>
                     <div className="mt-25">
-                      <Link href="/contact" className="th-btn style1 th-icon hosting-btn">Enquire About Hosting</Link>
+                      <Link href="/book-your-stay/organize-your-own-retreat" className="th-btn style1 th-icon hosting-btn">Enquire About Hosting</Link>
                     </div>
                   </div>
                 </div>
@@ -294,34 +418,87 @@ export default function BookYourStayPage() {
                         </ul>
                       </div>
                     </div>
-                    <p className="blog-text mb-40">Join us in the mountains of Andalucia for our next retreat here: <Link href="#upcoming" className="th-btn style4 th-icon" style={{padding:'4px 14px'}}>View Upcoming</Link></p>
+                    <p className="blog-text mb-40">
+                      Join us in the mountains of Andalucia for our next retreat here:
+                      <Link href="#upcoming-2026" className="th-btn style4 th-icon" style={{padding:'4px 14px'}}>View 2026 Schedule</Link>
+                    </p>
 
-                    {/* Upcoming Retreats List */}
-                    <h3 className="page-title mt-10 mb-25" id="upcoming">Upcoming Retreats</h3>
-                    <div className="row gy-4 gx-4 mb-10">
-                      {upcomingRetreats.map(r => (
-                        <div key={r.id} className="col-md-6 col-lg-4">
-                          <div className="destination-item th-ani" aria-label={r.title}>
-                            <div className="destination-item_img global-img">
-                              <img src="/assets/img/destination/destination_1_1.jpg" alt={r.title} />
-                            </div>
-                            <div className="destination-content">
-                              <h3 className="box-title" style={{fontSize:'19px'}}>
-                                <Link href="#contact">{r.title}</Link>
-                              </h3>
-                              <p className="destination-text mb-10" style={{minHeight:'60px'}}>{r.summary}</p>
-                              <p className="destination-text mb-5" style={{fontSize:'12px',letterSpacing:'.05em',textTransform:'uppercase'}}>{r.date}</p>
-                              <p className="destination-text mb-15" style={{fontWeight:600}}>{r.fee} <span style={{fontWeight:400,fontSize:'11px'}}>• 5 Days • Andalusia</span></p>
-                              <Link href="#contact" className="th-btn style4 th-icon" style={{padding:'6px 18px',fontSize:'13px'}}>Book Now</Link>
-                            </div>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
+                    {/* REMOVED legacy "Upcoming Retreats" cards */}
                   </div>
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+        {/* NEW: 2026 Upcoming Retreats & Events (Redesigned) */}
+        <section className="space hoa-events-2026 position-relative overflow-hidden" id="upcoming-2026" aria-labelledby="hoa-events-2026-title">
+          <div className="container shape-mockup-wrap">
+            {/* Decorative Shapes (reuse existing assets) */}
+            <div className="shape-mockup d-none d-xl-block hoa-shape-left" style={{ top: '4%', left: '-6%' }}>
+              <img src="/assets/img/shape/shape_2.png" alt="decor shape" />
+            </div>
+            <div className="shape-mockup d-none d-xl-block hoa-shape-right" style={{ bottom: '6%', right: '-4%' }}>
+              <img src="/assets/img/shape/shape_3.png" alt="decor shape" />
+            </div>
+
+            {/* Intro */}
+            <div className="row justify-content-center mb-50">
+              <div className="col-xl-9">
+                <div className="title-area text-center">
+                  <span className="sub-title style1">2026 Schedule</span>
+                  <h2 id="hoa-events-2026-title" className="sec-title mb-20 heading">House of Andalus Retreats & Events – 2026</h2>
+                  <p className="sec-text mx-auto" style={{maxWidth:'760px'}}>
+                    We welcome you to a year of reflection, growth, and renewal under the Andalusian sky.
+                    Whether you seek peace, connection, or inspiration — there’s a retreat waiting for you.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Month Groups */}
+            {events2026.map(group => (
+              <div key={group.month} className="hoa-month-wrapper mb-60">
+                <div className="hoa-month-bar">
+                  <span className="hoa-month-icon" aria-hidden="true">{group.icon}</span>
+                  <span className="hoa-month-label">{group.month}</span>
+                  <span className="hoa-month-line" />
+                </div>
+                <div className="row gy-4 gx-4">
+                  {group.items.map((ev, i) => (
+                    <div key={i} className="col-sm-6 col-lg-4">
+                      <div className="hoa-event-card destination-item th-ani" role="article" aria-label={ev.title}>
+                        <div className="hoa-event-accent" />
+                        <div className="hoa-event-inner">
+                          <h4 className="box-title hoa-event-title">{ev.title}</h4>
+                          <p className="destination-text hoa-event-desc">{ev.description}</p>
+                          <p className="destination-text hoa-event-dates"><strong>Dates:</strong> {ev.dates}</p>
+                          <div className="hoa-actions d-flex flex-wrap gap-2">
+                            {ev.viewDetails && (
+                              <Link
+                                href="/book-your-stay/booking-form"
+                                className="th-btn style1 th-icon"
+                                aria-label={`View details for ${ev.title}`}
+                              >
+                                View Details
+                              </Link>
+                            )}
+                            {ev.register && (
+                              <Link
+                                href={getInterestHref(ev.title)}
+                                className="th-btn style3 th-icon"
+                                aria-label={`Register interest for ${ev.title}`}
+                              >
+                                Register Interest
+                              </Link>
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </section>
       </main>
@@ -334,9 +511,149 @@ export default function BookYourStayPage() {
           box-shadow: 0 4px 14px rgba(0,0,0,0.25);
         }
         .hosting-btn:hover {
-          background: #e9f4ef !important;
+          background: #ffffffff !important;
           color: #0f221b !important;
           box-shadow: 0 6px 20px rgba(0,0,0,0.28);
+        }
+        /* Redesigned 2026 Events Section */
+        .hoa-events-2026 {
+          background:
+            linear-gradient(140deg,#f9f7f3 0%, #ffffffff 55%, #eef3ef 100%);
+        }
+        .hoa-events-2026:before {
+          content:'';
+          position:absolute;
+          inset:0;
+          background:
+            radial-gradient(circle at 12% 18%, rgba(197,161,91,0.12) 0%, transparent 55%),
+            radial-gradient(circle at 88% 82%, rgba(122,139,115,0.12) 0%, transparent 60%);
+          pointer-events:none;
+        }
+        .hoa-month-wrapper:last-of-type { margin-bottom:0; }
+        .hoa-month-bar {
+          display:flex;
+          align-items:center;
+          gap:14px;
+          margin-bottom:28px;
+          position:relative;
+        }
+        .hoa-month-icon {
+          font-size:22px;
+          line-height:1;
+        }
+        .hoa-month-label {
+          font-size:18px;
+          font-weight:600;
+          letter-spacing:.05em;
+          text-transform:uppercase;
+          padding:6px 16px;
+          background:#ffffff;
+          border:1px solid #e1ece8;
+          border-radius:30px;
+          color:#2a332c;
+        }
+        .hoa-month-line {
+          flex:1;
+          height:1px;
+          background:linear-gradient(90deg,#5a6d52 0%, rgba(90,109,82,0) 80%);
+          opacity:.35;
+        }
+        .hoa-event-card {
+          position:relative;
+          background:#fff;
+          border:1px solid #e1e8ecff;
+          border-radius:18px;
+          box-shadow:0 6px 20px -8px rgba(32,42,36,0.12);
+          overflow:hidden;
+          padding:0;
+          opacity:0;
+          transform:translateY(26px);
+          transition:transform .45s cubic-bezier(.19,1,.22,1), box-shadow .45s ease;
+        }
+        .hoa-event-card.in-view {
+          animation:hoaCardIn .75s ease forwards;
+        }
+        .hoa-event-card:hover {
+          transform:translateY(-6px);
+          box-shadow:0 16px 34px -14px rgba(32,42,36,0.28);
+        }
+        .hoa-event-accent {
+          height:5px;
+          background:linear-gradient(90deg,#c5a15b 0%, #d7b980 60%, #e1ece8 100%);
+        }
+        .hoa-event-inner {
+          padding:18px 20px 22px;
+        }
+        .hoa-event-title {
+          font-size:18px;
+          margin-bottom:10px;
+        }
+        .hoa-event-desc {
+          font-size:14px;
+          line-height:1.55;
+          min-height:62px;
+          margin-bottom:12px;
+          color:#5a6d52;
+        }
+        .hoa-event-dates {
+          font-size:12px;
+          letter-spacing:.05em;
+          text-transform:uppercase;
+          margin:0 0 16px;
+          font-weight:500;
+          color:#596b57;
+        }
+        .hoa-actions .hoa-register-btn {
+          padding:8px 18px;
+          border-radius:28px;
+          font-size:13px;
+          letter-spacing:.04em;
+        }
+        /* UPDATED: View Details button refinement */
+        .hoa-details-btn {
+          position:relative;
+          display:inline-flex;
+          align-items:center;
+          gap:6px;
+          font-size:12px;
+          margin-top:10px;
+          padding:6px 16px;
+          padding-top: 10px;
+          border-radius:26px;
+          background:#ffffff;
+          border:1px solid #c9d5ce;
+          color:#4e5f49;
+          font-weight:500;
+          letter-spacing:.05em;
+          line-height:1.2;
+          transition:background .3s ease, color .3s ease, box-shadow .3s ease, border-color .3s ease, transform .3s ease;
+        }
+        .hoa-details-btn:hover {
+          background:#f1f6f3;
+          color:#2a332c;
+          border-color:#5a6d52;
+          box-shadow:0 6px 16px -8px rgba(74,90,69,.35);
+          transform:translateY(-2px);
+        }
+        .hoa-details-btn:active {
+          transform:translateY(0);
+          box-shadow:0 3px 10px -6px rgba(74,90,69,.3);
+        }
+        .hoa-details-btn:focus,
+        .hoa-register-btn:focus {
+          outline:2px solid #c5a15b;
+          outline-offset:2px;
+        }
+        @keyframes hoaCardIn {
+          0% { opacity:0; transform:translateY(26px); }
+          100% { opacity:1; transform:translateY(0); }
+        }
+        @media (max-width:640px) {
+          .hoa-month-label { font-size:14px; padding:6px 14px; }
+          .hoa-event-inner { padding:16px 18px 20px; }
+          .hoa-details-btn {
+            padding:6px 15px;
+          }
         }
       `}</style>
       <FooterFour />
