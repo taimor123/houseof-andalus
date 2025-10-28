@@ -229,6 +229,9 @@ function HeaderOne() {
                                                     <li>
                                                         <Link href="/book-your-stay/organize-your-own-retreat">Organize your own Retreat</Link>
                                                     </li>
+                                                    <li>
+                                                        <Link href="/book-your-stay/couple-retreat-form">Book Couple Retreat</Link>
+                                                    </li>
                                                 </ul>
                                             </li>
                                             {/* <li className="menu-item-has-children">

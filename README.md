@@ -91,6 +91,37 @@ The original CRA scripts have been replaced with Next.js scripts:
 - [ ] Optional: Replace `<img>` with `next/image` progressively
 - [ ] Optional: Implement route-level caching / ISR
 
+## Email Configuration
+
+The site sends notification + confirmation emails for:
+
+- Booking enquiries (`/api/booking`)
+- Couples’ retreat interest (`/api/couples-retreat`)
+- Organise/custom retreat interest (`/api/retreat-interest`)
+
+Setup steps:
+
+1. Copy `.env.example` to `.env.local`.
+2. Provide a Gmail address in `EMAIL_USER` and its App Password in `EMAIL_PASS` (Google Account → Security → App passwords).
+3. Optionally override per-form notification addresses with:
+	- `BOOKING_NOTIFY_TO`
+	- `COUPLES_NOTIFY_TO`
+	- `RETREAT_NOTIFY_TO`
+4. Restart the dev server after adding env vars.
+
+Security / deliverability notes:
+
+- Do NOT commit `.env.local`.
+- For production brand identity, consider a custom domain + a transactional provider (Resend, Postmark, SES) with SPF/DKIM.
+- Add basic rate limiting or CAPTCHA to deter abuse.
+- Current implementation sends emails inline (request waits for SMTP). For higher resilience use a job queue / background trigger later.
+
+Troubleshooting:
+
+- If emails do not send, check server logs for "Email credentials missing" warning.
+- Gmail may block sign-in if App Password not used or account security flags appear.
+- Ensure outbound SMTP (587) is allowed on hosting provider.
+
 ## License
 
 All rights reserved © 2025 House of Andalus.
