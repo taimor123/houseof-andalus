@@ -106,7 +106,7 @@ function TourTwo() {
                     <div className="col-lg-8">
                         <div className="title-area text-center">
                             <span className="sub-title">Best Experience</span>
-                            <h2 className="sec-title">Amazing Travel Experience</h2>
+                            <h2 className="sec-title">Why House of Andalus</h2>
                         </div>
                     </div>
                 </div>

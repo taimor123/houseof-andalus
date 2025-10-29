@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import HeaderOne from '../../src/Components/Header/HeaderOne';
 import FooterFour from '../../src/Components/Footer/FooterFour';
 import ScrollToTop from '../../src/Components/ScrollToTop';
@@ -17,36 +17,28 @@ const rooms = [
 ];
 
 export default function TheHousePage() {
-  const introVideoRef = useRef(null);
-
-  // Auto-play video when it scrolls into view (with user gesture fallback for sound policies)
+  // Auto-play / pause any video with data-autoplay-scroll when it enters/leaves viewport
   useEffect(() => {
-    const videoEl = introVideoRef.current;
-    if (!videoEl) return;
+    const videos = Array.from(document.querySelectorAll('video[data-autoplay-scroll]'));
+    if (!videos.length) return;
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
+        entries.forEach(entry => {
+          const vid = entry.target;
           if (entry.isIntersecting) {
-            // Attempt play; browsers may block if not muted until user interacts
-            const playPromise = videoEl.play();
-            if (playPromise && typeof playPromise.then === 'function') {
-              playPromise.catch(() => {
-                // If playback is blocked (likely due to sound), you could optionally mute then play
-                // videoEl.muted = true; videoEl.play(); // Uncomment if you prefer silent autoplay fallback
-              });
+            const p = vid.play();
+            if (p && typeof p.then === 'function') {
+              p.catch(() => { vid.muted = true; vid.play().catch(()=>{}); });
             }
           } else {
-            // Pause when out of view to save resources
-            if (!videoEl.paused) {
-              videoEl.pause();
-            }
+            vid.pause();
           }
         });
       },
       { threshold: 0.4 }
     );
-    observer.observe(videoEl);
-    return () => observer.disconnect();
+    videos.forEach(v => observer.observe(v));
+    return () => { videos.forEach(v => observer.unobserve(v)); observer.disconnect(); };
   }, []);
 
   return (
@@ -55,7 +47,9 @@ export default function TheHousePage() {
       <Breadcrumb title="House of Andalus" />
       <main className="space-top space-extra-bottom">
         {/* Section 1: Intro */}
+
         <div className="about-area position-relative overflow-hidden space" id="the-house-intro">
+
           <div className="container shape-mockup-wrap">
             <div className="row">
               <div className="col-xl-6 mb-40 mb-xl-0">
@@ -94,6 +88,23 @@ export default function TheHousePage() {
                 </div>
               </div>
             </div>
+                  <div className="row gy-4 space-top ">
+                  <div className="col-12">
+                    <div className="blog-img">
+                      <video
+                        className="w-100"
+                        controls
+                        loop
+                        playsInline
+                        data-autoplay-scroll
+                        aria-label="House of Andalus Intro Video"
+                      >
+                        <source src="/assets/img/homev.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                      </video>
+                      </div>
+                      </div>
+                      </div>
             {/* Shapes similar to AboutOne */}
             <div className="shape-mockup shape1 d-none d-xl-block" style={{ top: '12%', left: '-16%' }}>
               <img src="/assets/img/shape/shape_1.png" alt="shape" />
@@ -133,20 +144,19 @@ export default function TheHousePage() {
                                     <div className="col-12">
                                         <div className="blog-img">
                       <video
-                        ref={introVideoRef}
                         className="w-100"
                         controls
                         loop
                         playsInline
-                        // poster="/assets/img/blog/blog_inner_1.jpg"
+                        data-autoplay-scroll
                         aria-label="House of Andalus Intro Video"
                       >
                         <source src="/assets/img/House%20of%20Andalus%20video%203.mp4" type="video/mp4" />
                         Your browser does not support the video tag.
                       </video>
-                                        </div>
-                                    </div>
-                                </div>
+                      </div>
+                      </div>
+                      </div>
               </div>
             </div>
           </div>
@@ -258,9 +268,9 @@ export default function TheHousePage() {
                         #the-house-rooms .destination-box:hover img { transform: none; }
                       }
                     `}</style>
-                    <div className="text-center mt-40">
+                    {/* <div className="text-center mt-40">
                       <Link href="/rooms" className="th-btn style3 th-icon">View All Rooms</Link>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>

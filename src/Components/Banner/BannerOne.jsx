@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css'; // Core Swiper styles
 import { Pagination, EffectFade, Navigation } from 'swiper/modules';
@@ -8,8 +8,19 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/scrollbar';
 import Link from 'next/link';
+import Modal from 'react-modal';
+function useModalAccessibility(){
+    useEffect(() => {
+        const appElem = document.getElementById('__next') || document.body;
+        if (appElem) Modal.setAppElement(appElem);
+    }, []);
+}
+
 function BannerOne() {
-    const swiperRef = useRef(null);
+        const swiperRef = useRef(null);
+        useModalAccessibility();
+        const [modalIsOpen, setModalIsOpen] = useState(false);
+        const videoRef = useRef(null);
 
     useEffect(() => {
         // Function to add animation classes
@@ -40,8 +51,21 @@ function BannerOne() {
         }
     };
 
-    return (
-        <div className="th-hero-wrapper hero-1" id="hero">
+        // Auto play / pause video when modal toggles
+        useEffect(() => {
+            if (modalIsOpen && videoRef.current) {
+                const v = videoRef.current;
+                const attempt = v.play();
+                if (attempt && typeof attempt.then === 'function') {
+                    attempt.catch(() => { v.muted = true; v.play().catch(()=>{}); });
+                }
+            } else if (!modalIsOpen && videoRef.current) {
+                videoRef.current.pause();
+            }
+        }, [modalIsOpen]);
+
+        return (
+                <div className="th-hero-wrapper hero-1" id="hero">
 
             <Swiper
                 modules={[Navigation, Pagination, EffectFade]} // Initialize necessary modules
@@ -60,7 +84,7 @@ function BannerOne() {
                 id="heroSlide1"
             >
                 <div className="swiper-wrapper">
-                    <SwiperSlide>
+                    {/* <SwiperSlide>
                         <div className="hero-inner">
                             <div className="th-hero-bg" aria-label="House of Andalus introduction background">
                                 <video
@@ -101,17 +125,14 @@ function BannerOne() {
                                         data-ani="slideinup"
                                         data-ani-delay="0.6s"
                                     >
-                                        <Link href="/contact" className="th-btn th-icon">
+                                        <button type="button" onClick={()=>setModalIsOpen(true)} className="th-btn th-icon">
                                             Book Retreats
-                                        </Link>
-                                        <Link href="/book-your-stay" className="th-btn style2 th-icon">
-                                            Our Services
-                                        </Link>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </SwiperSlide>
+                    </SwiperSlide> */}
                     <SwiperSlide>
                         <div className="hero-inner">
                             <div className="th-hero-bg" aria-label="House of Andalus introduction background">
@@ -148,23 +169,28 @@ function BannerOne() {
                                     >
                                         Rediscover peace and purpose here{" "}
                                     </h1>
+
+
+
+                                    
                                     <div
-                                        className="btn-group"
-                                        data-ani="slideinup"
-                                        data-ani-delay="0.6s"
+                                            className="hero-cta-inline"
+                                            data-ani="slideinup"
+                                            data-ani-delay="0.6s"
                                     >
-                                        <Link href="/contact" className="th-btn th-icon">
-                                            Join Retreats
-                                        </Link>
-                                        <Link href="/book-your-stay" className="th-btn style2 th-icon">
-                                            Our Services
-                                        </Link>
+                                        
+                                        <div className='video-box1 left-margin'>
+                                            <span className="watch-label">Click to Watch →</span>
+                                        <button className="play-btn style2 popup-video" onClick={() => setModalIsOpen(true)} aria-label="Play introduction video">
+                                            <i className="fa-sharp fa-solid fa-play" />
+                                        </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide>
+                    {/* <SwiperSlide>
                         <div className="hero-inner">
                             <div className="th-hero-bg" aria-label="House of Andalus introduction background">
                                 <video
@@ -205,35 +231,66 @@ function BannerOne() {
                                         data-ani="slideinup"
                                         data-ani-delay="0.6s"
                                     >
-                                        <Link href="/contact" className="th-btn th-icon">
+                                        <button type="button" onClick={()=>setModalIsOpen(true)} className="th-btn th-icon">
                                             Book Retreats
-                                        </Link>
-                                        <Link href="/book-your-stay" className="th-btn style2 th-icon">
-                                            Our Services
-                                        </Link>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </SwiperSlide>
-                </div>
-                <div className="th-swiper-custom">
+                    </SwiperSlide> */}
+                                </div>
+                        <style jsx>{`
+                            .hero-cta-inline { display:inline-flex; align-items:center; gap:14px; margin-top:14px; }
+                            .hero-cta-inline .play-btn { position:relative; }
+                            .watch-label { font-size:14px; font-weight:600; letter-spacing:.03em; color:#fff; text-shadow:0 2px 4px rgba(0,0,0,0.4); }
+                            @media (max-width: 767px){ .hero-cta-inline { margin-top:18px; gap:10px; } .watch-label { font-size:13px; } }
+                        `}</style>
+                {/* <div className="th-swiper-custom">
                     <button
                         className="slider-arrow slider-prev"
                         onClick={() => handleSliderNavigation("prev")}
                     >
                         <img src="/assets/img/icon/right-arrow.svg" alt="Prev" />
                     </button>
-                    <div className="swiper-pagination" /> {/* Pagination container */}
+                    <div className="swiper-pagination" />
                     <button
                         className="slider-arrow slider-next"
                         onClick={() => handleSliderNavigation("next")}
                     >
                         <img src="/assets/img/icon/left-arrow.svg" alt="Next" />
                     </button>
-                </div>
+                </div> */}
             </Swiper>
-        </div>
+                        <Modal
+                            isOpen={modalIsOpen}
+                            onRequestClose={()=>setModalIsOpen(false)}
+                            contentLabel="Retreat Video"
+                            className="video-modal large"
+                            overlayClassName="video-modal-overlay"
+                            style={{
+                                content:{
+                                    maxWidth:'1100px', width:'100%', inset:'50% auto auto 50%', transform:'translate(-50%, -50%)', background:'#000', borderRadius:'14px'
+                                }
+                            }}
+                        >
+                            <button className="close-btn" onClick={()=>setModalIsOpen(false)}>&times;</button>
+                            <video
+                                ref={videoRef}
+                                width="100%"
+                                height="700"
+                                autoPlay
+                                controls
+                                playsInline
+                                poster=""
+                                aria-label="Retreat Introduction Video"
+                                style={{ borderRadius:'10px', boxShadow:'0 6px 30px rgba(106,104,104,0.4)' }}
+                            >
+                                <source src="/assets/img/homev.mp4" type="video/mp4" />
+                                Your browser does not support the video tag.
+                            </video>
+                        </Modal>
+                </div>
 
     )
 }

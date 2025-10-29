@@ -5,10 +5,10 @@ import { useInView } from "react-intersection-observer";
 
 const CounterOne = () => {
     const counters = [
-        { value: "Next", suffix: "", title: "Years Experience" },
-        { value: "Next", suffix: "", title: "Retention Rate" },
-        { value: "Next", suffix: "", title: "Tour Completed" },
-        { value: "Next", suffix: "", title: "Happy Travellers" }
+        { value: "20+", suffix: "", title: "Years Experience" },
+        { value: "90%", suffix: "", title: "Retention Rate" },
+        { value: "70+", suffix: "", title: "Tour Completed" },
+        { value: "100+", suffix: "", title: "Happy Travellers" }
     ];
 
     // Use intersection observer to detect when component is in view
