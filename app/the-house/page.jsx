@@ -52,7 +52,7 @@ export default function TheHousePage() {
   return (
     <>
       <HeaderOne />
-      <Breadcrumb title="The House" />
+      <Breadcrumb title="House of Andalus" />
       <main className="space-top space-extra-bottom">
         {/* Section 1: Intro */}
         <div className="about-area position-relative overflow-hidden space" id="the-house-intro">

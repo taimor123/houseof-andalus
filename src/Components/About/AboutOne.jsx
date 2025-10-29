@@ -61,7 +61,7 @@ function AboutOne() {
                                 </div>
                             </div>
                             <div className="mt-35">
-                                <Link href="/about" className="th-btn style3 th-icon">
+                                <Link href="/the-house" className="th-btn style3 th-icon">
                                     Explore More
                                 </Link>
                             </div>

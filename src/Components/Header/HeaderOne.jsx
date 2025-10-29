@@ -91,7 +91,7 @@ function HeaderOne() {
                                     <div className="header-logo">
                                         <Link href="/" aria-label="The House of Andalus Home">
                                             <img 
-                                                src="/assets/img/Andalus-logo-white.png" 
+                                                src="/assets/img/loii.png" 
                                                 alt="The House of Andalus" 
                                                 style={{
                                                     height: '54px',
@@ -212,7 +212,7 @@ function HeaderOne() {
                                             </li>
                                            
                                              <li>
-                                                <Link href="/the-house">The House</Link>
+                                                <Link href="/the-house">House of Andalus</Link>
                                             </li> 
                                             {/* <li>
                                                 <Link href="/book-your-stay">Book Your Stay</Link>
