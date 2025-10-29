@@ -2,25 +2,30 @@
 import React, { useState, useEffect } from 'react';
 
 const accommodationOptions = [
-  { value: 'main_house', label: 'The Main House Only (2-person sharing)' },
-  { value: 'whole_site', label: 'The Whole Site (Main House + 3 Apartments)' },
-  { value: 'guided_tours', label: 'Guided Tours to Historic Sites of Andalusia' },
+  { value: 'main_house', label: 'The Main House only (capacity for 2 people on sharing basis)' },
+  { value: 'whole_site', label: 'The Whole Site (Main House and 3 Apartments)' },
+  { value: 'guided_tours', label: 'Guided Tours to Historic Sites of Andalucia' },
   { value: 'outdoor', label: 'Outdoor Activities' },
   { value: 'cultural', label: 'Cultural / Culinary Experiences' },
+];
+
+const bookingPreferenceOptions = [
+  { value: 'bed_and_breakfast', label: 'Bed and Breakfast' },
+  { value: 'half_board', label: 'Half Board' },
+  { value: 'full_meals', label: 'Full Meals Provided' },
+  { value: 'self_catering', label: 'Self-Catering' },
 ];
 
 const BookingForm = () => {
   const [formData, setFormData] = useState({
     name: '',
-    contact: '',
+    phone: '',
     email: '',
     country: '',
-    selfCatering: '', // yes | no
+    bookingPreferences: [], // array of meal plan selections
     adults: '',
-    childrenAges: '',
-    startDate: '',
-    endDate: '',
-    daysCount: '',
+    childrenDetails: '',
+    datesAndDuration: '',
     flexibleDates: '', // yes | no
     purpose: '',
     specialRequirements: '',
@@ -38,22 +43,19 @@ const BookingForm = () => {
     'United Kingdom','United States','Spain','France','Germany','Canada','Saudi Arabia','United Arab Emirates','Morocco','Turkey','Malaysia','Australia','South Africa','Nigeria','Pakistan','India','Indonesia','Other'
   ];
 
-  // Auto-calc days if start & end chosen
-  useEffect(() => {
-    if (formData.startDate && formData.endDate) {
-      const s = new Date(formData.startDate);
-      const e = new Date(formData.endDate);
-      if (!isNaN(s) && !isNaN(e) && e >= s) {
-        const diff = Math.round((e - s) / (1000*60*60*24)) + 1; // inclusive
-        setFormData(prev => ({ ...prev, daysCount: String(diff) }));
-      }
-    }
-  }, [formData.startDate, formData.endDate]);
+  // No automatic date calculation now (single free-text field)
 
   const toggleAccommodation = (value) => {
     setFormData((prev) => {
       const exists = prev.accommodation.includes(value);
       return { ...prev, accommodation: exists ? prev.accommodation.filter(v => v !== value) : [...prev.accommodation, value] };
+    });
+  };
+
+  const toggleBookingPreference = (value) => {
+    setFormData(prev => {
+      const exists = prev.bookingPreferences.includes(value);
+      return { ...prev, bookingPreferences: exists ? prev.bookingPreferences.filter(v => v !== value) : [...prev.bookingPreferences, value] };
     });
   };
 
@@ -68,7 +70,7 @@ const BookingForm = () => {
 
   const validate = () => {
     if (!formData.name || !formData.email || !formData.country) {
-      return { ok: false, msg: 'Please fill at least Name, Email, and Country.' };
+      return { ok: false, msg: 'Please fill Name, Email, and Country.' };
     }
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
       return { ok: false, msg: 'Enter a valid email address.' };
@@ -97,7 +99,7 @@ const BookingForm = () => {
       } else {
         setStatus({ type: 'success', message: 'Your booking enquiry has been sent. We will respond shortly.' });
         setFormData({
-          name: '', contact: '', email: '', country: '', selfCatering: '', adults: '', childrenAges: '', startDate: '', endDate: '', daysCount: '', flexibleDates: '', purpose: '', specialRequirements: '', accommodation: [], drivingOwnCar: '', needTaxi: '', airportTransfers: '', anythingElse: ''
+          name: '', phone: '', email: '', country: '', bookingPreferences: [], adults: '', childrenDetails: '', datesAndDuration: '', flexibleDates: '', purpose: '', specialRequirements: '', accommodation: [], drivingOwnCar: '', needTaxi: '', airportTransfers: '', anythingElse: ''
         });
       }
     } catch (err) {
@@ -119,17 +121,17 @@ const BookingForm = () => {
             </div>
             <form onSubmit={handleSubmit} className="booking-enquiry-form" noValidate>
               <div className="form-section card-plate">
-                <h5 className="section-heading">Guest & Contact</h5>
+                <h5 className="section-heading">Name & Contact Details</h5>
                 <div className="row g-4">
                 {/* Name */}
                 <div className="col-md-6">
                   <label className="form-label">Name *</label>
                   <input type="text" required aria-required="true" name="name" value={formData.name} onChange={handleChange} className="form-control" placeholder="e.g. Aisha Khan" />
                 </div>
-                {/* Contact */}
+                {/* Phone */}
                 <div className="col-md-6">
-                  <label className="form-label">Contact Details (Phone / WhatsApp)</label>
-                  <input type="text" name="contact" value={formData.contact} onChange={handleChange} className="form-control" placeholder="+44 7800 000000" />
+                  <label className="form-label">Phone Number</label>
+                  <input type="text" name="phone" value={formData.phone} onChange={handleChange} className="form-control" placeholder="+44 7800 000000" />
                 </div>
                 {/* Email */}
                 <div className="col-md-6">
@@ -138,90 +140,76 @@ const BookingForm = () => {
                 </div>
                 {/* Country */}
                 <div className="col-md-6">
-                  <label className="form-label">Which Country Are You Traveling From? *</label>
-                  <select name="country" required aria-required="true" value={formData.country} onChange={handleChange} className="form-control">
-                    <option value="">Select Country</option>
-                    {countryOptions.map(c => <option key={c} value={c}>{c}</option>)}
-                  </select>
+                  <label className="form-label">Which country are you traveling from? *</label>
+                  <input type="text" name="country" required aria-required="true" value={formData.country} onChange={handleChange} className="form-control" placeholder="e.g. United Kingdom" />
                 </div>
                 </div>
               </div>
 
               <div className="form-section card-plate">
-                <h5 className="section-heading">Stay Preferences</h5>
+                <h5 className="section-heading">Booking Preferences</h5>
                 <div className="row g-4">
-
-                {/* Self-catering */}
-                <div className="col-md-6">
-                  <label className="form-label d-block">Would You Like to Book a Self-Catering Stay?</label>
-                  <div className="d-flex gap-3 flex-wrap">
-                    {['yes','no'].map(val => (
-                      <label key={val} className={`radio-pill ${formData.selfCatering===val?'active':''}`}>
-                        <input type="radio" name="selfCatering" value={val} checked={formData.selfCatering === val} onChange={(e)=>handleRadioGroup('selfCatering', e.target.value)} />
-                        <span className="radio-indicator" aria-hidden="true"></span>
-                        <span className="label-text">{val === 'yes' ? 'Yes' : 'No'}</span>
-                      </label>
-                    ))}
+                  <div className="col-12">
+                    <label className="form-label d-block">What would you like to book?</label>
+                    <div className="row g-2">
+                      {bookingPreferenceOptions.map(opt => (
+                        <div className="col-md-6" key={opt.value}>
+                          <label className={`checkbox-line ${formData.bookingPreferences.includes(opt.value) ? 'active' : ''}`}>
+                            <input
+                              type="checkbox"
+                              value={opt.value}
+                              checked={formData.bookingPreferences.includes(opt.value)}
+                              onChange={() => toggleBookingPreference(opt.value)}
+                            /> {opt.label}
+                          </label>
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                </div>
-
-                {/* Guests */}
-                <div className="col-md-6">
-                  <label className="form-label">Number of Guests (Adults)</label>
-                  <input type="number" min="1" name="adults" value={formData.adults} onChange={handleChange} className="form-control" placeholder="e.g. 2" />
-                  <small className="form-hint">Children & Ages listed below</small>
-                </div>
-                <div className="col-12">
-                  <label className="form-label">Children & Ages</label>
-                  <input type="text" name="childrenAges" value={formData.childrenAges} onChange={handleChange} className="form-control" placeholder="e.g. 2 children (5 & 9)" />
-                </div>
-                {/* Preferred Dates */}
-                <div className="col-md-4">
-                  <label className="form-label">Start Date</label>
-                  <input type="date" name="startDate" value={formData.startDate} onChange={handleChange} className="form-control" />
-                </div>
-                <div className="col-md-4">
-                  <label className="form-label">End Date</label>
-                  <input type="date" name="endDate" value={formData.endDate} onChange={handleChange} className="form-control" min={formData.startDate || undefined} />
-                </div>
-                <div className="col-md-4">
-                  <label className="form-label">Days (auto)</label>
-                  <input type="number" name="daysCount" value={formData.daysCount} onChange={handleChange} className="form-control" placeholder="" />
-                </div>
-
-                {/* Flexible Dates */}
-                <div className="col-md-6">
-                  <label className="form-label d-block">Are You Flexible with Dates/Times?</label>
-                  <div className="d-flex gap-3 flex-wrap">
-                    {['yes','no'].map(val => (
-                      <label key={val} className={`radio-pill ${formData.flexibleDates===val?'active':''}`}>
-                        <input type="radio" name="flexibleDates" value={val} checked={formData.flexibleDates === val} onChange={(e)=>handleRadioGroup('flexibleDates', e.target.value)} />
-                        <span className="radio-indicator" aria-hidden="true"></span>
-                        <span className="label-text">{val === 'yes' ? 'Yes' : 'No'}</span>
-                      </label>
-                    ))}
+                  <div className="col-md-6">
+                    <label className="form-label">Number of Adults</label>
+                    <input type="number" min="1" name="adults" value={formData.adults} onChange={handleChange} className="form-control" placeholder="e.g. 2" />
                   </div>
-                </div>
+                  <div className="col-md-6">
+                    <label className="form-label">Number of Children / Age of Each Child</label>
+                    <input type="text" name="childrenDetails" value={formData.childrenDetails} onChange={handleChange} className="form-control" placeholder="e.g. 2 children (5 & 9)" />
+                  </div>
+                  <div className="col-12">
+                    <label className="form-label">When and how many days would you like to book for?</label>
+                    <input type="text" name="datesAndDuration" value={formData.datesAndDuration} onChange={handleChange} className="form-control" placeholder="e.g. 10–15 August (5 nights)" />
+                  </div>
+                  <div className="col-md-6">
+                    <label className="form-label d-block">Are you flexible with times/dates?</label>
+                    <div className="d-flex gap-3 flex-wrap">
+                      {['yes','no'].map(val => (
+                        <label key={val} className={`radio-pill ${formData.flexibleDates===val?'active':''}`}>
+                          <input type="radio" name="flexibleDates" value={val} checked={formData.flexibleDates === val} onChange={(e)=>handleRadioGroup('flexibleDates', e.target.value)} />
+                          <span className="radio-indicator" aria-hidden="true"></span>
+                          <span className="label-text">{val === 'yes' ? 'Yes' : 'No'}</span>
+                        </label>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </div>
 
               <div className="form-section card-plate">
-                <h5 className="section-heading">Intent & Requirements</h5>
+                <h5 className="section-heading">Purpose & Special Requirements</h5>
                 <div className="row g-4">
                 {/* Purpose */}
                 <div className="col-md-6">
-                  <label className="form-label">Purpose of Your Visit</label>
+                  <label className="form-label">What is the purpose of your visit?</label>
                   <textarea name="purpose" value={formData.purpose} onChange={handleChange} className="form-control" rows={3} placeholder="Retreat, renewal, research, family time, etc." />
                 </div>
                 {/* Special Requirements */}
                 <div className="col-md-6">
-                  <label className="form-label">Special Requirements</label>
-                  <textarea name="specialRequirements" value={formData.specialRequirements} onChange={handleChange} className="form-control" rows={3} placeholder="Accessibility, dietary needs, prayer space, etc." />
+                  <label className="form-label">Do you have any special requirements?</label>
+                  <textarea name="specialRequirements" value={formData.specialRequirements} onChange={handleChange} className="form-control" rows={3} placeholder="Allergies, special dietary requirements, wheelchair access, or anything else" />
                 </div>
 
                 {/* Accommodation & Experiences */}
                 <div className="col-12">
-                  <label className="form-label d-block">Accommodation & Experiences (Tick All That Apply)</label>
+                  <label className="form-label d-block">Accommodation & Experiences (Tick all that apply)</label>
                   <div className="row g-2">
                     {accommodationOptions.map(opt => (
                       <div className="col-md-6" key={opt.value}>
@@ -279,10 +267,10 @@ const BookingForm = () => {
               </div>
 
               <div className="form-section card-plate">
-                <h5 className="section-heading">Anything Else</h5>
+                <h5 className="section-heading">Additional Notes</h5>
                 <div className="row g-4">
                   <div className="col-12">
-                    <label className="form-label">Anything Else You’d Like Us to Know?</label>
+                    <label className="form-label">Please specify anything else you might need for your stay:</label>
                     <textarea name="anythingElse" value={formData.anythingElse} onChange={handleChange} className="form-control" rows={3} placeholder="Additional needs or requests" />
                   </div>
                 </div>

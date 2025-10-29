@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { sendMail, formatKeyValueTable, plainTextSummary } from '../../../lib/email';
 
-// Required minimal fields
+// Required minimal fields (updated schema)
 const required = ['name','email','country'];
 
 export async function POST(request) {
@@ -18,22 +18,20 @@ export async function POST(request) {
       return NextResponse.json({ message: 'Invalid email format' }, { status: 400 });
     }
 
-    // Normalised record
+    // Normalised record (only updated form field names, no deprecated keys)
     const record = {
       name: body.name,
-      contact: body.contact || '',
+      phone: body.phone || '',
       email: body.email,
       country: body.country,
-      selfCatering: body.selfCatering || '',
+      bookingPreferences: Array.isArray(body.bookingPreferences) ? body.bookingPreferences : [],
       adults: body.adults || '',
-      childrenAges: body.childrenAges || '',
-      startDate: body.startDate || '',
-      endDate: body.endDate || '',
-      daysCount: body.daysCount || '',
+      childrenDetails: body.childrenDetails || '',
+      datesAndDuration: body.datesAndDuration || '',
       flexibleDates: body.flexibleDates || '',
       purpose: body.purpose || '',
       specialRequirements: body.specialRequirements || '',
-      accommodation: body.accommodation || [],
+      accommodation: Array.isArray(body.accommodation) ? body.accommodation : [],
       drivingOwnCar: body.drivingOwnCar || '',
       needTaxi: body.needTaxi || '',
       airportTransfers: body.airportTransfers || '',
@@ -42,7 +40,7 @@ export async function POST(request) {
     };
 
     // Build emails
-    const adminSubject = `Booking Enquiry: ${record.name} (${record.country})`;
+  const adminSubject = `Booking Enquiry: ${record.name} (${record.country})`;
     const userSubject = 'We received your booking enquiry – House of Andalus';
     const tableHtml = formatKeyValueTable(record);
     const plainSummary = plainTextSummary(record);
@@ -57,7 +55,7 @@ export async function POST(request) {
       sendMail({
         to: record.email,
         subject: userSubject,
-        text: `Dear ${record.name},\n\nThank you for your enquiry. We have received the following details:\n\n${plainSummary}\n\nWe will be in touch soon.\n\nHouse of Andalus`,
+        text: `Dear ${record.name},\n\nThank you for your booking enquiry. We have received the following details:\n\n${plainSummary}\n\nWe will be in touch soon.\n\nHouse of Andalus`,
         html: `<p style='font-family:Arial'>Dear ${record.name},</p><p style='font-family:Arial'>Thank you for your booking enquiry. We have received the details below and will respond shortly.</p>${tableHtml}<p style='font-family:Arial'>Warm regards,<br/>House of Andalus</p>`
       })
     ]);
