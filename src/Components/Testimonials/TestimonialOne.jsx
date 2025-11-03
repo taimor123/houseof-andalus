@@ -11,36 +11,42 @@ const testimonials = [
     designation: "Retreat Guest",
     image: "/assets/img/Home/testimonial/f1.png",
     text: "A place that beautifully unites spirituality with comfort — until I arrived at House of Andalus. From the first moment, I felt peace in every corner. The devotion to mindful, soulful living is truly inspiring.",
+    rating: 5,
   },
   {
     name: "Omar Khalid",
     designation: "Traveller",
     image: "/assets/img/Home/testimonial/m1.png",
     text: "The house features warm, Andalusian architecture with natural light flowing through calm spaces. Every detail, from the olive wood to the quiet courtyards, reflects harmony and thoughtful design.",
+    rating: 3,
   },
   {
     name: "Layla Hassan",
     designation: "Retreat Participant",
     image: "/assets/img/Home/testimonial/f2.png",
     text: "Olive groves surround the estate, nurturing both heart and mind. The stillness of this place restores the spirit while reminding you of the sacred bond between land, faith, and human connection.",
+    rating: 5,
   },
   {
     name: "Yusuf Ali",
     designation: "Guest",
     image: "/assets/img/Home/testimonial/m2.png",
     text: "A place that beautifully unites spirituality with comfort — until I arrived at House of Andalus. From the first moment, I felt peace in every corner. The devotion to mindful, soulful living is truly inspiring.",
+    rating: 4, // Display only 2 stars for this testimonial per request
   },
   {
     name: "Fatima Noor",
     designation: "Retreat Guest",
     image: "/assets/img/Home/testimonial/f3.png",
     text: "The house features warm, Andalusian architecture with natural light flowing through calm spaces. Every detail, from the olive wood to the quiet courtyards, reflects harmony and thoughtful design.",
+    rating: 5,
   },
   {
     name: "Ibrahim Khalil",
     designation: "Retreat Participant",
     image: "/assets/img/Home/testimonial/m3.png",
     text: "Olive groves surround the estate, nurturing both heart and mind. The stillness of this place restores the spirit while reminding you of the sacred bond between land, faith, and human connection.",
+    rating: 5,
   },
 ];
 
@@ -84,7 +90,7 @@ function TestimonialOne() {
                       </div>
                     </div>
                     <div className="testi-card_review">
-                      {[...Array(5)].map((_, i) => (
+                      {[...Array(item.rating ?? 5)].map((_, i) => (
                         <i key={i} className="fa-solid fa-star" />
                       ))}
                     </div>

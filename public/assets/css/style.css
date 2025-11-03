@@ -3104,7 +3104,7 @@ input[type=time]::-webkit-calendar-picker-indicator {
 
 .subr-title {
   display: block;
-  color: var(--title-color);
+  color: #133D48;
   font-size: 40px;
   line-height: 40px;
   font-weight: 400;
@@ -3126,6 +3126,8 @@ input[type=time]::-webkit-calendar-picker-indicator {
   margin-bottom: -4px;
   /* Extra small devices */
 }
+
+
 
 @media (max-width: 480px) {
   .sub-title {

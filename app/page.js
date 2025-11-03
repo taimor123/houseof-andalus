@@ -13,6 +13,7 @@ import BrandOne from '../src/Components/Brand/BrandOne';
 import BlogOne from '../src/Components/Blog/BlogOne';
 import FooterOne from '../src/Components/Footer/FooterOne';
 import ScrollToTop from '../src/Components/ScrollToTop';
+import TourValues from '../src/Components/Tour/TourValues';
 
 export default function HomePage() {
   return (
@@ -25,7 +26,7 @@ export default function HomePage() {
       <CategoryOne />
      
     
-      <TourTwo />
+      <TourValues />
       <GalleryOne />
       <CounterOne />
       {/* <TourGuide /> */}

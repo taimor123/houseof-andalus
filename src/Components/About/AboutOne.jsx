@@ -30,13 +30,17 @@ function AboutOne() {
                                 <h2 className="sec-title mb-20 pe-xl-5 me-xl-5 heading">
                                     Welcome to the House of Andalus
                                 </h2>
-                                <p className="sec-text mb-30">
+                                <p className="">
                                     {/* Rediscover stillness and soul at The House of Andalus, where wellness, faith, and nature merge to restore peace, balance, and belonging. */}
-                                    Set within a century-old farmhouse, House of Andalus is a serene retreat for seekers and storytellers. Honouring the spirit of Al-Andalus, it offers space for rest, reflection, and renewal — nurturing both you and the ummah.
+                                 A sanctuary nestled in the sacred hills of Andalucía, House of Andalus is a living space of renewal, heritage, and leadership. Here, the land restores what we resist and what the word unravels. 
+
 
                                 </p>
+                                <p>
+                                Our philosophy invites you to reconnect with purpose, reimagine leadership, and take part in reviving a legacy rooted in nature, knowledge, and community.
+                            </p>
                             </div>
-                            <div className="about-item-wrap">
+                            <div className="">
                                 <div className="about-item">
                                     <div className="about-item_img">
                                         <img src="/assets/img/icon/map3.svg" alt="" />
@@ -44,8 +48,9 @@ function AboutOne() {
                                     <div className="about-item_centent">
                                         <h5 className="box-title">Sacred Retreat</h5>
                                         <p className="about-item_text">
-                                            A sanctuary where hearts heal and spirits rise.
+                                           A sanctuary where hearts heal and spirits rise.
                                         </p>
+                                    
                                     </div>
                                 </div>
                                 <div className="about-item">
@@ -55,7 +60,7 @@ function AboutOne() {
                                     <div className="about-item_centent">
                                         <h5 className="box-title">Spiritual & Professional Guide</h5>
                                         <p className="about-item_text">
-                                            Guided reflection for soulful discovery.
+                                          Guided reflection for soulful discovery.
                                         </p>
                                     </div>
                                 </div>

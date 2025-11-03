@@ -45,8 +45,296 @@ export default function TheHousePage() {
     <>
       <HeaderOne />
       <Breadcrumb title="House of Andalus" />
-      <main className="space-top space-extra-bottom">
+      <main className="space-extra-bottom">
         {/* Section 1: Intro */}
+
+        <div className="  " id="the-house-intro">
+
+          <div className="container shape-mockup-wrap">
+                  <div className="row gy-4 space-top ">
+                  <div className="col-12">
+                    <div className="blog-img">
+                      <video
+                        className="w-100"
+                        controls
+                        loop
+                        playsInline
+                        data-autoplay-scroll
+                        aria-label="House of Andalus Intro Video"
+                      >
+                        <source src="/assets/img/homev.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                      </video>
+                      </div>
+                      </div>
+                      </div>
+            {/* Shapes similar to AboutOne */}
+            <div className="shape-mockup shape1 d-none d-xl-block" style={{ top: '12%', left: '-16%' }}>
+              <img src="/assets/img/shape/shape_1.png" alt="shape" />
+            </div>
+            <div className="shape-mockup shape2 d-none d-xl-block" style={{ top: '20%', left: '-16%' }}>
+              <img src="/assets/img/shape/shape_2.png" alt="shape" />
+            </div>
+            <div className="shape-mockup shape3 d-none d-xl-block" style={{ top: '14%', left: '-10%' }}>
+              <img src="/assets/img/shape/shape_3.png" alt="shape" />
+            </div>
+          </div>
+        </div>
+        {/* Section 2: Vision (Destination-style layout) */}
+        <section className="space-top" id="the-house-vision">
+          <div className="container shape-mockup-wrap">
+            <div className="row">
+              <div className="col-xl-12">
+                <div className="page-single">
+                  <div className="page-content d-block">
+                    <div className="page-meta mt-10 mb-30">
+                      <span className="page-tag mr-5">Our Vision</span>
+                      <span className="destination-subtitle" style={{display:'inline-block',padding:'4px 10px',border:'1px solid #e1ece8',borderRadius:'30px',fontSize:'12px',letterSpacing:'.05em',textTransform:'uppercase'}}>Reconnecting Community</span>
+                    </div>
+                    <h2 className="box-title">Reconnecting The Ummah</h2>
+                    <p className="blog-text mb-30">The House of Al-Andalus was born out of an essential question: What if we could take people beyond history, restore it with reverence, stone by stone, to preserve the soul of its past? What if we reawakened their senses so they can disconnect yet be reconnected… to themselves, their family, and their immediate and wider communities. </p>
+                    <p className="blog-text mb-35">We aim to bring our vision through everything- from the way we have designed the rooms to the way we prepare our food and treat our guests. Our vision rooted in reverence and simplicity, it guided us from a single room to a growing tapestry of spaces in this farmhouse, each echoing the same essence of stillness, beauty, and belonging. This work has made us realize the importance of rest, reconnection and rejuvenation beyond the olive trees and make us work hard to connect to our  guests and hosts to support them as they rest, reflect and reconnect long after they leave from here. We only have one aim for our gusts- to leave lighter, clearer, and more whole than when they arrived.</p>
+                    {/* <h3 className="box-title">A passion for heritage, harmony, and heartfelt smiles</h3>
+                    <p className="blog-text mb-30">From the moment our guests step onto 14 hectares of natural land and an olive grove of 400 trees for their welcome ritual, through the programming they experience while they’re with us, until the sad time they wave farewell, we do everything we can to ensure they feel the long-lasting and uplifting impact of emotional hospitality. This is wrapped up in meaningful, out-of-the-ordinary moments, whether that means fresh air, waking up to birdsong, pioneering wellness, or a chance to interact with the community around you in a way that feels genuine and authentic.</p>
+                    <p className="blog-text mb-30">Over time, we keep enhancing the way we do this, for example, working with scientists, engineers, and specialists in sacred geometry to offer you healing spaces, whether consciously through our rooms named after famous Andalusi historic figures or unconsciously through the energy of the natural environment itself.</p>
+                    <blockquote>
+                      <p>Although we never joke around when it comes to preserving our Andalusian heritage, nurturing land, and serving with ihsan, there’s always been plenty of time for fun. You’ll find laughter in the courtyard, stories shared under olive trees, and that unmistakable feeling of being home.</p>
+                      <cite>The House Team</cite>
+                    </blockquote> */}
+                  </div>
+                </div>
+                   <div className="row gy-4">
+                                    <div className="col-12">
+                                        <div className="blog-img">
+                      <video
+                        className="w-100"
+                        controls
+                        loop
+                        playsInline
+                        data-autoplay-scroll
+                        aria-label="House of Andalus Intro Video"
+                      >
+                        <source src="/assets/img/House%20of%20Andalus%20video%203.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                      </video>
+                      </div>
+                      </div>
+                      </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+              {/* Section 3: Rooms (Destination-style gallery/grid) */}
+        <section className="space" id="the-house-rooms">
+          <div className="container shape-mockup-wrap">
+            <div className="row">
+              <div className="col-xl-12">
+                <div className="page-single">
+                  <div className="page-content d-block">
+                    <div className="page-meta mt-10 mb-30">
+                      <span className="page-tag mr-5">The Rooms</span>
+                      <span className="destination-subtitle" style={{display:'inline-block',padding:'4px 10px',border:'1px solid #e1ece8',borderRadius:'30px',fontSize:'12px',letterSpacing:'.05em',textTransform:'uppercase'}}>Heritage Alive</span>
+                    </div>
+                    <h2 className="box-title">House of Andalus by different Season</h2>
+                    <p className="blog-text ">Each room is named after a historic Andalusi figure, chosen for their unique character, achievements, leadership styles, and the legacy they left behind. Every fabric, tile, and scent was chosen to honour heritage and harmony. The interiors blend local Andalusian craft with modern restraint, resulting in a space that feels both timeless and intimate. </p>
+                    <p className="blog-text ">Each olive tree, each archway carries the memory of Al-Andalus, where scholars once wrote, artists once painted, and hearts once worshipped in beauty. This is a house that holds stories. And now, it holds yours, too.</p>
+                    {/* <h3 className="page-title mt-10 mb-25">Room Showcase</h3> */}
+                    <div className="row g-4">
+                      {rooms.map(room => (
+                        <div key={room.id} className="col-md-6 col-lg-4">
+                          <div className="destination-box th-ani" aria-label={`Room: ${room.name}`}>
+                            <div className="destination-img position-relative" style={{ aspectRatio: '4/3', overflow: 'hidden' }}>
+                              <img src={room.image} alt={room.name} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform .6s ease' }} />
+                              <div className="img-overlay" style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(0,0,0,0.0) 40%, rgba(0,0,0,0.65) 100%)' }} />
+                              <div className="room-name-overlay" style={{ position: 'absolute', left: '0', right: '0', bottom: '12px', padding: '0 16px', textAlign: 'left' }}>
+                                <h5 style={{ color: '#fff', margin: 0, fontSize: '18px', fontWeight: 600 }}>{room.name}</h5>
+                              </div>
+                              <div className="hover-actions d-flex align-items-center justify-content-center" style={{ position: 'absolute', inset: 0, opacity: 0, transition: 'opacity .4s ease' }}>
+                                <Link href="/rooms" className="th-btn style3 th-icon" aria-label={`View details for ${room.name}`}>View</Link>
+                              </div>
+                            </div>
+                            <div className="destination-content pt-15">
+                              <h5 className="box-title mb-5">{room.name}</h5>
+                              <div className="destination-subtitle mb-10">Heritage & Harmony</div>
+                              <p className="mb-15" style={{ fontSize: '14px' }}>A tranquil space inspired by the legacy of {room.name}, blending Andalusian craft with restorative simplicity.</p>
+                              <Link href="/rooms" className="th-btn style1" aria-label={`Navigate to all rooms`}>Explore</Link>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                    <style jsx>{`
+                      #the-house-rooms .destination-box:hover img { transform: scale(1.08); }
+                      #the-house-rooms .destination-box:hover .hover-actions { opacity: 1; }
+                      #the-house-rooms .destination-box .destination-content { background: #fff; border: 1px solid #eee; border-top: none; padding: 18px 20px; }
+                      @media (prefers-reduced-motion: reduce) {
+                        #the-house-rooms .destination-box:hover img { transform: none; }
+                      }
+                    `}</style>
+                    {/* <div className="text-center mt-40">
+                      <Link href="/rooms" className="th-btn style3 th-icon">View All Rooms</Link>
+                    </div> */}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+                {/* Section 3: Description of the House (Destination-style layout) */}
+        <section className="" id="the-house-vision">
+          <div className="container shape-mockup-wrap">
+            <div className="row">
+              <div className="col-xl-12">
+                <div className="page-single">
+                  <div className="page-content d-block">
+                    <div className="page-meta mt-10 mb-30">
+                      <span className="page-tag mr-5">Description of the House</span>
+                      <span className="destination-subtitle" style={{display:'inline-block',padding:'4px 10px',border:'1px solid #e1ece8',borderRadius:'30px',fontSize:'12px',letterSpacing:'.05em',textTransform:'uppercase'}}>The Mountains and Surrounding Land</span>
+                    </div>
+                    <h2 className="box-title">A passion for heritage, harmony, and heartfelt connections</h2>
+                    <p className="blog-text mb-30">From the moment our guests step onto 14 hectares of natural land and the grooves of 400 olive trees for their welcome ritual, through the programming they experience while they’re with us, until the time they wave farewell, we do our utmost to ensure they feel the long-lasting and uplifting experience here. This is nurtured  through meaningful, out-of-the-ordinary moments, whether that might mean waking in fresh mountain air, listening to birdsongs, pioneering wellness, or a chance to interact with the community around them in a way that feels genuine and authentic. </p>
+                    <p className="blog-text mb-35">Over time, we will keep enhancing the way we do this. This will mean working with scientists, engineers, and specialists in sacred arts to offer intentional healing spaces, whether consciously through our rooms named after famous Andalusi historic figures or unconsciously through the energy of the natural environment itself. We are always looking for artists and specialists for collaborative projects where our visions are aligned and we create a unique atmosphere for our new visitors and regular guests. </p>
+                    <blockquote>
+                      <p>The House of Andalus is an evolving space where ideas, collaboration and strategic movement is always welcome!</p>
+                      <cite>The House Team</cite>
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        {/* Section 4: Values (Destination-style checklist) */}
+        <section className="" id="the-house-values">
+          <div className="container shape-mockup-wrap">
+            <div className="row">
+              <div className="col-xl-12">
+                <div className="page-single">
+                  <div className="page-content d-block">
+                    <div className="page-meta mb-20">
+                      <span className="subr-title" style={{ color:'#133D48'}}>Our Values</span>
+                    </div>
+                    <h2 className="box-title mb-20">Rooted In Reverence</h2>
+                    <p className="blog-text mb-40">We intend to create a way of life here that is rooted in reverence. We bring this to you through the way we inhabit the space or how we help you reawaken your senses with offerings and experiences that are quietly transformative, gently restorative, and intentionally out of the ordinary. Each olive tree is tended with reverence as well as every living creature on the land.</p>
+                    <div className="row gy-4 gx-4 mb-10">
+                      {[
+                        {title:'Excellence',image:'/assets/img/the-house/Ihsan with Heart.png',backText:'No work is worth doing if it is not done with excellence. Our intention guides the design & stillness of the space and every experience you will embark on here.'},
+                        {title:'Local Integrity, Global Vision',image:'/assets/img/the-house/Local Integrity.png',backText:'As a local enterprise with deep roots in Andalucia, the impact of the House of Andalus reaches beyond the borders of the mountains of Spain.'},
+                        {title:'Sacred Simplicity',image:'/assets/img/the-house/Sustainability.png',backText:'Our main principle of sustainability is deeply connected to our spirituality as a practice. We tend the land as the Creator looks after its creations- with loving attention.'},
+                        {title:'Emotional Hospitality',image:'/assets/img/the-house/Emotional.png',backText:'Our Hospitality is part of adab culture, where we aim to serve with humility, grace and love.'}
+                      ].map(v => (
+                        <div key={v.title} className="col-md-6 col-lg-3">
+                          <div className="value-flip" aria-label={v.title}>
+                            <div className="flip-inner">
+                              <div className="flip-face flip-front">
+                                <div className="destination-item_img global-img">
+                                  <img src={v.image} alt={v.title} />
+                                </div>
+                                <div className="destination-content text-center pt-2 px-2">
+                                  <h6 className="destination-subtitle mb-0"><span>{v.title}</span></h6>
+                                </div>
+                              </div>
+                              <div className="flip-face flip-back">
+                                <div className="flip-back-content px-2">
+                                  <h6 className="destination-subtitle mb-10"><span>{v.title}</span></h6>
+                                  <p className="flip-text mb-0">{v.backText}</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="row gy-4 gx-4 mb-40">
+                      {[
+                        {title:'Legacy of Light',image:'/assets/img/the-house/Legacy.png',backText:'Our Legacy of Light is guided by our light touch and is rooted in our faith.'},
+                        {title:'Andalusian Roots',image:'/assets/img/the-house/Andalusian.png',backText:'Andalusian Roots is important to us as part of our identity in Europe and in the world. The Heritage we aim to keep has resonance beyond individuals and communities it nurtures from within.'},
+                        {title:'Gratitude in Care',image:'/assets/img/the-house/Gratitude.png',backText:'In every detail—from the curve of an arch to the scent of our gardens—we honour the beauty of simplicity. It is through the quiet, the unadorned, and the intentional that the spirit of Andalus truly breathes.'},
+                        {title:'A History Archive',image:'/assets/img/the-house/Adab.png',backText:'At the House of Andalus, history is being archived in every manner visible. The house will stand the test of time as a museum honouring our ancestors.'}
+                      ].map(v => (
+                        <div key={v.title} className="col-md-6 col-lg-3">
+                          <div className="value-flip" aria-label={v.title}>
+                            <div className="flip-inner">
+                              <div className="flip-face flip-front">
+                                <div className="destination-item_img global-img">
+                                  <img src={v.image} alt={v.title} />
+                                </div>
+                                <div className="destination-content text-center pt-2 px-2">
+                                  <h6 className="destination-subtitle mb-0"><span>{v.title}</span></h6>
+                                </div>
+                              </div>
+                              <div className="flip-face flip-back">
+                                <div className="flip-back-content px-2">
+                                  <h6 className="destination-subtitle mb-10"><span>{v.title}</span></h6>
+                                  <p className="flip-text mb-0">{v.backText}</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                   
+                  </div>
+                
+                </div>
+              </div>
+            </div>
+          </div>
+          <style jsx>{`
+            #the-house-values .value-flip { perspective:1200px; position:relative; }
+            #the-house-values .value-flip .flip-inner { position:relative; width:100%; transform-style:preserve-3d; transition:transform .85s cubic-bezier(.68,-0.35,.27,1.3); }
+            #the-house-values .value-flip:hover .flip-inner { transform:rotateY(180deg); }
+            /* Front face should define natural height; make it relative */
+            #the-house-values .flip-front { position:relative; backface-visibility:hidden; -webkit-backface-visibility:hidden; border:1px solid #e6eeea; border-radius:14px; overflow:hidden; background:#ffffff; box-shadow:0 6px 18px -6px rgba(0,0,0,0.15); }
+            #the-house-values .flip-front img { width:100%; display:block; }
+            #the-house-values .flip-front .destination-content { background:rgba(0,0,0,0.55); position:absolute; left:0; right:0; bottom:0; padding:6px 10px; }
+            #the-house-values .flip-front .destination-subtitle span { color:#ffffff; font-weight:600; letter-spacing:.03em; font-size:20px; }
+            /* Back face overlays full area */
+            #the-house-values .flip-back { position:absolute; inset:0; padding:0px 18px 30px 18px; transform:rotateY(180deg); backface-visibility:hidden; -webkit-backface-visibility:hidden; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; border:1px solid #e6eeea; border-radius:14px; background:linear-gradient(155deg,#234237 0%, #133D48 5%, #17A9CB 100%); color:#ffffff; }
+            #the-house-values .flip-back-content { width:100%; max-width:90%; }
+            #the-house-values .flip-back-content .destination-subtitle span { color:#f4f8f6; font-weight:600; letter-spacing:.02em; font-size:23px; }
+            #the-house-values .flip-text { font-size:18px; line-height:1.55; letter-spacing:.02em; color:#eef7f3; }
+            /* Ensure inner takes height from front */
+            #the-house-values .value-flip .flip-inner { min-height:100%; }
+            @media (max-width:575px){ #the-house-values .flip-text { font-size:12px; } }
+            @media (prefers-reduced-motion:reduce){ #the-house-values .value-flip .flip-inner { transition:none; } #the-house-values .value-flip:hover .flip-inner { transform:none; } }
+          `}</style>
+        </section>
+  
+                {/* Section 3: Description of the House (Destination-style layout) */}
+        <section className="" id="the-house-vision">
+          <div className="container shape-mockup-wrap">
+            <div className="row">
+              <div className="col-xl-12">
+                <div className="page-single">
+                  <div className="page-content d-block">
+                                                            <div className="page-meta mb-20">
+                      <span className="subr-title" style={{ color:'#133D48'}}>The Mountains</span>
+                    </div>
+                    <h2 className="box-title mb-20">Guardians of Stillness</h2>
+                    <p className="blog-text mb-30">The mountains surrounding the House of Andalus stand like silent guardians, sheltering the valley in a gentle embrace. Their presence commands reverence—timeless, patient, and steadfast. From dawn’s first blush to the amber hues of sunset, they mirror the rhythm of prayer and pause, inspiring reflection in all who gaze upon them.</p>
+                    <p className="blog-text mb-35">Each peak tells its own story: of scholars who once travelled these paths, of shepherds who sang to their flocks, and of wind-carved stones that have borne witness to centuries of faith and resilience. The air here is pure—infused with thyme, pine, and the whisper of ancient Andalusi echoes. It is a landscape where hearts slow down, where silence is not empty but alive with remembrance.</p>
+                    <blockquote>
+                      <p>In the stillness of the mountains, our guests rediscover what it means to be small before greatness, grounded yet lifted, solitary yet connected. These mountains teach serenity—not as escape, but as return.</p>
+                      <cite>The House Team</cite>
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+
+
+           {/* Section 5: Intro */}
 
         <div className="about-area position-relative overflow-hidden space" id="the-house-intro">
 
@@ -88,23 +376,7 @@ export default function TheHousePage() {
                 </div>
               </div>
             </div>
-                  <div className="row gy-4 space-top ">
-                  <div className="col-12">
-                    <div className="blog-img">
-                      <video
-                        className="w-100"
-                        controls
-                        loop
-                        playsInline
-                        data-autoplay-scroll
-                        aria-label="House of Andalus Intro Video"
-                      >
-                        <source src="/assets/img/homev.mp4" type="video/mp4" />
-                        Your browser does not support the video tag.
-                      </video>
-                      </div>
-                      </div>
-                      </div>
+  
             {/* Shapes similar to AboutOne */}
             <div className="shape-mockup shape1 d-none d-xl-block" style={{ top: '12%', left: '-16%' }}>
               <img src="/assets/img/shape/shape_1.png" alt="shape" />
@@ -117,160 +389,22 @@ export default function TheHousePage() {
             </div>
           </div>
         </div>
-        {/* Section 2: Vision (Destination-style layout) */}
+
+
+                        {/* Section 3: Description of the House (Destination-style layout) */}
         <section className="" id="the-house-vision">
           <div className="container shape-mockup-wrap">
             <div className="row">
               <div className="col-xl-12">
                 <div className="page-single">
                   <div className="page-content d-block">
-                    <div className="page-meta mt-10 mb-30">
-                      <span className="page-tag mr-5">Our Vision</span>
-                      <span className="destination-subtitle" style={{display:'inline-block',padding:'4px 10px',border:'1px solid #e1ece8',borderRadius:'30px',fontSize:'12px',letterSpacing:'.05em',textTransform:'uppercase'}}>Reconnecting Community</span>
+                                                            <div className="page-meta mb-20">
+                      <span className="subr-title" style={{ color:'#133D48'}}>The River</span>
                     </div>
-                    <h2 className="box-title">Reconnecting The Ummah</h2>
-                    <p className="blog-text mb-30">The House of Al-Andalus was born with a whole lot of questions. What if we could take people beyond history, restore it with reverence, stone by stone, to preserve the soul of its past? What if we reawaken their senses so they can disconnect yet be reconnected… to themselves, their family, and the ummah?</p>
-                    <p className="blog-text mb-35">Our vision breathes through everything, from the way we designed our rooms to the way we prepare our food and treat our guests and hosts. Rooted in reverence and simplicity, it guided us from a single room to a growing tapestry of spaces in this farmhouse, each echoing the same essence of stillness, beauty, and belonging. It has pushed our DNA beyond our olive trees, to how our guests and hosts rest, reflect and reconnect long after they leave. We want everyone to leave us in a better place than when they arrived, lighter, clearer, and more whole.</p>
-                    <h3 className="box-title">A passion for heritage, harmony, and heartfelt smiles</h3>
-                    <p className="blog-text mb-30">From the moment our guests step onto 14 hectares of natural land and an olive grove of 400 trees for their welcome ritual, through the programming they experience while they’re with us, until the sad time they wave farewell, we do everything we can to ensure they feel the long-lasting and uplifting impact of emotional hospitality. This is wrapped up in meaningful, out-of-the-ordinary moments, whether that means fresh air, waking up to birdsong, pioneering wellness, or a chance to interact with the community around you in a way that feels genuine and authentic.</p>
-                    <p className="blog-text mb-30">Over time, we keep enhancing the way we do this, for example, working with scientists, engineers, and specialists in sacred geometry to offer you healing spaces, whether consciously through our rooms named after famous Andalusi historic figures or unconsciously through the energy of the natural environment itself.</p>
-                    <blockquote>
-                      <p>Although we never joke around when it comes to preserving our Andalusian heritage, nurturing land, and serving with ihsan, there’s always been plenty of time for fun. You’ll find laughter in the courtyard, stories shared under olive trees, and that unmistakable feeling of being home.</p>
-                      <cite>The House Team</cite>
-                    </blockquote>
-                  </div>
-                </div>
-                   <div className="row gy-4">
-                                    <div className="col-12">
-                                        <div className="blog-img">
-                      <video
-                        className="w-100"
-                        controls
-                        loop
-                        playsInline
-                        data-autoplay-scroll
-                        aria-label="House of Andalus Intro Video"
-                      >
-                        <source src="/assets/img/House%20of%20Andalus%20video%203.mp4" type="video/mp4" />
-                        Your browser does not support the video tag.
-                      </video>
-                      </div>
-                      </div>
-                      </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        {/* Section 3: Values (Destination-style checklist) */}
-        <section className="space" id="the-house-values">
-          <div className="container shape-mockup-wrap">
-            <div className="row">
-              <div className="col-xl-12">
-                <div className="page-single">
-                  <div className="page-content d-block">
-                    <div className="page-meta mb-20">
-                      <span className="sub-title">Our Values</span>
-                    </div>
-                    <h2 className="box-title mb-20">Rooted In Reverence</h2>
-                    <p className="blog-text mb-40">This is our how: the way we live our name and reawaken your senses with offerings and experiences that are quietly transformative, gently restorative, and intentionally out of the ordinary.</p>
-                    <div className="row gy-4 gx-4 mb-10">
-                      {[
-                        {title:'Ihsan with Heart',desc:'Intention guides design & stillness.',image:'/assets/img/the-house/Ihsan with Heart.png'},
-                        {title:'Local Integrity, Global Vision',desc:'Roots Andalusian, reach the world.',image:'/assets/img/the-house/Local Integrity.png'},
-                        {title:'Sustainability as Spirituality',desc:'Land care as gratitude to the Maker.',image:'/assets/img/the-house/Sustainability.png'},
-                        {title:'Emotional Hospitality',desc:'Adab in service: humility, grace, love.',image:'/assets/img/the-house/Emotional.png'}
-                      ].map((v,i)=>(
-                        <div key={v.title} className="col-md-6 col-lg-3">
-                          <div className="destination-item th-ani" aria-label={v.title}>
-                            <div className="destination-item_img global-img">
-                              <img src={v.image} alt={v.title} />
-                            </div>
-                            <div className="destination-content">
-                              <h6 className="destination-subtitle mb-10"><span>{v.title}</span></h6>
-                              <p className="destination-text">{v.desc}</p>
-                            </div>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                    <div className="row gy-4 gx-4 mb-40">
-                      {[
-                        {title:'Legacy of Light',desc:'Guided by light, grounded in faith.',image:'/assets/img/the-house/Legacy.png'},
-                        {title:'Andalusian Roots',desc:'Heritage kept, resonance extended.',image:'/assets/img/the-house/Andalusian.png'},
-                        {title:'Gratitude in Care',desc:'Olive trees tended with reverence.',image:'/assets/img/the-house/Gratitude.png'},
-                        {title:'A History Archive',desc:'Manners visible in every moment.',image:'/assets/img/the-house/Adab.png'}
-                      ].map((v,i)=>(
-                        <div key={v.title} className="col-md-6 col-lg-3">
-                          <div className="destination-item th-ani" aria-label={v.title}>
-                            <div className="destination-item_img global-img">
-                              <img src={v.image} alt={v.title} />
-                            </div>
-                            <div className="destination-content">
-                              <h6 className="destination-subtitle mb-10"><span>{v.title}</span></h6>
-                              <p className="destination-text">{v.desc}</p>
-                            </div>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                   
-                  </div>
-                
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        {/* Section 4: Rooms (Destination-style gallery/grid) */}
-        <section className="" id="the-house-rooms">
-          <div className="container shape-mockup-wrap">
-            <div className="row">
-              <div className="col-xl-12">
-                <div className="page-single">
-                  <div className="page-content d-block">
-                    <div className="page-meta mt-10 mb-30">
-                      <span className="page-tag mr-5">The Rooms</span>
-                      <span className="destination-subtitle" style={{display:'inline-block',padding:'4px 10px',border:'1px solid #e1ece8',borderRadius:'30px',fontSize:'12px',letterSpacing:'.05em',textTransform:'uppercase'}}>Heritage Alive</span>
-                    </div>
-                    <h2 className="box-title">House of Andalus by different Season</h2>
-                    <p className="blog-text mb-35">Each room is named after a historic Andalusi figure, chosen for their unique character, achievements, leadership styles, and the legacy they left behind. Every fabric, tile, and scent was chosen to honour heritage and harmony. The interiors blend local Andalusian craft with modern restraint, resulting in a space that feels both timeless and intimate.</p>
-                    <p className="blog-text mb-35">Each olive tree, each archway carries the memory of Al-Andalus, where scholars once wrote, artists once painted, and hearts once worshipped in beauty. This is a house that holds stories. And now, it holds yours too.</p>
-                    {/* <h3 className="page-title mt-10 mb-25">Room Showcase</h3> */}
-                    <div className="row g-4">
-                      {rooms.map(room => (
-                        <div key={room.id} className="col-md-6 col-lg-4">
-                          <div className="destination-box th-ani" aria-label={`Room: ${room.name}`}>
-                            <div className="destination-img position-relative" style={{ aspectRatio: '4/3', overflow: 'hidden' }}>
-                              <img src={room.image} alt={room.name} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform .6s ease' }} />
-                              <div className="img-overlay" style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(0,0,0,0.0) 40%, rgba(0,0,0,0.65) 100%)' }} />
-                              <div className="room-name-overlay" style={{ position: 'absolute', left: '0', right: '0', bottom: '12px', padding: '0 16px', textAlign: 'left' }}>
-                                <h5 style={{ color: '#fff', margin: 0, fontSize: '18px', fontWeight: 600 }}>{room.name}</h5>
-                              </div>
-                              <div className="hover-actions d-flex align-items-center justify-content-center" style={{ position: 'absolute', inset: 0, opacity: 0, transition: 'opacity .4s ease' }}>
-                                <Link href="/rooms" className="th-btn style3 th-icon" aria-label={`View details for ${room.name}`}>View</Link>
-                              </div>
-                            </div>
-                            <div className="destination-content pt-15">
-                              <h5 className="box-title mb-5">{room.name}</h5>
-                              <div className="destination-subtitle mb-10">Heritage & Harmony</div>
-                              <p className="mb-15" style={{ fontSize: '14px' }}>A tranquil space inspired by the legacy of {room.name}, blending Andalusian craft with restorative simplicity.</p>
-                              <Link href="/rooms" className="th-btn style1" aria-label={`Navigate to all rooms`}>Explore</Link>
-                            </div>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                    <style jsx>{`
-                      #the-house-rooms .destination-box:hover img { transform: scale(1.08); }
-                      #the-house-rooms .destination-box:hover .hover-actions { opacity: 1; }
-                      #the-house-rooms .destination-box .destination-content { background: #fff; border: 1px solid #eee; border-top: none; padding: 18px 20px; }
-                      @media (prefers-reduced-motion: reduce) {
-                        #the-house-rooms .destination-box:hover img { transform: none; }
-                      }
-                    `}</style>
-                    {/* <div className="text-center mt-40">
-                      <Link href="/rooms" className="th-btn style3 th-icon">View All Rooms</Link>
-                    </div> */}
+                    <h2 className="box-title mb-20">A Stream of Renewal</h2>
+                    <p className="blog-text mb-30">The river flows quietly near the House of Andalus, weaving its silver thread through olive groves and sunlit meadows. Its rhythm is gentle yet insistent, a reminder that all things move, change, and are renewed. To sit by its banks is to listen to time itself—soft, flowing, and eternal.</p>
+                    <p className="blog-text mb-35">This river has nourished life here for generations, its waters reflecting the golden light of Andalusian skies. Guests often find peace in its company—immersed in meditation, writing, or simple contemplation as the water hums its eternal dhikr. It speaks of continuity: between the seen and unseen, the present moment and the sacred memory of what was.</p>
+                    <p className="blog-text mb-35">We honour this river not merely as part of our land, but as part of our soul. It invites every traveller to let go—to release what burdens them and flow forward lighter, clearer, and more whole. In its current, the spirit finds cleansing; in its song, a prayer without words.</p>
                   </div>
                 </div>
               </div>
