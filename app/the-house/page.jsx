@@ -314,16 +314,17 @@ export default function TheHousePage() {
               <div className="col-xl-12">
                 <div className="page-single">
                   <div className="page-content d-block">
-                                                            <div className="page-meta mb-20">
-                      <span className="subr-title" style={{ color:'#133D48'}}>The Mountains</span>
+                      <div className="page-meta mb-20">
+                      <span className="subr-title" style={{ color:'#133D48'}}>Guardians of Stillness</span>
                     </div>
-                    <h2 className="box-title mb-20">Guardians of Stillness</h2>
-                    <p className="blog-text mb-30">The mountains surrounding the House of Andalus stand like silent guardians, sheltering the valley in a gentle embrace. Their presence commands reverence—timeless, patient, and steadfast. From dawn’s first blush to the amber hues of sunset, they mirror the rhythm of prayer and pause, inspiring reflection in all who gaze upon them.</p>
-                    <p className="blog-text mb-35">Each peak tells its own story: of scholars who once travelled these paths, of shepherds who sang to their flocks, and of wind-carved stones that have borne witness to centuries of faith and resilience. The air here is pure—infused with thyme, pine, and the whisper of ancient Andalusi echoes. It is a landscape where hearts slow down, where silence is not empty but alive with remembrance.</p>
+                    <h2 className="box-title mb-20">The Mountains</h2>
                     <blockquote>
-                      <p>In the stillness of the mountains, our guests rediscover what it means to be small before greatness, grounded yet lifted, solitary yet connected. These mountains teach serenity—not as escape, but as return.</p>
-                      <cite>The House Team</cite>
+                      <p>Great things are done when men and mountains meet</p>
+                      <cite>William Blake</cite>
                     </blockquote>
+                    <p className="blog-text mb-30">Wherever you look, you see power, stability, strength, resilience and a deep sense of humility that waves through the landscape.  Mountains speak a secret language men must decipher with care and intention. They hold themselves in grace and dignity, a state we humans must embody yet we approach these creased earth pieces with a deliberate focus on conquering, as if it was ever possible. We never conquer the mountains, they conquer us; or rather we conquer something within us, as we embrace our follies and wobbliness. There is beauty and vulnerability in being in the mountains. </p>
+                    <p className="blog-text mb-35">Here at the House of Andalus you will be reminded that our lives are like mountains- a presence that is solemn, dignified and hold a certain pose. The curvature of our life is often unpredictable; the ways we expand or stretch is commanded by the environment we find ourselves in. The way we stand depends on how deeply rooted and pegged we are into our own sense of self. We might appear scary from far, yet we welcome all walkers of life to stand with us. Mountains have been a fascination for authors, artists of all forms, and sensitives who can see beyond the obvious and while mountain living carries its own challenges, nothing compares to a few days in altitude that elevates our thinking and spiritual level. Mountains hold the view graciously and elegantly; an aspiration all humans have as we face our own challenges. </p>
+                    
                   </div>
                 </div>
               </div>
@@ -399,12 +400,13 @@ export default function TheHousePage() {
                 <div className="page-single">
                   <div className="page-content d-block">
                                                             <div className="page-meta mb-20">
-                      <span className="subr-title" style={{ color:'#133D48'}}>The River</span>
+                      <span className="subr-title" style={{ color:'#133D48'}}>A Stream of Renewal</span>
                     </div>
-                    <h2 className="box-title mb-20">A Stream of Renewal</h2>
-                    <p className="blog-text mb-30">The river flows quietly near the House of Andalus, weaving its silver thread through olive groves and sunlit meadows. Its rhythm is gentle yet insistent, a reminder that all things move, change, and are renewed. To sit by its banks is to listen to time itself—soft, flowing, and eternal.</p>
-                    <p className="blog-text mb-35">This river has nourished life here for generations, its waters reflecting the golden light of Andalusian skies. Guests often find peace in its company—immersed in meditation, writing, or simple contemplation as the water hums its eternal dhikr. It speaks of continuity: between the seen and unseen, the present moment and the sacred memory of what was.</p>
-                    <p className="blog-text mb-35">We honour this river not merely as part of our land, but as part of our soul. It invites every traveller to let go—to release what burdens them and flow forward lighter, clearer, and more whole. In its current, the spirit finds cleansing; in its song, a prayer without words.</p>
+                    <h2 className="box-title mb-20">The River</h2>
+                    <p className="blog-text mb-30">At the bottom of the land runs a river we cherish in the neighbourhood. The riverbed is dry half of the year; the other half fills it with swooshing water running from the mountains. We never know how much of it, though, and this is one of its mysteries. During the dry months it is a pleasure to go for a walk in the riverbed, collect stones and connect to an eternal silence you become part of when you spend a few days here. </p>
+                    <p className="blog-text mb-35">
+As the rainier season arrives, we are hopeful for the rainwater to gather and flow leisurely, bringing freshness, new life and hope for the plants. At times, the river swells into an rush; those are the times when it is best to sit above, on the terrace and listen to the frogs’ night choir. With the stars above you, in the melodious chants of the frog, you will experience life like never before- your whole being is invited to participate in the world.</p>
+                    {/* <p className="blog-text mb-35">We honour this river not merely as part of our land, but as part of our soul. It invites every traveller to let go—to release what burdens them and flow forward lighter, clearer, and more whole. In its current, the spirit finds cleansing; in its song, a prayer without words.</p> */}
                   </div>
                 </div>
               </div>

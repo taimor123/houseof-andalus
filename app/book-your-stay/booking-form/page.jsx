@@ -13,7 +13,7 @@ export default function BookYourStayPage() {
   return (
     <>
       <HeaderOne />
-      <Breadcrumb title="Book Retreat" />
+      <Breadcrumb title="Book a Stay" />
       <main className="space-top space-extra-bottom">
         <BookingForm />
       </main>

@@ -1,118 +1,12 @@
 "use client";
 import React, { useEffect } from 'react';
-import HeaderOne from '../../src/Components/Header/HeaderOne';
-import FooterFour from '../../src/Components/Footer/FooterFour';
-import ScrollToTop from '../../src/Components/ScrollToTop';
-import Breadcrumb from '../../src/Components/BreadCrumb/Breadcrumb';
+import HeaderOne from '../../../src/Components/Header/HeaderOne';
+import FooterFour from '../../../src/Components/Footer/FooterFour';
+import ScrollToTop from '../../../src/Components/ScrollToTop';
+import Breadcrumb from '../../../src/Components/BreadCrumb/Breadcrumb';
 import Link from 'next/link';
 
-// REPLACED placeholder upcomingRetreats with structured 2026 data
-const events2026 = [
-  {
-    month: 'March',
-    icon: '🌸',
-    items: [
-      {
-        title: 'New Blossom – Spring Writer’s Retreat',
-        description: 'Nurture creativity and peace among the olive groves. Write, reflect, and rediscover inspiration.',
-        dates: 'March (exact dates to be announced)',
-        register: true
-      }
-    ]
-  },
-  {
-    month: 'April',
-    icon: '🌿',
-    items: [
-      {
-        title: 'Alchemy of Leadership Programme',
-        description: 'Transform your understanding of leadership with a soulful, purpose-driven framework.',
-        dates: '23–27 April',
-        viewDetails: true,
-        register: true
-      }
-    ]
-  },
-  {
-    month: 'May',
-    icon: '❀',
-    items: [
-      {
-        title: 'Muslim Women Leadership Retreat',
-        description: 'A sacred space for women to grow, connect, and empower each other through spiritual and personal development.',
-        dates: '14–17 May',
-        register: true
-      }
-    ]
-  },
-  {
-    month: 'June',
-    icon: '♥︎',
-    items: [
-      {
-        title: 'Connecting Couples Retreat',
-        description: 'Reignite love, improve communication, and renew your relationship in a serene Andalusian setting.',
-        dates: 'June (exact dates to be announced)',
-        register: true
-      }
-    ]
-  },
-  {
-    month: 'July & August',
-    icon: '☀️',
-    items: [
-      {
-        title: 'Family & Friends Open Retreats',
-        description: 'Spend precious days with loved ones. Reconnect through laughter, food, and shared memories.',
-        dates: 'July–August (flexible bookings)',
-        register: true
-      }
-    ]
-  },
-  {
-    month: 'September',
-    icon: '🍁',
-    items: [
-      {
-        title: 'Women’s Retreat with Asma Ahmad',
-        description: 'A rejuvenating retreat to restore balance, strength, and inner peace.',
-        dates: '24–28 September',
-        register: true
-      },
-      {
-        title: 'Couples Retreat',
-        description: 'A nurturing space to reconnect hearts and heal together through guided reflection.',
-        dates: 'September (exact dates to be announced)',
-        register: true
-      },
-      {
-        title: 'Alchemy of Leadership (Encore)',
-        description: 'An extended opportunity for those who missed the April programme.',
-        dates: 'September (TBC)',
-        viewDetails: true,
-        register: true
-      }
-    ]
-  },
-  {
-    month: 'October',
-    icon: '🫒',
-    items: [
-      {
-        title: 'Writer’s Retreat',
-        description: 'Find your muse in the Andalusian calm. A peaceful space to write, think, and grow.',
-        dates: 'October (exact dates to be announced)',
-        register: true
-      },
-      {
-        title: 'Olive Harvest Retreat',
-        description: 'Experience the sacred tradition of olive harvesting — reconnecting body, earth, and spirit.',
-        dates: 'October (exact dates to be announced)',
-        register: true
-      }
-    ]
-  }
-];
+
 // ADD: helper for Register Interest button destination
 const getInterestHref = (title = '') => {
   const lower = title.toLowerCase();
@@ -121,7 +15,7 @@ const getInterestHref = (title = '') => {
   return '/book-your-stay/booking-form';
 };
 
-export default function BookYourStayPage() {
+export default function HouseofAndulusRetreats() {
   useEffect(() => {
     const cards = document.querySelectorAll('.hoa-event-card');
     const obs = new IntersectionObserver(
@@ -141,58 +35,12 @@ export default function BookYourStayPage() {
   return (
     <>
       <HeaderOne />
-      <Breadcrumb title="Book Your Stay" />
+      <Breadcrumb title="House of Andulus Retreats" />
       <main className="space-top space-extra-bottom">
-        {/* Hero / Intro */}
-        <section className="about-area position-relative overflow-hidden space" id="stay-intro">
-          <div className="container shape-mockup-wrap">
-            <div className="row">
-              <div className="col-xl-7 mb-40 mb-xl-0">
-                {/* Adopt AboutFour image composition */}
-                <div className="img-box3" aria-label="Retreat Atmosphere Images">
-                  <div className="img1">
-                    <img src="/assets/img/Book your stay/Retreat 1.png" alt="Olive Grove Morning" />
-                  </div>
-                  <div className="img2">
-                    <img src="/assets/img/Book your stay/Retreat 2.png" alt="Courtyard Reflection" />
-                  </div>
-                  <div className="img3 movingX">
-                    <img src="/assets/img/Book your stay/Retreat 3.png" alt="Stillness & Light" />
-                  </div>
-                </div>
-              </div>
-              <div className="col-xl-5">
-                <div className="ps-xl-4">
-                  <div className="title-area mb-20">
-                    <span className="sub-title style1">Book Your Stay</span>
-                    <h1 className="sec-title mb-15 heading" style={{fontSize:'46px',lineHeight:'1.15'}}>A House That Holds Your Retreat</h1>
-                  </div>
-                  <p className="sec-text mb-20">In the heart of Andalusia, far from hurry and habit, a house waits to hold your retreat. Here the call to prayer drifts across terraces, olive leaves shimmer in morning light, and interiors invite a slower rhythm. We curate spaces where couples rediscover tenderness, writers honour voice, leaders cultivate inner alignment, and seekers return to stillness. If it matters to your heart—faith, family, creativity, renewal—it matters here.</p>
-                  <p className="sec-text mb-25">Choose from signature experiences already lovingly designed, or craft a bespoke gathering shaped around your own intention. Every retreat is woven from reflection, nature, communion and the quiet joy of remembering Allah together. Let House of Andalus answer the lingering question, “Which retreat shall we choose?”—with one that feels like it was always waiting for you.</p>
-                  <div className="d-flex flex-wrap gap-3">
-                    <Link href="#retreats" className="th-btn style1">House of Andalus Retreats</Link>
-                    <Link href="#craft-your-own" className="th-btn style3 th-icon">Organise Your Own Retreat</Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* Shapes retained */}
-            <div className="shape-mockup shape1 d-none d-xl-block" style={{ top: '12%', left: '-16%' }}>
-              <img src="/assets/img/shape/shape_1.png" alt="shape" />
-            </div>
-            <div className="shape-mockup shape2 d-none d-xl-block" style={{ top: '20%', left: '-16%' }}>
-              <img src="/assets/img/shape/shape_2.png" alt="shape" />
-            </div>
-            <div className="shape-mockup shape3 d-none d-xl-block" style={{ top: '14%', left: '-10%' }}>
-              <img src="/assets/img/shape/shape_3.png" alt="shape" />
-            </div>
-          </div>
-        </section>
-
    
 
   {/* Couples’ Retreat (Text Focus) */}
-        {/* <section className="space" id="couples-retreat">
+        <section className="space" id="couples-retreat">
           <div className="container shape-mockup-wrap">
             <div className="row justify-content-center">
               <div className="col-xl-12">
@@ -220,10 +68,10 @@ export default function BookYourStayPage() {
               </div>
             </div>
           </div>
-        </section> */}
+        </section>
 
   {/* Writers’ Retreat (Text Focus) */}
-        {/* <section className="space bg-smoke2" id="writers-retreat">
+        <section className="space bg-smoke2" id="writers-retreat">
           <div className="container shape-mockup-wrap">
             <div className="row justify-content-center">
               <div className="col-xl-12">
@@ -244,10 +92,10 @@ export default function BookYourStayPage() {
               </div>
             </div>
           </div>
-        </section> */}
+        </section>
 
         {/* Leadership Retreat (Text Focus) */}
-        {/* <section className="space" id="leadership-retreat">
+        <section className="space" id="leadership-retreat">
           <div className="container shape-mockup-wrap">
             <div className="row justify-content-center">
               <div className="col-xl-12">
@@ -268,10 +116,10 @@ export default function BookYourStayPage() {
               </div>
             </div>
           </div>
-        </section> */}
+        </section>
 
   {/* Men&rsquo;s Retreat (Simplified) */}
-        {/* <section className="space bg-smoke" id="mens-retreat">
+        <section className="space bg-smoke" id="mens-retreat">
           <div className="container shape-mockup-wrap">
             <div className="row justify-content-center">
               <div className="col-xl-12">
@@ -307,10 +155,10 @@ export default function BookYourStayPage() {
               </div>
             </div>
           </div>
-        </section> */}
+        </section>
 
   {/* Women&rsquo;s Retreat */}
-        {/* <section className="space bg-smoke2" id="womens-retreat">
+        <section className="space bg-smoke2" id="womens-retreat">
           <div className="container shape-mockup-wrap">
             <div className="row align-items-center">
               <div className="col-xl-5 order-2 order-xl-1">
@@ -342,10 +190,10 @@ export default function BookYourStayPage() {
               </div>
             </div>
           </div>
-        </section> */}
+        </section>
 
         {/* Craft Your Own Retreat */}
-        {/* <section className="space bg-title text-white" id="craft-your-own">
+        <section className="space bg-title text-white" id="craft-your-own">
           <div className="container shape-mockup-wrap">
             <div className="row align-items-center">
               <div className="col-xl-7 mb-40 mb-xl-0">
@@ -366,7 +214,9 @@ export default function BookYourStayPage() {
                   <div className="page-content d-block">
                     <div className="page-meta mt-10 mb-30">
                       <span className="subr-title text-white ">Custom Retreat</span>
-                      </div>
+                      {/* <span className="page-tag mr-5 text-white">Craft Your Own</span>
+                      <span className="destination-subtitle text-white" style={{display:'inline-block',padding:'4px 12px',border:'1px solid #ffffff33',borderRadius:'30px',fontSize:'12px',letterSpacing:'.05em',textTransform:'uppercase',background:'rgba(255,255,255,0.08)'}}>Your Vision. Our Space.</span> */}
+                    </div>
                     <h2 className="box-title text-white">Design A Bespoke Retreat</h2>
                     <p className="blog-text mb-30 text-white">You can design your own journey, from a simple weekend of quiet companionship to a full multi-day renewal retreat. Every detail, from room selection to reflection themes, is crafted around your story.</p>
                     <p className="blog-text mb-30 text-white">Host your own gathering in the serene embrace of the Andalusian mountains. Whether for wellness, learning, or spiritual reflection, we&rsquo;ll help you create a bespoke experience.</p>
@@ -382,122 +232,8 @@ export default function BookYourStayPage() {
               </div>
             </div>
           </div>
-        </section> */}
-
-             {/* Section: Overview / What's Included */}
-  {/* <section className="space bg-smoke" id="retreats">
-          <div className="container shape-mockup-wrap">
-            <div className="row">
-              <div className="col-xl-12">
-                <div className="page-single">
-                  <div className="page-content d-block">
-                    <div className="page-meta mt-10 mb-30">
-                      <span className="page-tag mr-5">Retreats</span>
-                      <span className="destination-subtitle" style={{display:'inline-block',padding:'4px 10px',border:'1px solid #e1ece8',borderRadius:'30px',fontSize:'12px',letterSpacing:'.05em',textTransform:'uppercase'}}>Included</span>
-                    </div>
-                    <h2 className="box-title">House of Andalus Retreats</h2>
-                    <p className="blog-text mb-30">At the House of Andalus, we design retreats that the world makes us forget: intimacy, creativity, clarity, and connection. Each experience flows with reflection, community, and nature&rsquo;s rhythm.</p>
-                    <h3 className="box-title">What&rsquo;s Included</h3>
-                    <div className="destination-checklist mb-35">
-                      <div className="checklist style2">
-                        <ul>
-                          <li>All workshops & materials</li>
-                          <li>Premium accommodation</li>
-                          <li>All meals & refreshments</li>
-                          <li>Guided adventures & excursions</li>
-                        </ul>
-                      </div>
-                      <div className="checklist style2">
-                        <ul>
-                          <li>Pre-retreat consultation</li>
-                          <li>Wellness & reflection spaces</li>
-                          <li>Community circles & dhikr</li>
-                          <li>Dedicated retreat facilitators</li>
-                        </ul>
-                      </div>
-                    </div>
-                    <p className="blog-text mb-40">
-                      Join us in the mountains of Andalucia for our next retreat here:
-                      <Link href="#upcoming-2026" className="th-btn style4 th-icon" style={{padding:'4px 14px'}}>View 2026 Schedule</Link>
-                    </p>
-
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section> */}
-        {/* NEW: 2026 Upcoming Retreats & Events (Redesigned) */}
-        <section className="space hoa-events-2026 position-relative overflow-hidden" id="upcoming-2026" aria-labelledby="hoa-events-2026-title">
-          <div className="container shape-mockup-wrap">
-            {/* Decorative Shapes (reuse existing assets) */}
-            <div className="shape-mockup d-none d-xl-block hoa-shape-left" style={{ top: '4%', left: '-6%' }}>
-              <img src="/assets/img/shape/shape_2.png" alt="decor shape" />
-            </div>
-            <div className="shape-mockup d-none d-xl-block hoa-shape-right" style={{ bottom: '6%', right: '-4%' }}>
-              <img src="/assets/img/shape/shape_3.png" alt="decor shape" />
-            </div>
-
-            {/* Intro */}
-            <div className="row justify-content-center mb-50">
-              <div className="col-xl-9">
-                <div className="title-area text-center">
-                  <span className="sub-title style1">2026 Schedule</span>
-                  <h2 id="hoa-events-2026-title" className="sec-title mb-20 heading">House of Andalus Retreats & Events – 2026</h2>
-                  <p className="sec-text mx-auto" style={{maxWidth:'760px'}}>
-                    We welcome you to a year of reflection, growth, and renewal under the Andalusian sky.
-                    Whether you seek peace, connection, or inspiration — there’s a retreat waiting for you.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Month Groups */}
-            {events2026.map(group => (
-              <div key={group.month} className="hoa-month-wrapper mb-60">
-                <div className="hoa-month-bar">
-                  <span className="hoa-month-icon" aria-hidden="true">{group.icon}</span>
-                  <span className="hoa-month-label">{group.month}</span>
-                  <span className="hoa-month-line" />
-                </div>
-                <div className="row gy-4 gx-4">
-                  {group.items.map((ev, i) => (
-                    <div key={i} className="col-sm-6 col-lg-4">
-                      <div className="hoa-event-card destination-item th-ani" role="article" aria-label={ev.title}>
-                        <div className="hoa-event-accent" />
-                        <div className="hoa-event-inner">
-                          <h4 className="box-title hoa-event-title">{ev.title}</h4>
-                          <p className="destination-text hoa-event-desc">{ev.description}</p>
-                          <p className="destination-text hoa-event-dates"><strong>Dates:</strong> {ev.dates}</p>
-                          <div className="hoa-actions d-flex flex-wrap gap-2">
-                            {ev.viewDetails && (
-                              <Link
-                                href="/book-your-stay/booking-form"
-                                className="th-btn style1 th-icon"
-                                aria-label={`View details for ${ev.title}`}
-                              >
-                                View Details
-                              </Link>
-                            )}
-                            {ev.register && (
-                              <Link
-                                href={getInterestHref(ev.title)}
-                                className="th-btn style3 th-icon"
-                                aria-label={`Register interest for ${ev.title}`}
-                              >
-                                Register Interest
-                              </Link>
-                            )}
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
         </section>
+
       </main>
       <style jsx>{`
         /* Improve contrast of hosting enquiry button on dark bg */
@@ -657,4 +393,5 @@ export default function BookYourStayPage() {
       <ScrollToTop />
     </>
   );
+
 }

@@ -218,19 +218,22 @@ function HeaderOne() {
                                                 <Link href="/book-your-stay">Book Your Stay</Link>
                                             </li>  */}
                                             <li className="menu-item-has-children">
-                                                <Link href="/book-your-stay">Book Your Stay</Link>
+                                                <Link href="/book-your-stay">Book a Stay</Link>
                                                 <ul className="sub-menu">
                                                     {/* <li>
                                                         <Link href="/book-your-independence-day">Book your Independence Day</Link>
                                                     </li> */}
                                                     <li>
-                                                        <Link href="/book-your-stay/booking-form">Book your Retreat</Link>
+                                                        <Link href="/book-your-stay/booking-form">Book a Private Stay</Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/book-your-stay/organize-your-own-retreat">Organize your own Retreat</Link>
+                                                        <Link href="/book-your-stay/couple-retreat-form">Book a Retreat with Us</Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/book-your-stay/couple-retreat-form">Book Couple Retreat</Link>
+                                                        <Link href="/book-your-stay/organize-your-own-retreat">Organise Your Own Retreat.</Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link href="/book-your-stay/House-of-andulus-retreats">House of Andulus Retreat</Link>
                                                     </li>
                                                 </ul>
                                             </li>
