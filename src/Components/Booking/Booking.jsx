@@ -37,7 +37,7 @@ function Booking() {
         { value: "Leadership Retreat", label: "Leadership Retreat" },
         { value: "Men Retreat", label: "Men Retreat" },
         { value: "Women Retreat", label: "Women Retreat" },
-        { value: "Custom Retreat", label: "Custom Retreat" },
+        { value: "Discovering History", label: "Discovering History" },
     ];
 
     const handleChange = (name, value) => {
@@ -58,7 +58,7 @@ function Booking() {
         const cat = formData.category;
         if (cat === 'Couples Retreat') {
             router.push('/book-your-stay/couple-retreat-form');
-        } else if (cat === 'Custom Retreat') {
+        } else if (cat === 'Discovering History') {
             router.push('/book-your-stay/organize-your-own-retreat');
         } else {
             router.push('/book-your-stay/booking-form');

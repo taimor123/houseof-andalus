@@ -227,7 +227,7 @@ function HeaderOne() {
                                                         <Link href="/book-your-stay/booking-form">Book a Private Stay</Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/book-your-stay/couple-retreat-form">Book a Retreat with Us</Link>
+                                                        <Link href="/book-your-stay#upcoming-2026">Book a Retreat with Us</Link>
                                                     </li>
                                                     <li>
                                                         <Link href="/book-your-stay/organize-your-own-retreat">Organise Your Own Retreat.</Link>

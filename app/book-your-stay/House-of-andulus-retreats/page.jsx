@@ -213,7 +213,7 @@ export default function HouseofAndulusRetreats() {
                 <div className="page-single">
                   <div className="page-content d-block">
                     <div className="page-meta mt-10 mb-30">
-                      <span className="subr-title text-white ">Custom Retreat</span>
+                      <span className="subr-title text-white ">Discovering History</span>
                       {/* <span className="page-tag mr-5 text-white">Craft Your Own</span>
                       <span className="destination-subtitle text-white" style={{display:'inline-block',padding:'4px 12px',border:'1px solid #ffffff33',borderRadius:'30px',fontSize:'12px',letterSpacing:'.05em',textTransform:'uppercase',background:'rgba(255,255,255,0.08)'}}>Your Vision. Our Space.</span> */}
                     </div>

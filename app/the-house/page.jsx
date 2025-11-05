@@ -143,10 +143,10 @@ export default function TheHousePage() {
                     <div className="row g-4">
                       {rooms.map(room => (
                         <div key={room.id} className="col-md-6 col-lg-4">
-                          <div className="destination-box th-ani" aria-label={`Room: ${room.name}`}>
-                            <div className="destination-img position-relative" style={{ aspectRatio: '4/3', overflow: 'hidden' }}>
-                              <img src={room.image} alt={room.name} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform .6s ease' }} />
-                              <div className="img-overlay" style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(0,0,0,0.0) 40%, rgba(0,0,0,0.65) 100%)' }} />
+                          <div className="destination-box th-ani room-equal-height" aria-label={`Room: ${room.name}`}>
+                            <div className="destination-img position-relative room-img-equal-height">
+                              <img src={room.image} alt={room.name} loading="lazy" className="room-img-equal-height-img" />
+                              <div className="" style={{ position: 'absolute', inset: 0 }} />
                               <div className="room-name-overlay" style={{ position: 'absolute', left: '0', right: '0', bottom: '12px', padding: '0 16px', textAlign: 'left' }}>
                                 <h5 style={{ color: '#fff', margin: 0, fontSize: '18px', fontWeight: 600 }}>{room.name}</h5>
                               </div>
@@ -165,11 +165,63 @@ export default function TheHousePage() {
                       ))}
                     </div>
                     <style jsx>{`
-                      #the-house-rooms .destination-box:hover img { transform: scale(1.08); }
-                      #the-house-rooms .destination-box:hover .hover-actions { opacity: 1; }
-                      #the-house-rooms .destination-box .destination-content { background: #fff; border: 1px solid #eee; border-top: none; padding: 18px 20px; }
+                      #the-house-rooms .room-equal-height {
+                        display: flex;
+                        flex-direction: column;
+                        height: 100%;
+                        border-radius: 16px;
+                        overflow: hidden;
+                        background: #fff;
+                        // box-shadow: 0 4px 18px -6px rgba(30,40,60,0.10);
+                        transition: box-shadow .3s cubic-bezier(.4,0,.2,1);
+                      }
+                      #the-house-rooms .room-equal-height:hover {
+                        box-shadow: 0 8px 32px -8px rgba(30,40,60,0.16);
+                      }
+                      #the-house-rooms .room-img-equal-height {
+                        width: 100%;
+                        height: 270px;
+                        max-height: 300px;
+                        min-height: 200px;
+                        overflow: hidden;
+                        border-radius: 16px 16px 0 0;
+                        position: relative;
+                        background: #fafdff;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                      }
+                      #the-house-rooms .room-img-equal-height-img {
+                        width: 100%;
+                        height: 100%;
+                        max-height: 300px;
+                        object-fit: cover;
+                        border-radius: 16px 16px 0 0;
+                        transition: transform .5s cubic-bezier(.4,0,.2,1);
+                        background: #fafdff;
+                      }
+                      #the-house-rooms .room-equal-height:hover .room-img-equal-height-img {
+                        transform: scale(1.06);
+                      }
+                      #the-house-rooms .destination-box .destination-content {
+                        background: #fff;
+                        border: 1px solid #eee;
+                        border-top: none;
+                        padding: 18px 20px;
+                        flex: 1 1 auto;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                      }
+                      @media (max-width: 991px) {
+                        #the-house-rooms .room-img-equal-height { height: 170px; }
+                      }
+                      @media (max-width: 575px) {
+                        #the-house-rooms .room-img-equal-height { height: 100px; }
+                      }
                       @media (prefers-reduced-motion: reduce) {
-                        #the-house-rooms .destination-box:hover img { transform: none; }
+                        #the-house-rooms .room-equal-height:hover .room-img-equal-height-img { transform: none; }
+                        #the-house-rooms .room-equal-height:hover .hover-actions { opacity: 1; }
                       }
                     `}</style>
                     {/* <div className="text-center mt-40">

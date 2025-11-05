@@ -45,15 +45,15 @@ const destinations = [
     image: "/assets/img/Home/Reserve Your Retreat/5 Reserve Your Retreat 337x506 Artifacts.png",
     backText: "Sacred stillness and gentle creative flow. Wellness practices and heritage aesthetics nurture restoration and presence. Space to breathe, express, and return replenished and centered."
   },
+  // {
+  //   id: 6,
+  //   name: "Custom Retreat",
+  //   subtitle: "July and August 2026",
+  //   image: "/assets/img/Home/Reserve Your Retreat/6 Reserve Your Retreat 423x636 Preservation.png",
+  //   backText: "Design your focus: spiritual growth, creative discipline, leadership reset, or wellness immersion. Tailored facilitation with flexible pacing—build a retreat architecture that meets your season."
+  // },
   {
     id: 6,
-    name: "Custom Retreat",
-    subtitle: "July and August 2026",
-    image: "/assets/img/Home/Reserve Your Retreat/6 Reserve Your Retreat 423x636 Preservation.png",
-    backText: "Design your focus: spiritual growth, creative discipline, leadership reset, or wellness immersion. Tailored facilitation with flexible pacing—build a retreat architecture that meets your season."
-  },
-  {
-    id: 7,
     name: "Discovering History",
     subtitle: "October 2026",
     image: "/assets/img/Home/Reserve Your Retreat/7 Reserve Your Retreat 337x506 Monastery.png",

@@ -87,7 +87,7 @@ function TourTwo() {
         },
         {
             key: 'custom',
-            title: 'Custom Retreat',
+            title: 'Discovering History',
             image: '/assets/img/Home/Most Popular Tour/6 Most Popular Tour Customer Retreat.png',
             description: 'Shape your own path to peace, purpose, and renewal.',
             icon: 'fa-pen-nib',

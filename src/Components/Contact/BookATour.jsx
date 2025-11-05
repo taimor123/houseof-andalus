@@ -23,7 +23,7 @@ function BookATour() {
         { value: "Leaders Retreat", label: "Leaders Retreat" },
         { value: "Men Retreat", label: "Men Retreat" },
         { value: "Women Retreat", label: "Women Retreat" },
-        { value: "Custom Retreat", label: "Custom Retreat" },
+        { value: "Discovering History", label: "Discovering History" },
     ];
     // Auto-play video when modal opens (muted first to satisfy browser policies)
     useEffect(() => {
