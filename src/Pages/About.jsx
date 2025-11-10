@@ -22,13 +22,13 @@ function About() {
             />
             <AboutFour />
             {/* <OfferTwo /> */}
-            <TourOne/>
+            
+            {/* <TourOne/> */}
             <ElementSection />
             
             {/* <TourGuideTwo />
-            <TestimonialOne /> */}
-            {/* <BrandOne/> */}
-            <GalleryFive />
+                <AboutFour />
+                {/* <OfferTwo /> */}
             <FooterFour />
             <ScrollToTop />
         </>
