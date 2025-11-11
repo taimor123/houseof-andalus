@@ -456,7 +456,7 @@ export default function BookYourStayPage() {
             {events2026.map(group => (
               <div key={group.month} className="hoa-month-wrapper mb-60">
                 <div className="hoa-month-bar">
-                  <span className="hoa-month-icon" aria-hidden="true">{group.icon}</span>
+                  {/* <span className="hoa-month-icon" aria-hidden="true">{group.icon}</span> */}
                   <span className="hoa-month-label">{group.month}</span>
                   <span className="hoa-month-line" />
                 </div>
