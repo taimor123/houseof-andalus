@@ -24,7 +24,7 @@ function About() {
             {/* <OfferTwo /> */}
             
             {/* <TourOne/> */}
-            <ElementSection />
+            {/* <ElementSection /> */}
             
             {/* <TourGuideTwo />
                 <AboutFour />

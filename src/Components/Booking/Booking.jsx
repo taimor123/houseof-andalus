@@ -134,7 +134,7 @@ function Booking() {
                                 </button> */}
                                     <Link  href="/book-your-stay/booking-form" className="th-btn" type="submit">
                                     <img src="/assets/img/icon/search.svg" alt="" />
-                                    Book Retreat
+                                    Book a Stay
                                 </Link>
                             </div>
                         </div>

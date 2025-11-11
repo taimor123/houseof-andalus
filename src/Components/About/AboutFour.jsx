@@ -80,7 +80,7 @@ function AboutFour() {
                </div>
             </div>
             <div
-               className="shape-mockup movingX d-none d-xxl-block"
+               className=" movingX d-none d-xxl-block"
                style={{ top: '0%', left: '-18%' }}
             >
                <img src="/assets/img/shape/shape_2_1.png" alt="shape" />

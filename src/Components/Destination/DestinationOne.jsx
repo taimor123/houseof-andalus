@@ -15,49 +15,48 @@ const destinations = [
     name: "Couples Retreat",
     subtitle: "June, September 2026",
     image: "/assets/img/Home/Reserve Your Retreat/1 Reserve Your Retreat 423x636.png",
-    backText: "Reconnecting hearts in a quiet Andalus setting. Shared reflection, gentle rhythm, and guided intimacy moments that renew trust and tenderness. Leave with deeper harmony and a softened pace together."
+    backText: "Reconnecting hearts in a quiet Andalus setting. Shared reflection, gentle rhythm, and guided intimacy moments that renew trust and tenderness. Leave with deeper harmony and a softened pace together.",
+    link: "/book-your-stay/couple-retreat-form"
   },
   {
     id: 2,
     name: "Writers Retreat",
     subtitle: "March, October 2026",
     image: "/assets/img/Home/Reserve Your Retreat/2 Reserve Your Retreat Architecture.png",
-    backText: "Quiet creative mornings and heritage textures that stir the pen. Afternoon peer circles spark momentum while evenings invite contemplative craft. Shape chapters in stillness—refine voice, renew discipline."
+    backText: "Quiet creative mornings and heritage textures that stir the pen. Afternoon peer circles spark momentum while evenings invite contemplative craft. Shape chapters in stillness—refine voice, renew discipline.",
+    link: "/book-your-stay/booking-form" 
   },
   {
     id: 3,
     name: "Leadership Journeys",
     subtitle: "23-27 April 2026",
     image: "/assets/img/Home/Reserve Your Retreat/3 Reserve Your Retreat 247x372 History.png",
-    backText: "Servant leadership explored through ethics, legacy, and reflective space. Strategic pauses cultivate clarity while Andalus tradition frames responsibility. Emerge aligned—principled, purposeful, and grounded."
+    backText: "Servant leadership explored through ethics, legacy, and reflective space. Strategic pauses cultivate clarity while Andalus tradition frames responsibility. Emerge aligned—principled, purposeful, and grounded.",
+    link: "/book-your-stay/booking-form"
   },
   {
     id: 4,
     name: "Men Retreat",
     subtitle: "June 2026",
     image: "/assets/img/Home/Reserve Your Retreat/4 Reserve Your Retreat 337x506 Culture.png",
-    backText: "Brotherhood, balance, and inner stillness. Outdoor challenge meets calm restoration as faith and resilience intertwine. A resetting container for strength anchored in humility and grace."
+    backText: "Brotherhood, balance, and inner stillness. Outdoor challenge meets calm restoration as faith and resilience intertwine. A resetting container for strength anchored in humility and grace.",
+    link: "/book-your-stay/booking-form" 
   },
   {
     id: 5,
     name: "Women Only Retreat",
     subtitle: "14-17 May, 24-28 Sept 2026",
     image: "/assets/img/Home/Reserve Your Retreat/5 Reserve Your Retreat 337x506 Artifacts.png",
-    backText: "Sacred stillness and gentle creative flow. Wellness practices and heritage aesthetics nurture restoration and presence. Space to breathe, express, and return replenished and centered."
+    backText: "Sacred stillness and gentle creative flow. Wellness practices and heritage aesthetics nurture restoration and presence. Space to breathe, express, and return replenished and centered.",
+    link: "/book-your-stay/booking-form" 
   },
-  // {
-  //   id: 6,
-  //   name: "Custom Retreat",
-  //   subtitle: "July and August 2026",
-  //   image: "/assets/img/Home/Reserve Your Retreat/6 Reserve Your Retreat 423x636 Preservation.png",
-  //   backText: "Design your focus: spiritual growth, creative discipline, leadership reset, or wellness immersion. Tailored facilitation with flexible pacing—build a retreat architecture that meets your season."
-  // },
   {
     id: 6,
     name: "Discovering History",
     subtitle: "October 2026",
     image: "/assets/img/Home/Reserve Your Retreat/7 Reserve Your Retreat 337x506 Monastery.png",
-    backText: "Hands-on heritage immersion: architecture, preservation stories, and living craftsmanship. Walk narratives of continuity while savoring farm-to-table simplicity. Recover wonder in layered cultural memory."
+    backText: "Hands-on heritage immersion: architecture, preservation stories, and living craftsmanship. Walk narratives of continuity while savoring farm-to-table simplicity. Recover wonder in layered cultural memory.",
+    link: "/book-your-stay/organize-your-own-retreat"
   }
 ];
  
@@ -146,12 +145,22 @@ function DestinationOne() {
                         <div className="destination-img">
                           <img src={dest.image} alt={dest.name} />
                           <div className="destination-content">
-                            <div className="media-left">
-                              <h4 className="box-title">{dest.name}</h4>
-                              <span className="destination-subtitle">{dest.subtitle}</span>
-                            </div>
+                            {/* Clickable area now wrapped with Link */}
+                            <Link
+                              href={dest.link}
+                              className="media-left destination-click"
+                              aria-label={`Open ${dest.name} retreat page`}
+                            >
+                              <h4 className="box-title" style={{marginLeft: 20}}>{dest.name}</h4>
+                              <span className="destination-subtitle" style={{marginLeft: 20}}>{dest.subtitle}</span>
+                            </Link>
                             <div>
-                              <button type="button" onClick={()=>handleFlip(dest.id)} className="th-btn style2 th-icon" aria-label={`View details for ${dest.name}`}>Details</button>
+                              <button
+                                type="button"
+                                onClick={()=>handleFlip(dest.id)}
+                                className="th-btn style2 th-icon"
+                                aria-label={`View details for ${dest.name}`}
+                              >Details</button>
                             </div>
                           </div>
                         </div>
@@ -161,9 +170,20 @@ function DestinationOne() {
                         <div className="flip-back-content">
                           <h5 className="box-title mb-10">{dest.name}</h5>
                           <p className="retreat-paragraph">{dest.backText}</p>
-                          <button type="button" onClick={()=>handleFlip(dest.id)} className="th-btn style3 th-icon mt-15" aria-label={`Close details for ${dest.name}`}>Back</button>
+                          <div className="d-flex justify-content-center gap-2 mt-15">
+                            <button
+                              type="button"
+                              onClick={()=>handleFlip(dest.id)}
+                              className="th-btn style3 th-icon"
+                              aria-label={`Close details for ${dest.name}`}
+                            >Back</button>
+                            <Link
+                              href={dest.link}
+                              className="th-btn style2"
+                              aria-label={`Go to ${dest.name} retreat page`}
+                            >Book Stay</Link>
+                          </div>
                         </div>
-                                    
                       </div>
                     </div>
                   </div>
@@ -197,6 +217,13 @@ function DestinationOne() {
           .flip-back button.th-btn:hover { background:#d9efe6; color:#1f392f; }
           /* Accessibility focus */
           .flip-card button:focus-visible { outline:2px solid #fff; outline-offset:3px; }
+          .destination-content { display:flex; align-items:flex-end; justify-content:space-between; gap:12px; }
+          .destination-click { display:block; cursor:pointer; text-decoration:none; }
+          .destination-click:hover .box-title,
+          .destination-click:focus .box-title { text-decoration:underline; }
+          .destination-click:focus-visible { outline:2px solid #ffffff; outline-offset:3px; border-radius:4px; }
+          .flip-back-content .th-btn.style2 { background:#ffffff; color:#234237; }
+          .flip-back-content .th-btn.style2:hover { background:#d9efe6; }
           @media (max-width: 767px){ .flip-card .flip-inner { aspect-ratio: 2/3; } }
           @media (prefers-reduced-motion: reduce){ .flip-inner { transition:none; } }
         `}</style>
