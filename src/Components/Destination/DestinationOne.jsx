@@ -201,7 +201,7 @@ function DestinationOne() {
           .flip-front { z-index: 2; }
           .flip-front .destination-img, .flip-back { flex:1; }
           /* Improved back color scheme: richer emerald gradient for better contrast */
-          .flip-back { transform: rotateY(180deg); align-items:center; justify-content:center; padding:14px 10px; background:linear-gradient(160deg,#234237 0%, #133d48 5%, #17a9cb 100%); color:#ffffff; border-radius:12px; box-shadow:0 8px 26px -6px rgba(0,0,0,0.40); }
+          .flip-back { transform: rotateY(180deg); align-items:center; justify-content:center; padding:14px 10px; background:linear-gradient(160deg,#234237 0%, #92512B 5%, #17a9cb 100%); color:#ffffff; border-radius:12px; box-shadow:0 8px 26px -6px rgba(0,0,0,0.40); }
           .flip-back-content { text-align:center; max-width:320px; margin:0 auto; }
           .flip-back-content .box-title { font-size:22px; color:#ffffff; letter-spacing:.02em; }
           .retreat-paragraph { font-size:18px; line-height:1.55; letter-spacing:.025em; color:#f2f8f5; margin:0 0 12px; }

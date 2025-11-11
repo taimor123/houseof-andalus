@@ -23,8 +23,9 @@ function FooterOne() {
                                             placeholder="Enter Email"
                                             required=""
                                         />
-                                        <button type="submit" className="th-btn style3">
-                                            Subscribe Now <img src="/assets/img/icon/plane.svg" alt="" />
+                                        <button type="submit" className="th-btn style3 th-icon">
+                                            Subscribe Now 
+                                            {/* <img src="/assets/img/icon/plane.svg" alt="" /> */}
                                         </button>
                                     </form>
                                 </div>
@@ -232,7 +233,7 @@ function FooterOne() {
             </div>
             <div
                 className="copyright-wrap background-image"
-                style={{ backgroundImage: "url('/assets/img/home/copyright_bg_1.jpg')" }}
+                // style={{ backgroundImage: "url('/assets/img/home/copyright_bg_1.jpg')" }}
             >
                 <div className="container">
                     <div className="row justify-content-between align-items-center">
