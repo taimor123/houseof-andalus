@@ -52,7 +52,7 @@ function FooterFour() {
                                 <div className="th-widget-about">
                                     <div className="about-logo">
                                         <Link href="/">
-                                            <img src="/assets/img/Andalus-logo-white.png" alt="house-of-andalus" />
+                                            <img src="/assets/img/white-newlogo.png" alt="house-of-andalus" />
                                         </Link>
                                     </div>
                                     <p className="about-text">

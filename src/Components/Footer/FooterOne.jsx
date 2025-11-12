@@ -38,7 +38,7 @@ function FooterOne() {
                                 <div className="th-widget-about">
                                     <div className="about-logo">
                                         <Link href="/">
-                                            <img src="/assets/img/logo-2-03.png" alt="Tourm" />
+                                            <img src="/assets/img/brown-newlogo.png" alt="Tourm" width={100}  />
                                         </Link>
                                     </div>
                                     <p className="about-text">

@@ -201,20 +201,20 @@ function DestinationOne() {
           .flip-front { z-index: 2; }
           .flip-front .destination-img, .flip-back { flex:1; }
           /* Improved back color scheme: richer emerald gradient for better contrast */
-          .flip-back { transform: rotateY(180deg); align-items:center; justify-content:center; padding:14px 10px; background:linear-gradient(160deg,#234237 0%, #92512B 5%, #17a9cb 100%); color:#ffffff; border-radius:12px; box-shadow:0 8px 26px -6px rgba(0,0,0,0.40); }
-          .flip-back-content { text-align:center; max-width:320px; margin:0 auto; }
-          .flip-back-content .box-title { font-size:22px; color:#ffffff; letter-spacing:.02em; }
-          .retreat-paragraph { font-size:18px; line-height:1.55; letter-spacing:.025em; color:#f2f8f5; margin:0 0 12px; }
+          .flip-back { transform: rotateY(180deg); align-items:center; justify-content:center; padding:14px 10px; background:linear-gradient(160deg, #eba16cff 0%, #e4b397ff 5%, #d5a990ff  100%); color:#ffffff; border-radius:12px; box-shadow:0 8px 26px -6px rgba(0,0,0,0.40); }
+          .flip-back-content { text-align:center; max-width:320px;  margin:0 auto; }
+          .flip-back-content .box-title { font-size:22px; color: #481b02ff; letter-spacing:.02em; }
+          .retreat-paragraph { font-size:18px; line-height:1.55; letter-spacing:.025em; color: #481b02ff; margin:0 0 12px; }
           .destination-box.flip-card img { display:block; width:100%; height:100%; object-fit:cover; border-radius:12px; }
           .flip-card .destination-img { border-radius:12px; overflow:hidden; height:100%; }
           /* Front overlay adjustments */
           .flip-front .destination-content .box-title { color:#ffffff; text-shadow:0 2px 8px rgba(0,0,0,0.45); }
           .flip-front .destination-content .destination-subtitle { color:#d9efe6; font-weight:500; }
           .flip-front .th-btn.style2 { background:#ffffff; color:#2e4c3f; border:none; }
-          .flip-front .th-btn.style2:hover { background:#d9efe6; color:#1f392f; }
+          .flip-front .th-btn.style2:hover { background: #d9efe6; color:#1f392f; }
           .flip-back button.th-btn { min-width:130px; }
-          // .flip-back button.th-btn { background:#ffffff; color:#275041; }
-          .flip-back button.th-btn:hover { background:#d9efe6; color:#1f392f; }
+          // .flip-back button.th-btn { background:#ffffff; color: #275041; }
+          .flip-back button.th-btn:hover { background: #d9efe6; color: #1f392f; }
           /* Accessibility focus */
           .flip-card button:focus-visible { outline:2px solid #fff; outline-offset:3px; }
           .destination-content { display:flex; align-items:flex-end; justify-content:space-between; gap:12px; }
@@ -222,8 +222,8 @@ function DestinationOne() {
           .destination-click:hover .box-title,
           .destination-click:focus .box-title { text-decoration:underline; }
           .destination-click:focus-visible { outline:2px solid #ffffff; outline-offset:3px; border-radius:4px; }
-          .flip-back-content .th-btn.style2 { background:#ffffff; color:#234237; }
-          .flip-back-content .th-btn.style2:hover { background:#d9efe6; }
+          .flip-back-content .th-btn.style2 { background:#ffffff; color: #234237; }
+          .flip-back-content .th-btn.style2:hover { background: #d9efe6; }
           @media (max-width: 767px){ .flip-card .flip-inner { aspect-ratio: 2/3; } }
           @media (prefers-reduced-motion: reduce){ .flip-inner { transition:none; } }
         `}</style>

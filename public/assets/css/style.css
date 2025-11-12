@@ -88,6 +88,7 @@ Last Update: 20-07-2024
 /*------------------- 1.2. Function -------------------*/
 /*------------------- 1.3. Variable-------------------*/
 :root {
+  /* --theme-color: #92512B; */
   --theme-color: #92512B;
   --primary-color: #A56542;
   --title-color: #A56542;
@@ -7302,10 +7303,11 @@ ol.wp-block-rss {
 
 .about-logo {
   margin-bottom: 15px;
+  padding-left: 20px;
 }
 
 .th-widget-about .about-logo {
-  margin-bottom: 33px;
+  margin-bottom: 20px;
 }
 
 .th-widget-about .about-text {
