@@ -17,7 +17,7 @@ import TourValues from '../src/Components/Tour/TourValues';
 
 export default function HomePage() {
   return (
-    <div>
+    <div style={{backgroundColor: "#FFF9F3"}}>
       <HeaderOne />
       <BannerOne />
       <Booking />

@@ -6,9 +6,10 @@ function AboutOne() {
     return (
         <div
             className="about-area position-relative overflow-hidden space"
+            style={{backgroundColor: "#FFF9F3"}}
             id="about-sec"
         >
-            <div className="container shape-mockup-wrap">
+            <div className="container">
                 <div className="row">
                     <div className="col-xl-6">
                         <div className="img-box1">

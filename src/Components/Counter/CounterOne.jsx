@@ -16,7 +16,7 @@ const CounterOne = () => {
 
     return (
         <div className="counter-area space" ref={ref}>
-            <div className="container shape-mockup-wrap">
+            <div className="container ">
                 <div className="row">
                     {counters.map((counter, index) => (
                         <div key={index} className="col-sm-6 col-xl-3 counter-card-wrap">

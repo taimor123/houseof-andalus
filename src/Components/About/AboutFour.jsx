@@ -4,7 +4,7 @@ import Link from 'next/link'
 function AboutFour() {
    return (
       <div className="about-area position-relative overflow-hidden overflow-hidden space" id="about-sec">
-         <div className="container shape-mockup-wrap">
+         <div className="container ">
             <div className="row">
                <div className="col-xl-7">
                   <div className="img-box3">
