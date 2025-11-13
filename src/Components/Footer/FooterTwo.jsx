@@ -37,7 +37,7 @@ function FooterTwo() {
                                 <div className="th-widget-about">
                                     <div className="about-logo">
                                         <Link href="/">
-                                            <img src="/assets/img/logo-white.svg" alt="Tourm" />
+                                            <img src="/assets/img/logo-white.svg" alt="Tourm" width={100} />
                                         </Link>
                                     </div>
                                     <p className="about-text">
