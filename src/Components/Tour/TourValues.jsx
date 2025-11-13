@@ -53,7 +53,7 @@ function TourValues() {
 					))}
 				</div>
 				<style jsx>{`
-					.value-card { background:#ffffff; border-radius:16px; box-shadow:0 8px 30px -8px rgba(0,0,0,0.25); padding:18px 20px; gap:20px; position:relative; overflow:hidden; }
+					.value-card { background:#FFFAF3; border-radius:16px; box-shadow:0 8px 30px -8px rgba(0,0,0,0.25); padding:18px 20px; gap:20px; position:relative; overflow:hidden; }
 					.value-card-img img { width:130px; height:130px; object-fit:cover; border-radius:12px; display:block; }
 					.value-card-title { color:#234237; letter-spacing:.02em; font-weight:600; }
 					.value-card-text { font-size:.9rem; line-height:1.55; color:#2f4a3f; }

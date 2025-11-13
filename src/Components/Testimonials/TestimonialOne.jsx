@@ -52,7 +52,7 @@ const testimonials = [
 
 function TestimonialOne() {
   return (
-    <section className="testi-area overflow-hidden space shape-mockup-wrap" id="testi-sec">
+    <section className="testi-area overflow-hidden space " id="testi-sec">
       <div className="container-fluid p-0">
         <div className="title-area mb-20 text-center">
           <span className="sub-title">Testimonial</span>
@@ -74,11 +74,12 @@ function TestimonialOne() {
               1200: { slidesPerView: 2},
               1400: { slidesPerView: 3},
             }}
+            
             className="testiSlider1 has-shadow"
           >
             {testimonials.map((item, index) => (
               <SwiperSlide key={index}>
-                <div className="testi-card">
+                <div className="testi-card" style={{backgroundColor: "#fde4d6ff"}}>
                   <div className="testi-card_wrapper">
                     <div className="testi-card_profile">
                       <div className="testi-card_avater">
@@ -96,8 +97,8 @@ function TestimonialOne() {
                     </div>
                   </div>
                   <p className="testi-card_text">{item.text}</p>
-                  <div className="testi-card-quote">
-                    <img src="/assets/img/icon/testi-quote.svg" alt="img" />
+                  <div className="testi-card-quote" style={{color: "#fde4d6ff"}}>
+                    <img src="/assets/img/icon/testi-quoteu.svg" alt="img" />
                   </div>
                 </div>
               </SwiperSlide>

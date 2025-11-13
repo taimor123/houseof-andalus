@@ -4,7 +4,7 @@ import Link from 'next/link'
 function AboutFour() {
    return (
       <div className="about-area position-relative overflow-hidden overflow-hidden space" id="about-sec">
-         <div className="container shape-mockup-wrap">
+         <div className="container ">
             <div className="row">
                <div className="col-xl-7">
                   <div className="img-box3">
@@ -23,7 +23,7 @@ function AboutFour() {
                <div className="col-xl-5">
                   <div className="ps-xl-4">
                      <div className="title-area mb-20">
-                        <span className="sub-title style1 ">Welcome To House of Andalus</span>
+                        {/* <span className="sub-title style1 ">Welcome To House of Andalus</span> */}
                         <h2 className="sec-title mb-20 pe-xl-5 me-xl-5 heading">
                            Meet Ajmal Masroor & Henrietta Szovati
                         </h2>
@@ -79,12 +79,12 @@ function AboutFour() {
                   </div>
                </div>
             </div>
-            <div
+            {/* <div
                className=" movingX d-none d-xxl-block"
                style={{ top: '0%', left: '-18%' }}
             >
                <img src="/assets/img/shape/shape_2_1.png" alt="shape" />
-            </div>
+            </div> */}
             <div
                className="shape-mockup jump d-none d-xxl-block"
                style={{ top: '28%', right: '-15%' }}

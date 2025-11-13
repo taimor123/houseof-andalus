@@ -6,9 +6,10 @@ function AboutOne() {
     return (
         <div
             className="about-area position-relative overflow-hidden space"
+            style={{backgroundColor: "#FFF9F3"}}
             id="about-sec"
         >
-            <div className="container shape-mockup-wrap">
+            <div className="container">
                 <div className="row">
                     <div className="col-xl-6">
                         <div className="img-box1">
@@ -26,7 +27,7 @@ function AboutOne() {
                     <div className="col-xl-6">
                         <div className="ps-xl-4 ms-xl-2">
                             <div className="title-area mb-20 pe-xl-5 me-xl-5">
-                                <span className="sub-title style1 ">Reawaken Together</span>
+                                {/* <span className="sub-title style1 ">Reawaken Together</span> */}
                                 <h2 className="sec-title mb-20 pe-xl-5 me-xl-5 heading">
                                     Welcome to the House of Andalus
                                 </h2>

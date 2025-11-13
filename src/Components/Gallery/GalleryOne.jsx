@@ -21,7 +21,7 @@ function GalleryOne() {
 
     return (
         <div className="gallery-area">
-            <div className="container th-container shape-mockup-wrap">
+            <div className="container th-container ">
                 <div className="title-area text-center">
                     <span className="sub-title">Make Your Tour More Pleasure</span>
                     <h2 className="sec-title">Recent Gallery</h2>

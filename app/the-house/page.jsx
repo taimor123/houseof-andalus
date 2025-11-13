@@ -269,7 +269,7 @@ export default function TheHousePage() {
                 <div className="page-single">
                   <div className="page-content d-block">
                     <div className="page-meta mb-20">
-                      <span className="subr-title" style={{ color:'#133D48'}}>Our Values</span>
+                      <span className="subr-title" style={{ color:'#92512B'}}>Our Values</span>
                     </div>
                     <h2 className="box-title mb-20">Rooted In Reverence</h2>
                     <p className="blog-text mb-40">We intend to create a way of life here that is rooted in reverence. We bring this to you through the way we inhabit the space or how we help you reawaken your senses with offerings and experiences that are quietly transformative, gently restorative, and intentionally out of the ordinary. Each olive tree is tended with reverence as well as every living creature on the land.</p>
@@ -348,7 +348,7 @@ export default function TheHousePage() {
             #the-house-values .flip-front .destination-content { background:rgba(0,0,0,0.55); position:absolute; left:0; right:0; bottom:0; padding:6px 10px; }
             #the-house-values .flip-front .destination-subtitle span { color:#ffffff; font-weight:600; letter-spacing:.03em; font-size:20px; }
             /* Back face overlays full area */
-            #the-house-values .flip-back { position:absolute; inset:0; padding:0px 18px 30px 18px; transform:rotateY(180deg); backface-visibility:hidden; -webkit-backface-visibility:hidden; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; border:1px solid #e6eeea; border-radius:14px; background:linear-gradient(155deg,#234237 0%, #133D48 5%, #17A9CB 100%); color:#ffffff; }
+            #the-house-values .flip-back { position:absolute; inset:0; padding:0px 18px 30px 18px; transform:rotateY(180deg); backface-visibility:hidden; -webkit-backface-visibility:hidden; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; border:1px solid #e6eeea; border-radius:14px; background:linear-gradient(155deg,#234237 0%, #92512B 5%, #17A9CB 100%); color:#ffffff; }
             #the-house-values .flip-back-content { width:100%; max-width:90%; }
             #the-house-values .flip-back-content .destination-subtitle span { color:#f4f8f6; font-weight:600; letter-spacing:.02em; font-size:23px; }
             #the-house-values .flip-text { font-size:18px; line-height:1.55; letter-spacing:.02em; color:#eef7f3; }
@@ -367,7 +367,7 @@ export default function TheHousePage() {
                 <div className="page-single">
                   <div className="page-content d-block">
                       <div className="page-meta mb-20">
-                      <span className="subr-title" style={{ color:'#133D48'}}>Guardians of Stillness</span>
+                      <span className="subr-title" style={{ color:'#92512B'}}>Guardians of Stillness</span>
                     </div>
                     <h2 className="box-title mb-20">The Mountains</h2>
                     <blockquote>
@@ -452,7 +452,7 @@ export default function TheHousePage() {
                 <div className="page-single">
                   <div className="page-content d-block">
                                                             <div className="page-meta mb-20">
-                      <span className="subr-title" style={{ color:'#133D48'}}>A Stream of Renewal</span>
+                      <span className="subr-title" style={{ color:'#92512B'}}>A Stream of Renewal</span>
                     </div>
                     <h2 className="box-title mb-20">The River</h2>
                     <p className="blog-text mb-30">At the bottom of the land runs a river we cherish in the neighbourhood. The riverbed is dry half of the year; the other half fills it with swooshing water running from the mountains. We never know how much of it, though, and this is one of its mysteries. During the dry months it is a pleasure to go for a walk in the riverbed, collect stones and connect to an eternal silence you become part of when you spend a few days here. </p>
