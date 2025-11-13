@@ -91,11 +91,11 @@ function HeaderOne() {
                                     <div className="header-logo">
                                         <Link href="/" aria-label="The House of Andalus Home">
                                             <img 
-                                                src="/assets/img/loii.png" 
+                                                src="/assets/img/white-newlogo.png" 
                                                 alt="The House of Andalus" 
                                                 style={{
-                                                    height: '54px',
-                                                    width: 'auto',
+                                                    height: 'auto',
+                                                    width: '60px',
                                                     display: 'block'
                                                 }}
                                             />
