@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect } from 'react';
 import HeaderOne from '../../src/Components/Header/HeaderOne';
-import FooterFour from '../../src/Components/Footer/FooterFour';
+import FooterOne from '../../src/Components/Footer/FooterOne';
 import ScrollToTop from '../../src/Components/ScrollToTop';
 import Breadcrumb from '../../src/Components/BreadCrumb/Breadcrumb';
 import Link from 'next/link';
@@ -91,7 +91,7 @@ export default function TheHousePage() {
                       <span className="page-tag mr-5">Our Vision</span>
                       <span className="destination-subtitle" style={{display:'inline-block',padding:'4px 10px',border:'1px solid #e1ece8',borderRadius:'30px',fontSize:'12px',letterSpacing:'.05em',textTransform:'uppercase'}}>Reconnecting Community</span>
                     </div>
-                    <h2 className="box-title">Reconnecting The Ummah</h2>
+                    <h2 className="box-title">Connecting Past, Present and Future</h2>
                     <p className="blog-text mb-30">The House of Al-Andalus was born out of an essential question: What if we could take people beyond history, restore it with reverence, stone by stone, to preserve the soul of its past? What if we reawakened their senses so they can disconnect yet be reconnected… to themselves, their family, and their immediate and wider communities. </p>
                     <p className="blog-text mb-35">We aim to bring our vision through everything- from the way we have designed the rooms to the way we prepare our food and treat our guests. Our vision rooted in reverence and simplicity, it guided us from a single room to a growing tapestry of spaces in this farmhouse, each echoing the same essence of stillness, beauty, and belonging. This work has made us realize the importance of rest, reconnection and rejuvenation beyond the olive trees and make us work hard to connect to our  guests and hosts to support them as they rest, reflect and reconnect long after they leave from here. We only have one aim for our gusts- to leave lighter, clearer, and more whole than when they arrived.</p>
                     {/* <h3 className="box-title">A passion for heritage, harmony, and heartfelt smiles</h3>
@@ -133,10 +133,166 @@ export default function TheHousePage() {
                 <div className="page-single">
                   <div className="page-content d-block">
                     <div className="page-meta mt-10 mb-30">
+                      <span className="page-tag mr-5">The Seasons</span>
+                      <span className="destination-subtitle" style={{display:'inline-block',padding:'4px 10px',border:'1px solid #e1ece8',borderRadius:'30px',fontSize:'12px',letterSpacing:'.05em',textTransform:'uppercase'}}>Rhythm of Nature</span>
+                    </div>
+                    <h2 className="box-title">House of Andalus in different seasons</h2>
+                    <p className="blog-text ">Every season, like every day, is different at the House of Andalus. We encourage our guests to live by  the natural order of things and find peace and tranquility in the way the sun, the clouds and the moon moves. Being in tune with nature restores our sense of wellbeing and provides our nervous system a rest it needs.  </p>
+                    <p className="blog-text ">Each olive tree, each archway carries the memory of Al-Andalus, where scholars once wrote, artists once painted, and hearts once worshipped in beauty. This is a house that holds stories. And now, it holds yours, too.</p>
+                    <h5 className=""> Each season blesses us with its gifts</h5>
+                    <div className="seasons-grid  mt-20" aria-label="House of Andalus Seasons" role="list">
+                      {[
+                        {
+                          name: 'Spring',
+                          accent: 'var(--color-1)',
+                          text: 'Spring brings fresh breeze, delicious rain and an invigorating sense of renewal. Almonds are blossoming, the olive trees breathe and show their little flowers. Late spring brings wild flowers of all colours and they carpet this sacred land.'
+                        },
+                        {
+                          name: 'Summer',
+                          accent: 'var(--color-1)',
+                          text: 'Summer is a deep delight, full of rest, sun‑kissed cheeks and siestas in the afternoon. When you get overwhelmed, the sparkling pool is a refuge where you swim with dragonflies and colourful birds.'
+                        },
+                        {
+                          name: 'Autumn',
+                          accent: 'var(--color-1)',
+                          text: 'Autumn slithers in gently, bringing cooler but beautiful evening sunsets. The harvest is the highlight, where in the strong sun you collect juicy olives and taste their fresh oil on bread. Joy for life does not get much better than that.'
+                        },
+                        {
+                          name: 'Winter',
+                          accent: 'var(--color-1)',
+                          text: 'In winter your walks become invigorating. You rejuvenate in the daily sunshine and cozy up around the fireplace with hot chocolate or our lime blossom tea with orange blossom water and honey, drifting into a deep, restful night.'
+                        }
+                      ].map(season => (
+                        <article key={season.name} className="season-card" role="listitem" aria-labelledby={`season-${season.name}`}> 
+                          <div className="season-accent" style={{ background: season.accent }} />
+                          <h4 id={`season-${season.name}`} className="season-name">{season.name}</h4>
+                          <p className="season-text">{season.text}</p>
+                        </article>
+                      ))}
+                    </div>
+                    <style jsx>{`
+                      .seasons-heading {
+                        position: relative;
+                        font-size: 30px;
+                        line-height: 1.18;
+                        font-weight: 600;
+                        letter-spacing: .035em;
+                        display:inline-block;
+                        background: linear-gradient(90deg,var(--color-1) 0%, var(--color-1) 35%, var(--color-2) 65%, var(--color-2) 100%);
+                        -webkit-background-clip: text;
+                        background-clip: text;
+                        color: var(--title-color); /* fallback */
+                        -webkit-text-fill-color: transparent; /* ensure gradient shows */
+                        padding: 6px 14px 10px 14px;
+                        border-radius: 18px;
+                        text-shadow: 0 1px 2px rgba(0,0,0,.06); /* subtle contrast */
+                      }
+                      .seasons-heading__inner {
+                        position: relative;
+                        z-index: 2;
+                      }
+                      .seasons-heading:before, .seasons-heading:after {
+                        content: "";
+                        position: absolute;
+                        left: 0; right: 0;
+                        height: 100%;
+                        border-radius: inherit;
+                        opacity: .22;
+                        pointer-events: none;
+                      }
+                      .seasons-heading:before {
+                        top:0;
+                        background: linear-gradient(140deg, rgba(255,255,255,0.65) 0%, rgba(255,255,255,0.15) 70%);
+                        backdrop-filter: blur(8px);
+                      }
+                      // .seasons-heading:after {
+                      //   top:0;
+                      //   background:
+                      //     radial-gradient(circle at 12% 18%, rgba(223,165,133,0.55) 0%, transparent 60%),
+                      //     radial-gradient(circle at 88% 70%, rgba(255,250,243,0.6) 0%, transparent 65%);
+                      //   mix-blend-mode: overlay;
+                      // }
+                      .seasons-heading span:after {
+                        content: "";
+                        position: absolute;
+                        left: 8px; right: 8px; bottom: -4px;
+                        height: 3px;
+                        background: linear-gradient(90deg,var(--color-1) 0%, var(--color-2) 40%, var(--color-3) 70%, var(--color-4) 100%);
+                        border-radius: 3px;
+                        box-shadow: 0 2px 10px -2px rgba(0,0,0,0.25);
+                      }
+                      @media (max-width:991px){ .seasons-heading { font-size:32px; } }
+                      @media (max-width:575px){ .seasons-heading { font-size:26px; letter-spacing:.02em; } }
+                      @media (prefers-reduced-motion:reduce){ .seasons-heading { transition:none; } }
+                      .seasons-grid { 
+                        display: grid; 
+                        gap: 26px; 
+                        grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+                      }
+                      .season-card { 
+                        position: relative; 
+                        background: #ffffff; 
+                        border: 1px solid #e6ece8; 
+                        padding: 20px 22px 26px; 
+                        border-radius: 18px; 
+                        box-shadow: 0 4px 16px -4px rgba(30,40,60,0.12); 
+                        transition: box-shadow .35s cubic-bezier(.4,0,.2,1), transform .35s cubic-bezier(.4,0,.2,1);
+                      }
+                      .season-card:hover, .season-card:focus-within { 
+                        box-shadow: 0 10px 34px -10px rgba(30,40,60,0.25); 
+                        transform: translateY(-4px); 
+                      }
+                      .season-accent { 
+                        height: 6px; 
+                        width: calc(100% + 44px); 
+                        margin: -20px -22px 18px; 
+                        border-radius: 0 0 14px 14px; 
+                      }
+                      .season-name { 
+                        font-size: 22px; 
+                        line-height: 1.3; 
+                        margin: 0 0 10px; 
+                        letter-spacing: .02em; 
+                        color: var(--title-color); 
+                      }
+                      .season-text { 
+                        font-size: 15px; 
+                        line-height: 1.55; 
+                        margin: 0; 
+                        color: var(--body-color); 
+                      }
+                      @media (max-width: 575px) { 
+                        .season-name { font-size: 18px; } 
+                        .season-text { font-size: 14px; } 
+                      }
+                      @media (prefers-reduced-motion: reduce) { 
+                        .season-card { transition: none; } 
+                        .season-card:hover { transform: none; box-shadow:0 4px 16px -4px rgba(30,40,60,0.12);} 
+                      }
+                    `}</style>
+                    {/* <div className="text-center mt-40">
+                      <Link href="/rooms" className="th-btn style3 th-icon">View All Rooms</Link>
+                    </div> */}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+                      {/* Section 3: Rooms (Destination-style gallery/grid) */}
+        <section className="" id="the-house-rooms">
+          <div className="container shape-mockup-wrap">
+            <div className="row">
+              <div className="col-xl-12">
+                <div className="page-single">
+                  <div className="page-content d-block">
+                    <div className="page-meta mt-10 mb-30">
                       <span className="page-tag mr-5">The Rooms</span>
                       <span className="destination-subtitle" style={{display:'inline-block',padding:'4px 10px',border:'1px solid #e1ece8',borderRadius:'30px',fontSize:'12px',letterSpacing:'.05em',textTransform:'uppercase'}}>Heritage Alive</span>
                     </div>
-                    <h2 className="box-title">House of Andalus by different Season</h2>
+                    <h2 className="box-title">History in every corner of each room</h2>
                     <p className="blog-text ">Each room is named after a historic Andalusi figure, chosen for their unique character, achievements, leadership styles, and the legacy they left behind. Every fabric, tile, and scent was chosen to honour heritage and harmony. The interiors blend local Andalusian craft with modern restraint, resulting in a space that feels both timeless and intimate. </p>
                     <p className="blog-text ">Each olive tree, each archway carries the memory of Al-Andalus, where scholars once wrote, artists once painted, and hearts once worshipped in beauty. This is a house that holds stories. And now, it holds yours, too.</p>
                     {/* <h3 className="page-title mt-10 mb-25">Room Showcase</h3> */}
@@ -236,7 +392,7 @@ export default function TheHousePage() {
 
 
                 {/* Section 3: Description of the House (Destination-style layout) */}
-        <section className="" id="the-house-vision">
+        <section className="space" id="the-house-vision">
           <div className="container shape-mockup-wrap">
             <div className="row">
               <div className="col-xl-12">
@@ -360,7 +516,7 @@ export default function TheHousePage() {
         </section>
   
                 {/* Section 3: Description of the House (Destination-style layout) */}
-        <section className="" id="the-house-vision">
+        <section className="space" id="the-house-vision">
           <div className="container shape-mockup-wrap">
             <div className="row">
               <div className="col-xl-12">
@@ -466,7 +622,7 @@ As the rainier season arrives, we are hopeful for the rainwater to gather and fl
           </div>
         </section>
       </main>
-      <FooterFour />
+      <FooterOne />
       <ScrollToTop />
     </>
   );

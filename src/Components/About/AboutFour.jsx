@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 function AboutFour() {
    return (
-      <div className="about-area position-relative overflow-hidden overflow-hidden space" id="about-sec">
+      <div className="about-area position-relative overflow-hidden overflow-hidden space-top" id="about-sec">
          <div className="container ">
             <div className="row">
                <div className="col-xl-7">
@@ -122,10 +122,10 @@ function AboutFour() {
                      <p className="founders-text vision">Together, we create spaces—both virtual and real—where individuals can explore, reflect, and grow. Our shared vision is to inspire people to embrace life wit all its complexities and view it as a source of renewal, to listen deeply to themselves and the world, and to live with greater courage and clarity. Whether through our retreats, workshops, talks, or our writing, we invite you to join us in discovering the lessons and joys found in everyday moments and in the changing seasons of our lives.</p>
                    </div>
                    <p className="founders-text mb-30">If you wish to learn more about our work, collaborate, or simply connect, we welcome you to reach out and join us on this journey of soulful exploration and purposeful living.</p>
-                   <div className="d-flex flex-column flex-sm-row align-items-center gap-3 founders-cta-wrap">
+                   {/* <div className="d-flex flex-column flex-sm-row align-items-center gap-3 founders-cta-wrap">
                      
-                     {/* <a href="/retreat-interest" className="th-btn style1 founders-cta-alt" aria-label="Retreat Interest">Retreat Interest</a> */}
-                   </div>
+                     <a href="/retreat-interest" className="th-btn style1 founders-cta-alt" aria-label="Retreat Interest">Retreat Interest</a>
+                   </div> */}
                  </div>
                </div>
              </div>

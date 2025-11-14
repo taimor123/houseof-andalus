@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect } from 'react';
 import HeaderOne from '../../../src/Components/Header/HeaderOne';
-import FooterFour from '../../../src/Components/Footer/FooterFour';
+import FooterOne from '../../../src/Components/Footer/FooterOne';
 import ScrollToTop from '../../../src/Components/ScrollToTop';
 import Breadcrumb from '../../../src/Components/BreadCrumb/Breadcrumb';
 import Link from 'next/link';
@@ -389,7 +389,7 @@ export default function HouseofAndulusRetreats() {
           }
         }
       `}</style>
-      <FooterFour />
+      <FooterOne />
       <ScrollToTop />
     </>
   );
