@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
+import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 
 const accommodationOptions = [
   { value: 'main_house', label: 'The Main House only (capacity for 2 people on sharing basis)' },
@@ -38,6 +39,7 @@ const BookingForm = () => {
   const [status, setStatus] = useState({ type: '', message: '' });
   const [submitting, setSubmitting] = useState(false);
   const [errors, setErrors] = useState({});
+  const { executeRecaptcha } = useGoogleReCaptcha();
 
   const countryOptions = [
     'United Kingdom','United States','Spain','France','Germany','Canada','Saudi Arabia','United Arab Emirates','Morocco','Turkey','Malaysia','Australia','South Africa','Nigeria','Pakistan','India','Indonesia','Other'
@@ -88,10 +90,18 @@ const BookingForm = () => {
     }
     setSubmitting(true);
     try {
+      if (!executeRecaptcha) {
+        setStatus({ type: 'error', message: 'Recaptcha not ready. Please try again.' });
+        setSubmitting(false);
+        return;
+      }
+      
+      const token = await executeRecaptcha('booking_form');
+
       const res = await fetch('/api/booking', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData)
+        body: JSON.stringify({ ...formData, token })
       });
       const data = await res.json();
       if (!res.ok) {

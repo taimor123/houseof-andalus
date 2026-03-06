@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from 'react';
+import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 
 const relationshipDurationOptions = [
 	{ value: 'newlyweds', label: 'Newlyweds' },
@@ -47,6 +48,7 @@ const CouplesRetreatForm = () => {
 	});
 	const [status, setStatus] = useState({ type: '', message: '' });
 	const [submitting, setSubmitting] = useState(false);
+	const { executeRecaptcha } = useGoogleReCaptcha();
 
 	const handleChange = (e) => {
 		const { name, value } = e.target;
@@ -79,8 +81,16 @@ const CouplesRetreatForm = () => {
 		const v = validate();
 		if (!v.ok) { setStatus({ type:'error', message:v.msg }); return; }
 		setSubmitting(true);
+		
 		try {
-			const res = await fetch('/api/couples-retreat', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(formData) });
+			if (!executeRecaptcha) {
+				setStatus({ type: 'error', message: 'Recaptcha not ready' });
+				setSubmitting(false);
+				return;
+			}
+			const token = await executeRecaptcha('couples_retreat_form');
+			
+			const res = await fetch('/api/couples-retreat', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({ ...formData, token }) });
 			const data = await res.json();
 			if (!res.ok) {
 				setStatus({ type:'error', message:data.message || 'Submission failed.' });

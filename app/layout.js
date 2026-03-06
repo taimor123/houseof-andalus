@@ -1,5 +1,5 @@
-// import '../src/index.css';
 import './App.css';
+import RecaptchaProvider from '../src/Components/Providers/RecaptchaProvider';
 
 export const metadata = {
   title: 'House of Andalus',
@@ -42,7 +42,11 @@ export default function RootLayout({ children }) {
         <link rel="preload" href="/assets/fonts/vanitas/fonnts.com-Vanitas-Bold.otf" as="font" type="font/otf" crossOrigin="anonymous" />
         <link rel="preload" href="/assets/fonts/vanitas/fonnts.com-Vanitas-Bold.otf" as="font" type="font/otf" crossOrigin="anonymous" />
       </head>
-      <body>{children}</body>
+      <body>
+        <RecaptchaProvider>
+            {children}
+        </RecaptchaProvider>
+      </body>
     </html>
   );
 }

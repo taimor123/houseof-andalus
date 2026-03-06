@@ -10,6 +10,21 @@ const priceForCount = (count) => {
 export async function POST(request) {
   try {
     const body = await request.json();
+
+    // Verify Recaptcha
+    if (body.token) {
+      const secretKey = process.env.RECAPTCHA_SECRET_KEY;
+      const verifyRes = await fetch(`https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${body.token}`, {
+        method: 'POST'
+      });
+      const verifyJson = await verifyRes.json();
+      if (!verifyJson.success || verifyJson.score < 0.5) {
+        return NextResponse.json({ message: 'Captcha verification failed' }, { status: 400 });
+      }
+    } else {
+        return NextResponse.json({ message: 'Captcha token missing' }, { status: 400 });
+    }
+
     const trees = Number.parseInt(body.treeCount, 10);
     if (!body.name || !body.email || !trees || trees <= 0) {
       return NextResponse.json({ message: 'Name, email, and at least 1 tree are required.' }, { status: 400 });

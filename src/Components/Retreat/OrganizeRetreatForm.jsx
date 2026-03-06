@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from 'react';
+import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 
 const retreatTypeOptions = [
   { value: 'women', label: 'Women-Only Retreats' },
@@ -29,6 +30,7 @@ const OrganizeRetreatForm = () => {
   });
   const [status, setStatus] = useState({ type: '', message: '' });
   const [submitting, setSubmitting] = useState(false);
+  const { executeRecaptcha } = useGoogleReCaptcha();
 
   const toggleService = (value) => {
     setFormData(prev => {
@@ -66,6 +68,14 @@ const OrganizeRetreatForm = () => {
     const v = validate();
     if (!v.ok) { setStatus({ type:'error', message:v.msg }); return; }
     setSubmitting(true);
+    
+    if (!executeRecaptcha) {
+        setStatus({ type:'error', message:'Recaptcha not ready.' });
+        setSubmitting(false);
+        return;
+    }
+    const token = await executeRecaptcha('organize_retreat_form');
+
     // Build payload with legacy field aliases for backend/email
     const servicesReadable = formData.services.map(s => {
       const opt = serviceOptions.find(o => o.value === s);
@@ -88,6 +98,7 @@ const OrganizeRetreatForm = () => {
       servicesRequestedArray: servicesReadable,
       servicesRequestedString: servicesReadable.join(', '),
       requirements: servicesReadable.join(', '), // single string fallback
+      token, // Add reCAPTCHA token
       provideSpeakers: formData.provideSpeakers,
       speakersNeeded: formData.provideSpeakers === 'yes' ? 'Yes' : (formData.provideSpeakers === 'no' ? 'No' : ''),
       speakersTopics: formData.speakersTopics,

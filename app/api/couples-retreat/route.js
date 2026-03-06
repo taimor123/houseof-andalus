@@ -4,6 +4,22 @@ import { sendMail, formatKeyValueTable, plainTextSummary } from '../../../lib/em
 export async function POST(request){
   try {
     const body = await request.json();
+
+    // Verify Recaptcha
+    if (body.token) {
+      const secretKey = process.env.RECAPTCHA_SECRET_KEY;
+      const verifyRes = await fetch(`https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${body.token}`, {
+        method: 'POST'
+      });
+      const verifyJson = await verifyRes.json();
+      if (!verifyJson.success || verifyJson.score < 0.5) {
+        return NextResponse.json({ message: 'Captcha verification failed' }, { status: 400 });
+      }
+    } else {
+        // Enforce token presence
+        return NextResponse.json({ message: 'Captcha token missing' }, { status: 400 });
+    }
+
     const { wifeName, husbandName, email } = body;
     if(!wifeName || !husbandName || !email){
       return NextResponse.json({ message:'wifeName, husbandName and email are required.' }, { status:400 });

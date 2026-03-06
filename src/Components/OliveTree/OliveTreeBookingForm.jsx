@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
 const priceTable = { 1: 50, 2: 95, 3: 135, 4: 170, 5: 200 };
 const priceForCount = (count) => {
@@ -21,6 +22,7 @@ const OliveTreeBookingForm = () => {
   });
   const [submitting, setSubmitting] = useState(false);
   const [status, setStatus] = useState({ type: "", message: "" });
+  const { executeRecaptcha } = useGoogleReCaptcha();
 
   useEffect(() => {
     if (initialCount > 0) {
@@ -52,11 +54,19 @@ const OliveTreeBookingForm = () => {
 
     setSubmitting(true);
     try {
+      if (!executeRecaptcha) {
+        setStatus({ type: "error", message: "Recaptcha not ready." });
+        setSubmitting(false);
+        return;
+      }
+      const token = await executeRecaptcha("olive_tree_booking");
+
       const res = await fetch("/api/olive-tree-booking", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           ...formData,
+          token,
           treeCount: Number(formData.treeCount),
           totalPrice,
         }),
