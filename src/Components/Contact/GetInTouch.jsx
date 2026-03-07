@@ -19,7 +19,7 @@ function GetInTouch() {
                             <div className="about-contact-details">
                                 <h6 className="box-title">Our Address</h6>
                                 <p className="about-contact-details-text">
-                                    Andalucia, Spain x7792 street
+                                    Alora, Andalucia,  Spain
                                 </p>
                                 {/* <p className="about-contact-details-text">Road, New York, Canada</p> */}
                             </div>
@@ -33,11 +33,10 @@ function GetInTouch() {
                             <div className="about-contact-details">
                                 <h6 className="box-title">Phone Number</h6>
                                 <p className="about-contact-details-text">
-                                    <a href="tel:01234567890"> +34 000 000 000</a>
+                                <a href="tel:+447872553256000">+00447872553256000</a>
                                 </p>
-                                {/* <p className="about-contact-details-text">
-                                    <a href="tel:01234567890">+09 876 543 210</a>
-                                </p> */}
+                              
+
                             </div>
                         </div>
                     </div>
